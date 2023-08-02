@@ -4,41 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ubereats Copy</title>
-  <style>
-    .main-site {
-
-    }
-
-      .transparent-header {
-        display: flex;
-        background-color: lightpink;
-      }
-
-        .burger-menu {
-          width: 50px;
-        }
-        
-        .uber-eats-text-picture {
-          width: 50px;
-        }
-
-        .user-img {
-          width: 50px;
-        }
-
-  </style>
+  <link rel="stylesheet" href="styles/Mainside/general.css">
+  <link rel="stylesheet" href="styles/Mainside/header.css">
+  <link rel="stylesheet" href="styles/Mainside/middlepart-with-background.css">
 </head>
 <body>
   <div class="main-site">
     <div class="transparent-header">
-      <div>
-        <img class="burger-menu" src="burger-menu.png">
-        <img class="uber-eats-text-picture" src="Uber-eats-text.png">
+      <div class="header-left">
+        <img class="burger-menu" src="styles/Mainside/Pictures/burger-menu.png">
+        <img class="uber-eats-text-picture" src="styles/Mainside/Pictures/Uber-eats-text.png">
       </div>
-      <div>
+      <div class="header-right">
         <button class="sign-in-button">
-          <img class="user-img" src="User.png">
-          Anmelden
+          <div class="sign-in-button-div">
+            <img class="user-img" src="styles/Mainside/Pictures/User.png">
+            <p class="sign-in-button-text">Anmelden</p>
+          </div>
         </button>
         <button class="sign-up-button">
           Registrieren
@@ -46,7 +28,13 @@
       </div>
     </div>
 
-    <div class="middlepart-with-background"></div>
+    <div class="middlepart-with-background">
+      <h1>Dein Lieblingsessen an deine Tür geliefert</h1>
+      <input placeholder="Lieferadresse eingeben">
+      <input placeholder="Jetzt liefern">
+      <button>Essen finden</button>
+      <p>Anmelden für deine zuletzt genutzten Adressen</p>
+    </div>
 
     <div class="middlepart-with-3-pictures"></div>
 
