@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="main-site">
-    <div class="transparent-header">
+    <div class="header">
       <div class="header-left">
         <img class="burger-menu" src="styles/Mainside/icons/burger-menu.png">
         <img class="uber-eats-text-picture" src="styles/Mainside/icons/Uber-eats-text.png">
@@ -29,12 +29,15 @@
       </div>
     </div>
 
-    <div class="middlepart-with-background">
+    <div class="middlepart-with-background middlepart-with-background-js">
       <div class="find-eat-container">
         <h1 class="find-eat-headline">Dein Lieblingsessen an deine Tür geliefert</h1>
         <div class="find-eat-input-container">
           <input class="input-delivery-address" placeholder="Lieferadresse eingeben">
-          <input class="input-delivery-time" placeholder="Jetzt liefern">
+          <select class="input-delivery-time">
+            <option class="input-delivery-time-now">Jetzt liefern</option>
+            <option class="input-delivery-time-later">Für später planen</option>
+          </select>
           <button>Essen finden</button>
         </div>
         <p>Anmelden für deine zuletzt genutzten Adressen</p>
@@ -47,5 +50,18 @@
 
     <div class="footer"></div>
   </div>
+
+  <script>
+    console.log('hello');
+
+    const scrollelement = document.querySelector('.middlepart-with-background-js');
+   
+    // Why not mit scroll?!
+    scrollelement.addEventListener('click', () => {
+      console.log('scroller');
+    });
+
+  </script> 
+
 </body>
 </html>

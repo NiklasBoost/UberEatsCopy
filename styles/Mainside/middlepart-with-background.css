@@ -1,5 +1,5 @@
 .find-eat-container {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   margin-left: 40px;
   margin-top: -110px; 
 }
@@ -24,8 +24,12 @@
       width: 550px;
       margin-right: 4px;
       padding-left: 45px;
-      background-image: url(/styles/Mainside/icons/location.png);
+      background-image: url('../Mainside/icons/location.png');
       background-size: 20px;
       background-repeat: no-repeat;
       background-position: 10px;
+    }
+
+   .input-delivery-time {
+   
     }
