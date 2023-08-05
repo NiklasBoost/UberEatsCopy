@@ -1,0 +1,16 @@
+.middlepart-with-countrys-row {
+  display: block;
+}
+
+.middlepart-with-countrys-header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.country-grid-one {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 24px;
+  margin-bottom: 23px;
+}
+

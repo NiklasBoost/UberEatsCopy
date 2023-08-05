@@ -1,0 +1,22 @@
+.one-picture-block {
+ display: inline-block;
+ flex: 1;
+ 
+ 
+}
+
+.one-picture {
+  width: 96%;
+  min-width: 300px;
+  margin-bottom: 8px;
+}
+
+.picture-headline {
+  font-size: 28px;
+  margin-bottom: 7px;
+}
+
+.link-to-undersite {
+  color: black;
+  font-size: 18px;
+}
