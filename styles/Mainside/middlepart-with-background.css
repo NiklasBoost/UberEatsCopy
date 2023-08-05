@@ -1,0 +1,31 @@
+.find-eat-container {
+  background-color: lightblue;
+  margin-left: 40px;
+  margin-top: -110px; 
+}
+
+  .find-eat-headline {
+    font-size: 50px;
+    margin-bottom: 21px;
+  }
+
+  .find-eat-input-container {
+    margin-bottom: 20px;
+  }
+
+
+    .input-delivery-address,
+    .input-delivery-time {
+      height: 45px;
+      border: none;
+    }
+
+    .input-delivery-address {
+      width: 550px;
+      margin-right: 4px;
+      padding-left: 45px;
+      background-image: url(/styles/Mainside/icons/location.png);
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: 10px;
+    }
