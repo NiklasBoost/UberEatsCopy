@@ -1,10 +1,12 @@
 .middlepart-with-countrys-row {
   display: block;
+  /* background-color: lightcoral; */
 }
 
 .middlepart-with-countrys-header {
   display: flex;
   margin-bottom: 20px;
+  justify-content: space-between;
 }
 
 .country-grid-one {
@@ -13,4 +15,6 @@
   row-gap: 24px;
   margin-bottom: 23px;
 }
+
+
 
