@@ -1,0 +1,12 @@
+.transparent-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(252,201,14);
+  height: 96px;
+  flex-direction: row;
+}
+
+.middlepart-with-background {
+  background-color: rgb(252,201,14);
+  height: 750px;
+}
