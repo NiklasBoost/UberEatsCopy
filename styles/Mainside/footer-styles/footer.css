@@ -4,22 +4,6 @@
   display: flex;
 }
 
-  .logo-and-stores-container {
-    margin-top: 70px;
-    margin-left: 40px;
-    background-color: lightcoral;
-    flex: 1;
-  }
-
-  .links-container {
-    margin-top: 70px;
-    margin-left: 35px;
-    background-color: lightskyblue;
-    flex: 1.1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-  }
 
 .lower-container {
   background-color: lightpink;
