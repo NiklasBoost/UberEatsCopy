@@ -1,0 +1,43 @@
+.first-row {
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: row;
+  margin-top: 39px;
+  margin-left: 43px;
+  justify-content: space-between;
+}
+
+  .first-row-icon-links {
+    flex: 1fr;
+  }
+
+    .footer-icon {
+      width: 17px;
+      height: 17px;
+      margin-right: 19px;
+    }
+
+  .first-row-text-links {
+    flex: 1fr;
+  }
+
+    .first-row-text-link {
+      font-size: 14px;
+      margin-right: 33px;
+    }
+
+
+
+
+
+.second-row {
+  /* background-color: lightcoral; */
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 33px;
+  margin-top: 20px;
+}
+
+  .company-name {
+    margin-left: 40px;
+  }

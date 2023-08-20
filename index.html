@@ -6,11 +6,13 @@
   <title>Ubereats Copy</title>
   <link rel="stylesheet" href="styles/Mainside/general.css">
   <link rel="stylesheet" href="styles/Mainside/main-site.css">
-  <link rel="stylesheet" href="styles/Mainside/header.css">
-  <link rel="stylesheet" href="styles/Mainside/middlepart-with-background.css">
-  <link rel="stylesheet" href="styles/Mainside/middlepart-with-3-pictures.css">
-  <link rel="stylesheet" href="styles/Mainside/middlepart-with-countrys.css">
-  <link rel="stylesheet" href="styles/Mainside/footer.css">
+  <link rel="stylesheet" href="styles/Mainside/header-styles/header.css">
+  <link rel="stylesheet" href="styles/Mainside/middlepart-styles/middlepart-with-background.css">
+  <link rel="stylesheet" href="styles/Mainside/middlepart-styles/middlepart-with-3-pictures.css">
+  <link rel="stylesheet" href="styles/Mainside/middlepart-styles/middlepart-with-countrys.css">
+  <link rel="stylesheet" href="styles/Mainside/footer-styles/footer.css">
+  <link rel="stylesheet" href="styles/Mainside/footer-styles/upper-container.css">
+  <link rel="stylesheet" href="styles/Mainside/footer-styles/lower-container.css">
 </head>
 <body>
   <div class="main-site">
@@ -114,13 +116,17 @@
     </div>
 
     <div class="footer">
-      <div>
-        <div>
-          <img>
-          <img>
-          <img>
+      <div class="upper-container">
+        <div class="logo-and-stores-container">
+          <div class="logo-container">
+            <img src="/styles/Mainside/icons/Uber-eats-text.png">
+          </div>
+          <div class="stores-container">
+            <img class="stores-img" src="/styles/Mainside/icons/appstore.svg">
+            <img class="stores-img" src="/styles/Mainside/icons/google-play-store.png">
+          </div>
         </div>
-        <div>
+        <div class="links-container">
           <a href="">Hilfe erhalten</a>
           <a href="">Restaurants in meiner Nähe</a>
           <a href="">Füge dein Restaurant hinzu</a>
@@ -135,20 +141,24 @@
           <a href="">Deutsch</a>
         </div>
       </div>
-      <div>
-        <div>
-          <img>
-          <img>
-          <img>
-          <a href="">Impressum</a>
-          <a href="">So funktionieren die Websites und Apps von Uber und Uber Eats</a>
-          <a href="">Datenschutzrichtlinien</a>
-          <a href="">Bedingungen</a>
-          <a href="">Preise</a>
-          <a href="">Uber One kündigen</a>
-          <a href="">Meine persönlichen Daten nicht verkaufen oder weitergeben</a>
+      <div class="lower-container">
+        <div class="first-row">
+          <div class="first-row-icon-links">
+            <img class="footer-icon" src="styles/Mainside/icons/facebook.png">
+            <img class="footer-icon" src="styles/Mainside/icons/twitter.png">
+            <img class="footer-icon" src="styles/Mainside/icons/instagram.png">
+          </div>
+          <div class="first-row-text-links">
+            <a class="first-row-text-link" href="">Impressum</a>
+            <a class="first-row-text-link" href="">So funktionieren die Websites und Apps von Uber und Uber Eats</a>
+            <a class="first-row-text-link" href="">Datenschutzrichtlinien</a>
+            <a class="first-row-text-link" href="">Bedingungen</a>
+            <a class="first-row-text-link" href="">Preise</a>
+            <a class="first-row-text-link" href="">Uber One kündigen</a>
+            <a class="first-row-text-link" href="">Meine persönlichen Daten nicht verkaufen oder weitergeben</a>
+          </div>
         </div>
-        <div>
+        <div class="second-row">
           <p>Diese Website ist durch reCAPTCHA geschützt. Es gelten die 
             <a href="">
               Datenschutzrichtlinie
@@ -157,9 +167,13 @@
             <a href="">
               Nutzungsbedingungen
             </a> von Google.</p>
-          <p>c 2023 Uber Technologies Inc.</p>
+          <p class="company-name">c 2023 Uber Technologies Inc.</p>
         </div>
       </div>
+
+
+
+
     </div>
   </div>
 
