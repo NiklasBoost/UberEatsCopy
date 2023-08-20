@@ -1,16 +1,33 @@
 .logo-and-stores-container {
   margin-top: 70px;
   margin-left: 40px;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+  .logo-container {
+    /* background-color: green; */
+  }
+
+  .stores-container {
+    /* background-color: red; */
+    margin-bottom: 34px;
+  }
+
+    .stores-img {
+      height: 40px;
+      margin-right: 13px;
+    }
+
 
 .links-container {
   margin-top: 70px;
   margin-left: 35px;
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
   flex: 1.1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
 }

@@ -1,7 +1,8 @@
 .upper-container {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   flex: 2;
   display: flex;
+  border-top: 0.3px solid rgb(220, 220, 220);
 }
 
 
