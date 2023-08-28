@@ -27,6 +27,9 @@
           <img class="uber-eats-text-picture" src="styles/Mainside/icons/Uber-eats-text.png">
         </a>
       </div>
+      <div class="header-middle">
+        <input class="input-delivery-address header-input-delivery-address" placeholder="Lieferadresse eingeben">
+      </div>
       <div class="header-right">
         <button class="sign-in-button">
           <div class="sign-in-button-div">
@@ -188,22 +191,39 @@
           <p class="company-name">c 2023 Uber Technologies Inc.</p>
         </div>
       </div>
-
-
-
-
     </div>
   </div>
 
   <script>
-    console.log('hello');
-
-    const scrollelement = document.querySelector('.middlepart-with-background-js');
-   
-    // Why not mit scroll?!
-    scrollelement.addEventListener('click', () => {
-      console.log('scroller');
+      
+    window.addEventListener('scroll', () => {
+      currentScrollLevel = window.pageYOffset;
+      // console.log(currentScrollLevel);
+      checkScrollLevel(
+        '10', 
+        'changeHeaderColor('white')', 
+        'changeHeaderColor('rgb(252, 201, 14)')'
+      );
+      checkScrollLevel(
+        '441', 
+        'document.querySelector('.header-middle').style.display = 'flex'', 
+        'document.querySelector('.header-middle').style.display = 'none''
+      );
     });
+
+    function checkScrollLevel(numb, ifBranch, elseBranch){
+      if(currentScrollLevel > numb) {
+        ifBranch
+      } else {
+        elseBranch
+      }
+    }
+
+    //add slower colorchange
+    function changeHeaderColor(color) {
+      document.querySelector('.header')
+        .style.backgroundColor = color;
+    }
 
   </script> 
 
