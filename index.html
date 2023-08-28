@@ -197,25 +197,26 @@
   <script>
       
     window.addEventListener('scroll', () => {
-      currentScrollLevel = window.pageYOffset;
-      // console.log(currentScrollLevel);
       checkScrollLevel(
-        '10', 
-        'changeHeaderColor('white')', 
-        'changeHeaderColor('rgb(252, 201, 14)')'
+        10, 
+        () => changeHeaderColor('white'), 
+        () => changeHeaderColor('rgb(252, 201, 14)')
       );
+        
       checkScrollLevel(
-        '441', 
-        'document.querySelector('.header-middle').style.display = 'flex'', 
-        'document.querySelector('.header-middle').style.display = 'none''
+        441, 
+        () => document.querySelector('.header-middle').style.display = 'flex', 
+        () => document.querySelector('.header-middle').style.display = 'none'
       );
-    });
-
+    }); 
+        
     function checkScrollLevel(numb, ifBranch, elseBranch){
+      currentScrollLevel = window.pageYOffset;
+      console.log(currentScrollLevel);
       if(currentScrollLevel > numb) {
-        ifBranch
+        ifBranch();
       } else {
-        elseBranch
+        elseBranch();
       }
     }
 
