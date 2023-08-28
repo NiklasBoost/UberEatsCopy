@@ -19,6 +19,15 @@
     /* justify-content: center; */
   }
 
+.header-middle {
+  display: none;
+  align-items: center;
+}
+
+  .header-input-delivery-address {
+    background-color: rgb(230, 230, 230);
+  }
+
 .header-right {
   /* background-color: lightcoral; */
   margin-right: 35px;
