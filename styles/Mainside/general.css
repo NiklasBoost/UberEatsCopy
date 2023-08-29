@@ -13,7 +13,7 @@ h1, h2, p, a {
   text-decoration: none;
 }
 
-button, a, svg {
+button, a, svg, select {
   cursor: pointer;
 }
 
