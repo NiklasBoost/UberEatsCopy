@@ -24,9 +24,9 @@
 
 
 .links-container {
+  /* background-color: lightskyblue; */
   margin-top: 70px;
   margin-left: 35px;
-  /* background-color: lightskyblue; */
   flex: 1.1;
   display: grid;
   grid-template-columns: 1fr 1fr;
