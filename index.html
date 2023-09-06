@@ -13,9 +13,11 @@
   <link rel="stylesheet" href="styles/Mainside/footer-styles/footer.css">
   <link rel="stylesheet" href="styles/Mainside/footer-styles/upper-container.css">
   <link rel="stylesheet" href="styles/Mainside/footer-styles/lower-container.css">
+  <link rel="stylesheet" href="styles/Mainside/sidebar/sidebar.css">
 </head>
 <body>
   <div class="main-site">
+    <div class="overlay"></div>
     <div class="header">
       <div class="header-left">
         <svg class="burger-menu" width="18" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +44,6 @@
         </button>
       </div>
     </div>
-
     <div class="middlepart-with-background middlepart-with-background-js">
       <div class="find-eat-container">
         <h1 class="find-eat-headline">Dein Lieblingsessen an deine Tür geliefert</h1>
@@ -63,7 +64,6 @@
           für deine zuletzt genutzten Adressen</p>
       </div>
     </div>
-
     <div class="middlepart-with-3-pictures">
       <div class="one-picture-block">
         <a>
@@ -87,7 +87,6 @@
         </a>
       </div>
     </div>
-    
     <div class="middlepart-with-countrys">
       <div class="middlepart-with-countrys-row">
         <div class="middlepart-with-countrys-header">
@@ -134,7 +133,6 @@
         <a class="middlepart-with-countrys-p">So ordnet Uber Eats die Ereignisliste. <u>Mehr zum Ranking erfahren</u></a>
       </div>
     </div>
-      
     <div class="footer">
         <div class="upper-container">
           <div class="logo-and-stores-container">
@@ -186,14 +184,40 @@
             <a>
               Nutzungsbedingungen
             </a> von Google.</p>
-          <p class="company-name">c 2023 Uber Technologies Inc.</p>
+            <p class="company-name">c 2023 Uber Technologies Inc.</p>
+          </div>
+      </div>  
+    </div>  
+    <div class="sidebar">
+      <div class="sidebar-container">
+        <div class="upper-sidebar">
+          <button class="register-button">Registrieren</button>
+          <button class="login-button">Anmelden</button>
+          <a class="sidebar-link" href="">Ein Geschäftskonto anlegen</a>
+          <a class="sidebar-link" href="">Füge dein Restaurant hinzu</a>
+          <a class="sidebar-link" href=""> Registriere dich als Kurier</a>
         </div>
-      </div>
+        <div class="under-sidebar">
+          <div class="app-intro-container">
+              <img class="uber-eats-batch" src="styles/Mainside/icons/UberEats-batch.svg">
+              <p class="app-text">Die App hat noch mehr zu bieten.</p>
+            </div>
+            <div class="phone-buttons-container">
+              <a class="phone-button">
+                <img class="phone-logo" src="styles/Mainside/icons/apple-logo.png">
+                iPhone
+              </a>
+              <a class="phone-button">
+                <img class="phone-logo" src="styles/Mainside/icons/android-logo.png">
+                Android
+              </a>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 
   <script>
-      
     window.addEventListener('scroll', () => {
       checkScrollLevel(
         10, 
@@ -224,6 +248,31 @@
         .style.backgroundColor = color;
     }
 
+    
+    document.body.addEventListener('click', (event) => {
+      if (event.target.classList.contains('burger-menu-js')) {
+        sidebarToggle(true);
+      } else {
+        sidebarToggle(false);
+      }
+    });
+
+    function sidebarToggle(check) {
+      console.log('toggle sidebar');
+      const sidebar = document.querySelector('.sidebar');
+      if(sidebar.style.left === "0px") {
+        sidebar.style.left = "-300px";
+        changeOverlayState('none');
+      } else if(check) {
+        sidebar.style.left = "0px";
+        changeOverlayState('block');
+      }
+    }
+
+    function changeOverlayState(prop) {
+      overlay = document.querySelector('.overlay');
+      overlay.style.display = prop;
+    }
   </script> 
 
 </body>
