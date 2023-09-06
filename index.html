@@ -17,6 +17,7 @@
 </head>
 <body>
   <div class="main-site">
+    <div class="overlay"></div>
     <div class="header">
       <div class="header-left">
         <img class="burger-menu burger-menu-js" src="styles/Mainside/icons/burger-menu.png">
@@ -34,7 +35,6 @@
         </button>
       </div>
     </div>
-
     <div class="middlepart-with-background middlepart-with-background-js">
       <div class="find-eat-container">
         <h1 class="find-eat-headline">Dein Lieblingsessen an deine Tür geliefert</h1>
@@ -49,7 +49,6 @@
         <p><span>Anmelden</span> für deine zuletzt genutzten Adressen</p>
       </div>
     </div>
-
     <div class="middlepart-with-3-pictures">
       <div class="one-picture-block">
         <img class="one-picture" src="styles/Mainside/pictures/click_on_Laptop.webp">
@@ -67,7 +66,6 @@
         <a class="link-to-undersite" href="">Registriere dich als Kurier</a>
       </div>
     </div>
-
     <div class="middlepart-with-countrys">
       <div class="middlepart-with-countrys-row">
         <div class="middlepart-with-countrys-header">
@@ -112,17 +110,16 @@
       </div>
       <div class="middlepart-with-countrys-row">
         <p class="middlepart-with-countrys-p">So ordnet Uber Eats die Ereignisliste. <u>Mehr zum Ranking erfahren<u></p>
-
-      </div>
+          
+        </div>
     </div>
-
     <div class="footer">
-      <div class="upper-container">
-        <div class="logo-and-stores-container">
-          <div class="logo-container">
-            <img src="/styles/Mainside/icons/Uber-eats-text.png">
-          </div>
-          <div class="stores-container">
+        <div class="upper-container">
+          <div class="logo-and-stores-container">
+            <div class="logo-container">
+              <img src="/styles/Mainside/icons/Uber-eats-text.png">
+            </div>
+            <div class="stores-container">
             <img class="stores-img" src="/styles/Mainside/icons/appstore.svg">
             <img class="stores-img" src="/styles/Mainside/icons/google-play-store.png">
           </div>
@@ -168,15 +165,14 @@
             <a href="">
               Nutzungsbedingungen
             </a> von Google.</p>
-          <p class="company-name">c 2023 Uber Technologies Inc.</p>
-        </div>
+            <p class="company-name">c 2023 Uber Technologies Inc.</p>
+          </div>
       </div>
-
-
-
-
-    </div>
-
+        
+        
+        
+        
+    </div>  
     <div class="sidebar">
       <div class="sidebar-container">
         <div class="upper-sidebar">
@@ -188,34 +184,34 @@
         </div>
         <div class="under-sidebar">
           <div class="app-intro-container">
-            <img class="uber-eats-batch" src="styles/Mainside/icons/UberEats-batch.svg">
-            <p class="app-text">Die App hat noch mehr zu bieten.</p>
-          </div>
-          <div class="phone-buttons-container">
-            <a class="phone-button">
-              <img class="phone-logo" src="styles/Mainside/icons/apple-logo.png">
-              iPhone
-            </a>
-            <a class="phone-button">
-              <img class="phone-logo" src="styles/Mainside/icons/android-logo.png">
-              Android
-            </a>
+              <img class="uber-eats-batch" src="styles/Mainside/icons/UberEats-batch.svg">
+              <p class="app-text">Die App hat noch mehr zu bieten.</p>
+            </div>
+            <div class="phone-buttons-container">
+              <a class="phone-button">
+                <img class="phone-logo" src="styles/Mainside/icons/apple-logo.png">
+                iPhone
+              </a>
+              <a class="phone-button">
+                <img class="phone-logo" src="styles/Mainside/icons/android-logo.png">
+                Android
+              </a>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 
   <script>
     console.log('hello');
-
+    
     const scrollelement = document.querySelector('.middlepart-with-background-js');
    
     // Why not mit scroll?!
     scrollelement.addEventListener('click', () => {
       console.log('scroller');
     });
-
+    
     document.body.addEventListener('click', (event) => {
       if (event.target.classList.contains('burger-menu-js')) {
         sidebarToggle(true);
@@ -229,9 +225,16 @@
       const sidebar = document.querySelector('.sidebar');
       if(sidebar.style.left === "0px") {
         sidebar.style.left = "-300px";
+        changeOverlayState('none');
       } else if(check) {
         sidebar.style.left = "0px";
+        changeOverlayState('block');
       }
+    }
+
+    function changeOverlayState(prop) {
+      overlay = document.querySelector('.overlay');
+      overlay.style.display = prop;
     }
   </script> 
 
