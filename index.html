@@ -216,15 +216,13 @@
       console.log('scroller');
     });
 
-    document.querySelector('.burger-menu-js')
-      .addEventListener('click', () => {
+    document.body.addEventListener('click', (event) => {
+      if (event.target.classList.contains('burger-menu-js')) {
         sidebarToggle(true);
-      })
-
-    document.querySelector('body')
-      .addEventListener('click', () => {
+      } else {
         sidebarToggle(false);
-      })
+      }
+    });
 
     function sidebarToggle(check) {
       console.log('toggle sidebar');
