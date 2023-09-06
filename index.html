@@ -19,7 +19,7 @@
   <div class="main-site">
     <div class="header">
       <div class="header-left">
-        <img class="burger-menu" src="styles/Mainside/icons/burger-menu.png">
+        <img class="burger-menu burger-menu-js" src="styles/Mainside/icons/burger-menu.png">
         <img class="uber-eats-text-picture" src="styles/Mainside/icons/Uber-eats-text.png">
       </div>
       <div class="header-right">
@@ -216,6 +216,25 @@
       console.log('scroller');
     });
 
+    document.querySelector('.burger-menu-js')
+      .addEventListener('click', () => {
+        sidebarToggle(true);
+      })
+
+    document.querySelector('body')
+      .addEventListener('click', () => {
+        sidebarToggle(false);
+      })
+
+    function sidebarToggle(check) {
+      console.log('toggle sidebar');
+      const sidebar = document.querySelector('.sidebar');
+      if(sidebar.style.left === "0px") {
+        sidebar.style.left = "-300px";
+      } else if(check) {
+        sidebar.style.left = "0px";
+      }
+    }
   </script> 
 
 </body>
