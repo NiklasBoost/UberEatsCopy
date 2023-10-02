@@ -1,5 +1,13 @@
+import Home from "./home/HomeSite.tsx";
+import Dish from "./dish/DishOverview.tsx";
+
 function App() {
-  return <h1>Hier startet unser zweites Portfolioprojekt!</h1>
+  return (
+   <>
+    <Home />
+    <Dish />
+   </>
+  )
 }
 
 export default App;
