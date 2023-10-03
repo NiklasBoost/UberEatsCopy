@@ -1,3 +1,3 @@
-function InputDeliveryAddress () {
-  
+export function InputDeliveryAddress () {
+  return <input/>
 }

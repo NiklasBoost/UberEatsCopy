@@ -1,7 +1,7 @@
-function SignInButton() {
-
+export function SignInButton() {
+  return <button>Ich bims, </button>
 }
 
-function RegisterButton() {
-  
+export function RegisterButton() {
+  return <button>n butte</button>
 }

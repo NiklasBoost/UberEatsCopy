@@ -1,11 +1,11 @@
-function BusinessAccount () {
-
+export function BusinessAccount () {
+  return <p>einfach irgendwas</p>
 }
 
-function AddRestaurant () {
-
+export function AddRestaurant () {
+  return <p>einfach irgendwas</p>
 }
 
-function CourierRegistration() {
-  
+export function CourierRegistration() {
+  return <p>einfach irgendwas</p>
 }

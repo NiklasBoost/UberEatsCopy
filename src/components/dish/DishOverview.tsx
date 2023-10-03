@@ -1,5 +1,17 @@
+import { DishHeader, Categories, Slideshow } from "./layout/dLayout";
+import { Footer, Sidebar } from "../common/layout/cLayout";
+
+
 function Dish() {
-  return <p>Ich bin die DishOverview und muss auf eine andere Seite</p>
+  return (
+    <>
+      <DishHeader />
+      <Sidebar />
+      <Categories />
+      <Slideshow />
+      <Footer />
+    </>
+  )
 }
 
 

@@ -1,11 +1,41 @@
-function Header() {
+import { HamburgerMenu, Logo } from "../../common/Pics";
+import { SignInButton, RegisterButton } from "../../common/Buttons";
+import { SlideshowElement, Category } from "../elements/dElements";
 
+export function DishHeader() {
+  return (
+    <>
+      <HamburgerMenu />
+      <Logo />
+      <SignInButton />
+      <RegisterButton />
+    </>
+  )
 }
 
-function Categories() {
-  
+export function Categories() {
+  return (
+    <>
+      <Category />
+      <Category />
+      <Category /> 
+      <Category />
+      <Category />
+      <Category />
+      <Category />
+      <Category />
+      <Category />
+      <Category />
+    </>
+  )
 }
 
-function Slideshow() {
-
+export function Slideshow() {
+  return (
+    <>
+      <SlideshowElement />
+      <SlideshowElement />
+      <SlideshowElement />  
+    </>
+  )
 }
