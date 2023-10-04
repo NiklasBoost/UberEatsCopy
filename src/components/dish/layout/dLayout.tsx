@@ -17,15 +17,7 @@ export function Categories() {
   return (
     <>
       <Category />
-      <Category />
-      <Category /> 
-      <Category />
-      <Category />
-      <Category />
-      <Category />
-      <Category />
-      <Category />
-      <Category />
+
     </>
   )
 }
