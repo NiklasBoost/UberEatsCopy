@@ -49,11 +49,11 @@ export function Delivery() {
 
 export function PictureOptions() {
   return (
-    <>
+    <div className="middlepart-with-3-pictures">
       <PictureElementGroup />
       <PictureElementGroup />
       <PictureElementGroup />
-    </>
+    </div>
   )
 }
 
