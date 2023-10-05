@@ -5,13 +5,19 @@ import { PictureElementGroup } from "../elements/group";
 
 export function HomeHeader() {
   return (
-    <>
-      <HamburgerMenu />
-      <Logo />
-      <InputDeliveryAddress />
-      <SignInButton />
-      <RegisterButton />
-    </>
+    <div className="header">
+      <div className="header-left">
+        <HamburgerMenu />
+        <Logo />
+      </div>
+      <div className="header-middle">
+        <InputDeliveryAddress />
+      </div>
+      <div className="header-right">
+        <SignInButton />
+        <RegisterButton />
+      </div>
+    </div>
   );
 }
 

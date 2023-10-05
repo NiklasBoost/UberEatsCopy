@@ -21,10 +21,11 @@ export function RegisterButton() {
   return (
     <button 
       className="
-      sign-up-button
-      register-button
-    ">
+        sign-up-button
+        register-button
+      ">
       Registrieren
     </button>
   )
 }
+
