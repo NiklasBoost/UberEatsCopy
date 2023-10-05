@@ -16,6 +16,15 @@ export function SignInButton() {
   )
 }
 
+//Je nach Komponentenverwendung, darf halt nur eine der beiden Klassen verwendet oder übergeben werden. Wie ich das genau anstelle, steht ja nicht nur bei dieser Komponente hier offen
 export function RegisterButton() {
-  return <button>n butte</button>
+  return (
+    <button 
+      className="
+      sign-up-button
+      register-button
+    ">
+      Registrieren
+    </button>
+  )
 }
