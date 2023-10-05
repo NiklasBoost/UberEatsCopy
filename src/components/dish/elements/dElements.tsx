@@ -8,7 +8,18 @@ export function Category() {
   )
 }
 
+
+// Die jeweiligen inhalte und der img inhalt müssen variable sein. Aber von der Struktur her dürfte es passen
 export function SlideshowElement() {
-  return <p>Das wird noch lustig</p>
+  return (
+    <div className="slideshow-listelement-container">
+      <a className="slideshow-listelement">
+        <h3 className="headline">1 kaufen, 1 gratis bei O'Tacos</h3>
+        <p className="under-headline">Französische Tacos</p>
+        <button className="slideshow-button">Bestelle jetzt &#8594;</button>
+        <img />
+      </a>
+    </div>
+  )
 }
 
