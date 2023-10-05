@@ -1,13 +1,13 @@
 export function BusinessAccount () {
-  return <p>einfach irgendwas</p>
+  return <p></p>
 }
 
 export function AddRestaurant () {
-  return <p>einfach irgendwas</p>
+  return <p></p>
 }
 
 export function CourierRegistration() {
-  return <p>einfach irgendwas</p>
+  return <p></p>
 }
 
 
