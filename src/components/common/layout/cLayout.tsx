@@ -1,5 +1,5 @@
 import { SignInButton, RegisterButton } from "../Buttons";
-import { BusinessAccount, AddRestaurant, CourierRegistration } from "../../home/elements/links";
+import { UnderSiteLinks } from "../../home/elements/links";
 import { Logo } from "../Pics";
 
 
@@ -65,13 +65,34 @@ export function Footer() {
 
 export function Sidebar() {
   return (
-    <>
-      <RegisterButton />
-      <SignInButton />
-      <BusinessAccount />
-      <AddRestaurant />
-      <CourierRegistration />
-    </>
+    <div className="sidebar">
+      <div className="sidebar-container">
+        <div className="upper-sidebar">
+          <RegisterButton />
+          <SignInButton />
+          <UnderSiteLinks />
+          <UnderSiteLinks />
+          <UnderSiteLinks />
+        </div>
+        <div className="under-sidebar">
+          <div className="app-intro-container">
+            <img className="uber-eats-batch" src="old UberEatsFiles/styles/Mainside/icons/UberEats-batch.svg" />
+            <p className="app-text">Die App hat noch mehr zu bieten.</p>
+          </div>
+          <div className="phone-buttons-container">
+            <a className="phone-button">
+              <img className="phone-logo" src="old UberEatsFiles/styles/Mainside/icons/apple-logo.png" />
+              iPhone
+            </a>
+            <a className="phone-button">
+              <img className="phone-logo" src="old UberEatsFiles/styles/Mainside/icons/android-logo.png" />
+              Android
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
   )
 }
 
