@@ -22,7 +22,29 @@ export function HomeHeader() {
 }
 
 export function Delivery() {
-  return <InputDeliveryAddress />
+  return (
+    <div className="middlepart-with-background middlepart-with-background-js">
+      <div className="find-eat-container">
+        <h1 className="find-eat-headline">Dein Lieblingsessen an deine Tür geliefert</h1>
+        <div className="find-eat-input-container">
+          <InputDeliveryAddress />
+          <select className="input-delivery-time">
+              <option className="input-delivery-time-now">Jetzt liefern</option>
+              <option className="input-delivery-time-later">Für später planen</option>
+            </select>
+            <button>Essen finden</button>
+
+        </div>
+        <p>
+            <span>
+              <a>
+                Anmelden
+              </a>
+            </span> 
+            für deine zuletzt genutzten Adressen</p>
+      </div>
+    </div>
+  ) 
 }
 
 export function PictureOptions() {

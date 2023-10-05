@@ -8,7 +8,6 @@ export function InputDeliveryAddress () {
         "
         placeholder="Lieferadresse eingeben" 
       />
-  
     </>
   ) 
 }
