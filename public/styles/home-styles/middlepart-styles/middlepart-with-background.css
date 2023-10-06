@@ -29,3 +29,13 @@
       background-repeat: no-repeat;
       background-position: 10px;
     }
+
+    
+    .find-eat-button {
+      margin-left: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(64, 29, 29);
+      padding: 15px 15px;
+      color: white;
+    }

@@ -32,16 +32,19 @@ export function Delivery() {
               <option className="input-delivery-time-now">Jetzt liefern</option>
               <option className="input-delivery-time-later">Für später planen</option>
             </select>
-            <button>Essen finden</button>
+            <button className="find-eat-button">Essen finden</button>
 
         </div>
         <p>
-            <span>
-              <a>
-                Anmelden
-              </a>
-            </span> 
-            für deine zuletzt genutzten Adressen</p>
+          <span>
+            <a>
+              <u>
+                Anmelden 
+              </u>
+              &nbsp;
+            </a>
+          </span> 
+          für deine zuletzt genutzten Adressen</p>
       </div>
     </div>
   ) 
