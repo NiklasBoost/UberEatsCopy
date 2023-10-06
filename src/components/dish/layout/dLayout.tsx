@@ -46,10 +46,10 @@ export function DishHeader() {
 
 export function Categories() {
   return (
-    <>
+    <div className="categorys-container">
       <Category />
 
-    </>
+    </div>
   )
 }
 
