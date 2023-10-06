@@ -3,7 +3,7 @@ export function Logo() {
     <a href="">
       <img 
         className="uber-eats-text-picture" 
-        src="old UberEatsFiles/styles/Mainside/icons/Uber-eats-text.png" 
+        src="public/icons/Uber-eats-text.png" 
         alt="Uber Eats Logo"
       />
     </a> 

@@ -12,8 +12,8 @@ export function Footer() {
             <Logo />
           </div>
           <div className="stores-container">
-            <img className="stores-img" src="old UberEatsFiles/styles/Mainside/icons/appstore.svg" />
-            <img className="stores-img" src="old UberEatsFiles/styles/Mainside/icons/google-play-store.png" />
+            <img className="stores-img" src="public/icons/appstore.svg" />
+            <img className="stores-img" src="public/icons/google-play-store.png" />
           </div>
         </div>
         <div className="links-container">
@@ -34,9 +34,9 @@ export function Footer() {
       <div className="lower-container">
         <div className="first-row">
           <div className="first-row-icon-links">
-            <img className="footer-icon" src="old UberEatsFiles/styles/Mainside/icons/facebook.png" />
-            <img className="footer-icon" src="old UberEatsFiles/styles/Mainside/icons/twitter.png" />
-            <img className="footer-icon" src="old UberEatsFiles/styles/Mainside/icons/instagram.png" />
+            <img className="footer-icon" src="public/icons/facebook.png" />
+            <img className="footer-icon" src="public/icons/twitter.png" />
+            <img className="footer-icon" src="public/icons/instagram.png" />
           </div>
           <div className="first-row-text-links">
             <a className="first-row-text-link">Impressum</a>
@@ -76,16 +76,16 @@ export function Sidebar() {
         </div>
         <div className="under-sidebar">
           <div className="app-intro-container">
-            <img className="uber-eats-batch" src="old UberEatsFiles/styles/Mainside/icons/UberEats-batch.svg" />
+            <img className="uber-eats-batch" src="public/icons/UberEats-batch.svg" />
             <p className="app-text">Die App hat noch mehr zu bieten.</p>
           </div>
           <div className="phone-buttons-container">
             <a className="phone-button">
-              <img className="phone-logo" src="old UberEatsFiles/styles/Mainside/icons/apple-logo.png" />
+              <img className="phone-logo" src="public/icons/apple-logo.png" />
               iPhone
             </a>
             <a className="phone-button">
-              <img className="phone-logo" src="old UberEatsFiles/styles/Mainside/icons/android-logo.png" />
+              <img className="phone-logo" src="public/icons/android-logo.png" />
               Android
             </a>
           </div>

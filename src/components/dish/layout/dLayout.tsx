@@ -25,7 +25,7 @@ export function DishHeader() {
           <a></a>
         </div>
         <div className="input-header-container">
-            <img className="magnifier-img" src="old UberEatsFiles/styles/icons/magnifier.png" />
+            <img className="magnifier-img" src="public/icons/magnifier.png" />
             <input className="input-header" placeholder="Essen, Lebensmittel, Getränke usw." />
         </div>
       </div>

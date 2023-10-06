@@ -5,7 +5,7 @@ export function SignInButton() {
     <>
       <button className="sign-in-button">
         <div className="sign-in-button-div">
-          <img className="user-img" src="old UberEatsFiles/styles/Mainside/icons/User.png" />
+          <img className="user-img" src="public/icons/User.png" />
           <p className="sign-in-button-text">Anmelden</p>
         </div>
       </button>
