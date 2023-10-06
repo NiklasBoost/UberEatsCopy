@@ -55,10 +55,12 @@ export function Categories() {
 
 export function Slideshow() {
   return (
-    <>
-      <SlideshowElement />
-      <SlideshowElement />
-      <SlideshowElement />  
-    </>
+    <div className="slideshow">
+      <div className="slideshow-list">
+        <SlideshowElement />
+        <SlideshowElement />
+        <SlideshowElement />  
+      </div>
+    </div>
   )
 }
