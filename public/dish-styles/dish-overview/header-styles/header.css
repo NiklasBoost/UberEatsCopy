@@ -1,0 +1,27 @@
+.header-left {
+  /* background-color: gold; */
+  
+  margin-left: 35px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.header-middle {
+  flex: 1;
+  /* background-color: green; */
+  display: flex;
+  margin-right: 50px;
+}
+
+
+
+.header-right {
+  width: 430px;
+  display: flex;
+  flex-direction: row;
+  /* background-color: orange; */
+}
+

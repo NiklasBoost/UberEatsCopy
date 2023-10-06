@@ -1,0 +1,49 @@
+.slideshow-list {
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: lightcoral;
+  height: 100%;
+  display: flex;
+  
+}
+
+  .slideshow-listelement-container {
+    flex: 1;
+    background-color: lightblue;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+    .slideshow-listelement {
+      background-color: lightgray;
+      width: 90%;
+      aspect-ratio: 4 / 1.9 ;
+      min-width: 300px;
+      border-radius: 13px;
+      position: relative;
+    } 
+
+      .headline {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 15px;
+      }
+
+      .under-headline {
+        margin-left: 10px;
+        margin-top: 6px;
+        font-size: 13px;
+      }
+
+      .slideshow-button {
+        position: absolute;
+        left: 10px;
+        bottom: 13px;
+        border: none;
+        border-radius: 13px;
+        padding: 5px 8px;
+      }
+

@@ -1,0 +1,28 @@
+.filter {
+  background-color: lightcyan;
+  margin-left: 41px;
+  width: 300px;
+  height: 700px;
+}
+
+.sort-dropdown-container {
+  display: flex;
+}
+
+.dropdown-text {
+  font-size: 18px;
+  margin-right: 80px;
+}
+
+.dropdown-svg {
+
+}
+
+.sort-dropdown-values {
+  display: block;
+}
+
+.meals {
+  background-color: lightgreen;
+  flex: 1;
+}

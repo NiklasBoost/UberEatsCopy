@@ -1,0 +1,28 @@
+/* .location {
+  background-color: grey;
+  width: 150px;
+  margin-right: 70px;
+} */
+
+.input-header-container {
+  background-color:#eeeeee;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding: 11px 13px;
+  border-radius: 20px;
+}
+
+  .magnifier-img {
+    width: 20px;
+    background-color:#eeeeee;
+  }
+
+  .input-header {
+    flex: 1;
+    font-style: inherit;
+    font-size: 17px;
+    border: none;
+    background-color:#eeeeee;
+    margin-left: 12px;
+  }

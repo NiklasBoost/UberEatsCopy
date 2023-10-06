@@ -1,0 +1,41 @@
+.header-right-register,
+.header-right-sign-in,
+.header-right-shopping-cart {
+  font-size: 15px;
+  border: none;
+  padding: 9px 10px;
+  border-radius: 16px;
+  margin-left: 12px;
+}
+
+.header-right-shopping-cart {
+  background-color: #000000;
+  margin-right: 15px;
+}
+
+  .header-right-sign-in {
+    border-radius: 18px;
+  }
+
+    .sign-in-container,
+    .shopping-cart-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+      .sign-in-text,
+      .shopping-cart-text {
+        margin: 0;
+      }
+
+        .shopping-cart-text {
+          color: white;
+        }
+
+      .sign-in-icon,
+      .shopping-cart-icon {
+        width: 15px;
+        height: 16px;
+        margin-right: 5px;
+      }

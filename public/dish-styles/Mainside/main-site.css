@@ -1,0 +1,48 @@
+body {
+  margin-top: 96px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(252, 201, 14);
+  height: 96px;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.middlepart-with-background {
+  display: flex;
+  align-items: center;
+  background-color: rgb(252,201,14);
+  height: 827px;
+  
+}
+
+.middlepart-with-3-pictures{
+  margin-top: 80px;
+  margin-left: 40px;
+  margin-right: 15px;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: space-between;
+  
+  /* background-color: lightcoral; */
+}
+
+.middlepart-with-countrys {
+  margin-left: 40px;
+  margin-right: 50px;
+  margin-bottom: 150px;
+  /* background-color: lightgreen; */
+}
+
+.footer {
+  height: 523px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: lightskyblue; */
+}

@@ -1,0 +1,40 @@
+.burger-menu {
+  margin-right: 35px;
+}
+
+.uber-eats-logo {
+  margin-right: 40px;
+}
+
+.deliver-collection-container {
+  position: relative;
+}
+
+.white-choose-field {
+  position: absolute;
+  left: 6px;
+  top: 5px;
+  background-color: white;
+  width: 85px;
+  height: 36px;
+  border-radius: 25px;
+}
+
+.deliver-collection {
+  display: flex;
+  flex-direction: row;
+  background-color: #eeeeee;
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+  .delivery {
+    margin-right: 30px;
+    z-index: 2;
+    
+  }
+
+  .collection {
+    z-index: 2;
+  }
