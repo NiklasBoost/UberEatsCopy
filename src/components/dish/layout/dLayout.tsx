@@ -4,8 +4,8 @@ import { SlideshowElement, Category } from "../elements/dElements";
 
 export function DishHeader() {
   return (
-    <div className="header">
-      <div className="header-left">
+    <div className="dish-header">
+      <div className="d-header-left">
         <HamburgerMenu />
         <Logo />
         <div className="deliver-collection-container">
@@ -20,7 +20,7 @@ export function DishHeader() {
           </div>
         </div>
       </div>
-      <div className="header-middle">
+      <div className="d-header-middle">
         <div className="location">
           <a></a>
         </div>
@@ -29,10 +29,10 @@ export function DishHeader() {
             <input className="input-header" placeholder="Essen, Lebensmittel, Getränke usw." />
         </div>
       </div>
-      <div className="header-right">
+      <div className="d-header-right">
         <button className="header-right-shopping-cart">
           <div className="shopping-cart-container">
-            <img className="shopping-cart-icon" src="old UberEatsFiles/styles/icons/shopping-cart-white.png" />
+            <img className="shopping-cart-icon" src="public/icons/shopping-cart-white.png" />
             <p className="shopping-cart-text">Warenkorb &#8226; 0</p>
           </div>  
         </button>

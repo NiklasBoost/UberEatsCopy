@@ -1,5 +1,5 @@
 
-.header-left {
+.h-header-left {
   /* background-color: lightblue; */
   margin-left: 35px;
   
@@ -19,7 +19,7 @@
     /* justify-content: center; */
   }
 
-.header-middle {
+.h-header-middle {
   display: none;
   align-items: center;
 }
@@ -28,7 +28,7 @@
     background-color: rgb(230, 230, 230);
   }
 
-.header-right {
+.h-header-right {
   /* background-color: lightcoral; */
   margin-right: 35px;
 

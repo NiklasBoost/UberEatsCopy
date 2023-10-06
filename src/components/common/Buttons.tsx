@@ -10,7 +10,7 @@ export function SignInButton() {
         </div>
       </button>
 
-      <button className="login-button">Anmelden</button>
+      {/* <button className="login-button">Anmelden</button> */}
     </>
 
   )
@@ -22,10 +22,10 @@ export function RegisterButton() {
     <button 
       className="
         sign-up-button
-        register-button
-      ">
+        ">
       Registrieren
     </button>
   )
 }
 
+// register-button

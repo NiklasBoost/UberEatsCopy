@@ -5,15 +5,15 @@ import { PictureElementGroup } from "../elements/group";
 
 export function HomeHeader() {
   return (
-    <div className="header">
-      <div className="header-left">
+    <div className="h-header">
+      <div className="h-header-left">
         <HamburgerMenu />
         <Logo />
       </div>
-      <div className="header-middle">
+      <div className="h-header-middle">
         <InputDeliveryAddress />
       </div>
-      <div className="header-right">
+      <div className="h-header-right">
         <SignInButton />
         <RegisterButton />
       </div>
