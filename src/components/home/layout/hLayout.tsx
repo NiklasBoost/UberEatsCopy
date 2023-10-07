@@ -61,15 +61,28 @@ export function PictureOptions() {
   const linkTextAddRestraurant = 'Füge dein Restaurant hinzu';
   const linkTextCourierRegister = 'Registriere dich als Kurier';
 
+  const maEatHL = 'Deinen Mitarbeitern Essen bestellen';
+  const restaurantDeliveryHL = 'Ein Lieferservice für dein Restaurant';
+  const deliveryUberEatsHL = 'Liefere über Uber Eats';
+  const imgSourceleft = 'public/pictures/click_on_Laptop.webp';
+  const imgSourceMiddle = 'public/pictures/Pan.webp';
+  const imgSourceRight = 'public/pictures/rider.webp';
+
   return (
     <div className="middlepart-with-3-pictures">
       <PictureElementGroup 
+        headLine={maEatHL}
+        image={imgSourceleft}
         linkText={linkTextBusinessAccount}
       />
       <PictureElementGroup 
+        headLine={restaurantDeliveryHL}
+        image={imgSourceMiddle}
         linkText={linkTextAddRestraurant}
       />
       <PictureElementGroup 
+        headLine={deliveryUberEatsHL}
+        image={imgSourceRight}
         linkText={linkTextCourierRegister}
       />
     </div>
