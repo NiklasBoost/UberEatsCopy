@@ -57,11 +57,21 @@ export function Delivery() {
 }
 
 export function PictureOptions() {
+  const linkTextBusinessAccount = 'Ein Geschäftskonto anlegen'; 
+  const linkTextAddRestraurant = 'Füge dein Restaurant hinzu';
+  const linkTextCourierRegister = 'Registriere dich als Kurier';
+
   return (
     <div className="middlepart-with-3-pictures">
-      <PictureElementGroup />
-      <PictureElementGroup />
-      <PictureElementGroup />
+      <PictureElementGroup 
+        linkText={linkTextBusinessAccount}
+      />
+      <PictureElementGroup 
+        linkText={linkTextAddRestraurant}
+      />
+      <PictureElementGroup 
+        linkText={linkTextCourierRegister}
+      />
     </div>
   )
 }

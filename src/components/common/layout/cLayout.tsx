@@ -66,6 +66,11 @@ export function Footer() {
 export function Sidebar() {
   const signIn = 'sidebar';
   const signUp = 'register-button';
+  const linkClass = 'sidebar-link';
+  const linkTextBusinessAccount = 'Ein Geschäftskonto anlegen'; 
+  const linkTextAddRestraurant = 'Füge dein Restaurant hinzu';
+  const linkTextCourierRegister = 'Registriere dich als Kurier';
+
   return (
     <div className="sidebar">
       <div className="sidebar-container">
@@ -76,9 +81,18 @@ export function Sidebar() {
           <SignInButton 
             signIn={signIn}
           />
-          <UnderSiteLinks />
-          <UnderSiteLinks />
-          <UnderSiteLinks />
+          <UnderSiteLinks 
+            linkClass={linkClass}
+            linkText={linkTextBusinessAccount}
+          />
+          <UnderSiteLinks 
+            linkClass={linkClass}
+            linkText={linkTextAddRestraurant}
+          />
+          <UnderSiteLinks 
+            linkClass={linkClass}
+            linkText={linkTextCourierRegister}
+          />
         </div>
         <div className="under-sidebar">
           <div className="app-intro-container">
