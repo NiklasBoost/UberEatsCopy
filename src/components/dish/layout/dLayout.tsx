@@ -45,10 +45,79 @@ export function DishHeader() {
 }
 
 export function Categories() {
+  const img = [
+    '/public/img/alcohol.png',
+    '/public/img/deals.png',
+    '/public/img/burger.png',
+    '/public/img/chinese.png',
+    '/public/img/sandwich.png',
+    '/public/img/thai.png',
+    '/public/img/sushi.png',
+    '/public/img/dessert.png',
+    '/public/img/asian.png',
+    '/public/img/american.png',
+    '/public/img/top_eats.png'
+  ];
+  const text = [
+    'Alkohol',
+    'Angebote',
+    'Burger',
+    'Chinesisch',
+    'Sandwich',
+    'Thailändisch',
+    'Sushi',
+    'Dessert',
+    'Asiatisch',
+    'Amerikanisch',
+    'Bestes Essen'
+  ];
   return (
     <div className="categorys-container">
-      <Category />
-
+      <Category 
+        categoryImg={img[0]}
+        categoryText={text[0]}
+      />
+       <Category 
+        categoryImg={img[1]}
+        categoryText={text[1]}
+      />
+      <Category 
+        categoryImg={img[2]}
+        categoryText={text[2]}
+      />
+       <Category 
+        categoryImg={img[3]}
+        categoryText={text[3]}
+      />
+      <Category 
+        categoryImg={img[4]}
+        categoryText={text[4]}
+      />
+       <Category 
+        categoryImg={img[5]}
+        categoryText={text[5]}
+      />
+      <Category 
+        categoryImg={img[6]}
+        categoryText={text[6]}
+      />
+       <Category 
+        categoryImg={img[7]}
+        categoryText={text[7]}
+      />
+      <Category 
+        categoryImg={img[8]}
+        categoryText={text[8]}
+      />
+      <Category 
+        categoryImg={img[9]}
+        categoryText={text[9]}
+      />
+      <Category 
+        categoryImg={img[10]}
+        categoryText={text[10]}
+      
+      />
     </div>
   )
 }

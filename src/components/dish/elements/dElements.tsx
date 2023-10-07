@@ -1,9 +1,11 @@
-export function Category() {
+import { CategoryProps } from "../../../types/dish/elements/dElementsTypes"
+
+
+export function Category({ categoryImg, categoryText }: CategoryProps) {
   return (
     <div className="category-container">
-      <img className="category-pictures" src="public/img/deals.png" /> 
-      {/* The right Pic must always insert here */}
-      <p className="category-text">Aktionen</p> {/* The correct text must always be inserted here */}
+      <img className="category-pictures" src={categoryImg} /> 
+      <p className="category-text">{categoryText}</p>
     </div> 
   )
 }
