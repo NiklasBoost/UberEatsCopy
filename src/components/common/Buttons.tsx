@@ -19,15 +19,12 @@ export function SignInButton({ signIn }: {signIn: string} ) {
 }
 
 //Je nach Komponentenverwendung, darf halt nur eine der beiden Klassen verwendet oder übergeben werden. Wie ich das genau anstelle, steht ja nicht nur bei dieser Komponente hier offen
-export function RegisterButton() {
+export function RegisterButton({ signUp }: {signUp: string}) {
   return (
     <button 
-      className="
-        sign-up-button
-        ">
+      className={signUp}>
       Registrieren
     </button>
   )
 }
 
-// register-button

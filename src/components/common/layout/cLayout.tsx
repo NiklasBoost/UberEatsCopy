@@ -65,11 +65,14 @@ export function Footer() {
 
 export function Sidebar() {
   const signIn = 'sidebar';
+  const signUp = 'register-button';
   return (
     <div className="sidebar">
       <div className="sidebar-container">
         <div className="upper-sidebar">
-          <RegisterButton />
+          <RegisterButton 
+            signUp={signUp}
+          />
           <SignInButton 
             signIn={signIn}
           />

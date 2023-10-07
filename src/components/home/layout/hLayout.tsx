@@ -5,6 +5,7 @@ import { PictureElementGroup } from "../elements/group";
 
 export function HomeHeader() {
   const signIn = 'homeHeader';
+  const signUp= 'sign-up-button';
   return (
     <div className="h-header">
       <div className="h-header-left">
@@ -18,7 +19,9 @@ export function HomeHeader() {
         <SignInButton 
           signIn={signIn}  
         />
-        <RegisterButton />
+        <RegisterButton 
+          signUp={signUp}
+        />
       </div>
     </div>
   );
