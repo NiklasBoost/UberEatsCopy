@@ -1,18 +1,40 @@
+import { useEffect, useState } from "react";
 import { HamburgerMenu, Logo } from "../../common/Pics";
 import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { InputDeliveryAddress } from "../../common/Inputs";
 import { PictureElementGroup } from "../elements/group";
+import checkScrollLevel from "../scrollCheck";
 
-export function HomeHeader() {
+
+export function HomeHeader({ scrollingState }: {scrollingState: boolean}) {
   const signIn = 'homeHeader';
   const signUp= 'sign-up-button';
+  const [headerStyle, setHeaderStyle] = useState({});
+  const [headerMiddleStyle, setHeaderMiddleStyle] = useState({});
+
+  useEffect(() => {
+    console.log(scrollingState)
+    checkScrollLevel(
+      10, 
+      () => setHeaderStyle({backgroundColor: 'white'}), 
+      () => setHeaderStyle({backgroundColor: 'rgb(252,201,14)'})
+    );
+      
+    checkScrollLevel(
+      441, 
+      () => setHeaderMiddleStyle({display: 'flex'}), 
+      () => setHeaderMiddleStyle({display: 'none'})
+    );
+  }, [scrollingState])
+
+
   return (
-    <div className="h-header">
+    <div style={headerStyle} className="h-header">
       <div className="h-header-left">
         <HamburgerMenu />
         <Logo />
       </div>
-      <div className="h-header-middle">
+      <div style={headerMiddleStyle} className="h-header-middle">
         <InputDeliveryAddress />
       </div>
       <div className="h-header-right">
@@ -26,6 +48,7 @@ export function HomeHeader() {
     </div>
   );
 }
+
 
 export function Delivery() {
   return (
