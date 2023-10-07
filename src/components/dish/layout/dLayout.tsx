@@ -54,6 +54,7 @@ export function Categories() {
   const img = [
     '/public/img/alcohol.png',
     '/public/img/deals.png',
+    '/public/img/top_eats.png',
     '/public/img/burger.png',
     '/public/img/chinese.png',
     '/public/img/sandwich.png',
@@ -62,11 +63,14 @@ export function Categories() {
     '/public/img/dessert.png',
     '/public/img/asian.png',
     '/public/img/american.png',
-    '/public/img/top_eats.png'
+    '/public/img/convenience.png',
+    '/public/img/pet_supplies.png',
+    '/public/img/healthy.png'
   ];
   const text = [
     'Alkohol',
     'Angebote',
+    'Bestes Essen',
     'Burger',
     'Chinesisch',
     'Sandwich',
@@ -75,7 +79,9 @@ export function Categories() {
     'Dessert',
     'Asiatisch',
     'Amerikanisch',
-    'Bestes Essen'
+    'Allgemeines Zeug',
+    'Tierversorgung',
+    'Gesundes'
   ];
   return (
     <div className="categorys-container">
@@ -122,7 +128,18 @@ export function Categories() {
       <Category 
         categoryImg={img[10]}
         categoryText={text[10]}
-      
+      />
+      <Category 
+        categoryImg={img[11]}
+        categoryText={text[11]}
+      />
+      <Category 
+        categoryImg={img[12]}
+        categoryText={text[12]}
+      />
+      <Category 
+        categoryImg={img[13]}
+        categoryText={text[13]}
       />
     </div>
   )
