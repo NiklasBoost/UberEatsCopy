@@ -9,6 +9,15 @@ export function SignInButton({ signIn }: {signIn: string} ) {
         </div>
       </button>
     );
+  } else if (signIn === 'dishHeader') {
+    return (
+      <button className="header-right-sign-in">
+        <div className="sign-in-container">
+          <img className="user-img" src="public/icons/User.png" />
+          <p className="sign-in-text">Anmelden</p>
+        </div>
+      </button>
+    );
   } else if (signIn === 'sidebar') {
     return (
       <button className="login-button">Anmelden</button> 
@@ -18,7 +27,7 @@ export function SignInButton({ signIn }: {signIn: string} ) {
   }  
 }
 
-//Je nach Komponentenverwendung, darf halt nur eine der beiden Klassen verwendet oder übergeben werden. Wie ich das genau anstelle, steht ja nicht nur bei dieser Komponente hier offen
+
 export function RegisterButton({ signUp }: {signUp: string}) {
   return (
     <button 

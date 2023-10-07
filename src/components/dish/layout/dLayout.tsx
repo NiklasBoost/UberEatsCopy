@@ -3,6 +3,8 @@ import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { SlideshowElement, Category } from "../elements/dElements";
 
 export function DishHeader() {
+  const signIn = 'dishHeader';
+  const signUp = 'header-right-register'
   return (
     <div className="dish-header">
       <div className="d-header-left">
@@ -36,8 +38,12 @@ export function DishHeader() {
             <p className="shopping-cart-text">Warenkorb &#8226; 0</p>
           </div>  
         </button>
-        <SignInButton />
-        <RegisterButton />
+        <SignInButton 
+          signIn={signIn}
+        />
+        <RegisterButton 
+          signUp={signUp}
+        />
       </div>
     </div>
   
