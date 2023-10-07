@@ -67,9 +67,11 @@ export function Sidebar() {
   const signIn = 'sidebar';
   const signUp = 'register-button';
   const linkClass = 'sidebar-link';
-  const linkTextBusinessAccount = 'Ein Geschäftskonto anlegen'; 
-  const linkTextAddRestraurant = 'Füge dein Restaurant hinzu';
-  const linkTextCourierRegister = 'Registriere dich als Kurier';
+  const linkText = [
+    'Ein Geschäftskonto anlegen',
+    'Füge dein Restaurant hinzu',
+    'Registriere dich als Kurier'
+  ]
 
   return (
     <div className="sidebar">
@@ -83,15 +85,15 @@ export function Sidebar() {
           />
           <UnderSiteLinks 
             linkClass={linkClass}
-            linkText={linkTextBusinessAccount}
+            linkText={linkText[0]}
           />
           <UnderSiteLinks 
             linkClass={linkClass}
-            linkText={linkTextAddRestraurant}
+            linkText={linkText[1]}
           />
           <UnderSiteLinks 
             linkClass={linkClass}
-            linkText={linkTextCourierRegister}
+            linkText={linkText[2]}
           />
         </div>
         <div className="under-sidebar">
