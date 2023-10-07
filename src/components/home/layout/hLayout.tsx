@@ -4,6 +4,7 @@ import { InputDeliveryAddress } from "../../common/Inputs";
 import { PictureElementGroup } from "../elements/group";
 
 export function HomeHeader() {
+  const signIn = 'homeHeader';
   return (
     <div className="h-header">
       <div className="h-header-left">
@@ -14,7 +15,9 @@ export function HomeHeader() {
         <InputDeliveryAddress />
       </div>
       <div className="h-header-right">
-        <SignInButton />
+        <SignInButton 
+          signIn={signIn}  
+        />
         <RegisterButton />
       </div>
     </div>

@@ -64,12 +64,15 @@ export function Footer() {
 }
 
 export function Sidebar() {
+  const signIn = 'sidebar';
   return (
     <div className="sidebar">
       <div className="sidebar-container">
         <div className="upper-sidebar">
           <RegisterButton />
-          <SignInButton />
+          <SignInButton 
+            signIn={signIn}
+          />
           <UnderSiteLinks />
           <UnderSiteLinks />
           <UnderSiteLinks />
