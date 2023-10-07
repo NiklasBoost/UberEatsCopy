@@ -9,6 +9,7 @@ import checkScrollLevel from "../scrollCheck";
 export function HomeHeader({ scrollingState }: {scrollingState: boolean}) {
   const signIn = 'homeHeader';
   const signUp= 'sign-up-button';
+  const inputClass = 'input-delivery-address header-input-delivery-address';
   const [headerStyle, setHeaderStyle] = useState({});
   const [headerMiddleStyle, setHeaderMiddleStyle] = useState({});
 
@@ -35,7 +36,9 @@ export function HomeHeader({ scrollingState }: {scrollingState: boolean}) {
         <Logo />
       </div>
       <div style={headerMiddleStyle} className="h-header-middle">
-        <InputDeliveryAddress />
+        <InputDeliveryAddress
+          inputClass={inputClass}
+        />
       </div>
       <div className="h-header-right">
         <SignInButton 
@@ -51,12 +54,15 @@ export function HomeHeader({ scrollingState }: {scrollingState: boolean}) {
 
 
 export function Delivery() {
+  const inputClass = 'input-delivery-address';
   return (
     <div className="middlepart-with-background middlepart-with-background-js">
       <div className="find-eat-container">
         <h1 className="find-eat-headline">Dein Lieblingsessen an deine Tür geliefert</h1>
         <div className="find-eat-input-container">
-          <InputDeliveryAddress />
+          <InputDeliveryAddress
+            inputClass={inputClass}
+          />
           <select className="input-delivery-time">
               <option className="input-delivery-time-now">Jetzt liefern</option>
               <option className="input-delivery-time-later">Für später planen</option>
