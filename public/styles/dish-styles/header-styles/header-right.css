@@ -11,6 +11,8 @@
 .header-right-shopping-cart {
   background-color: #000000;
   margin-right: 15px;
+  padding: 9px 14px;
+  border-radius: 18px;
 }
 
   .header-right-sign-in {
