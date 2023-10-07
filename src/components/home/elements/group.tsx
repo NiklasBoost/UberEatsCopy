@@ -2,7 +2,7 @@ import { UnderSiteLinks } from "./links"
 
 
 //source und picture headline müssen variable eingefügt werden können
-export function PictureElementGroup ( { linkText } ) {
+export function PictureElementGroup ( { linkText }: {linkText: string} ) {
   const linkClass = 'link-to-undersite';
   return (
     <div className="one-picture-block">
