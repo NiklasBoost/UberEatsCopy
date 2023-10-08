@@ -4,9 +4,10 @@ import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { InputDeliveryAddress } from "../../common/Inputs";
 import { PictureElementGroup } from "../elements/group";
 import checkScrollLevel from "../scrollCheck";
+import { HomeHeaderProps } from "../../../types/home/layout/hLayoutTypes";
 
 
-export function HomeHeader({ scrollingState }: {scrollingState: boolean}) {
+export function HomeHeader({ scrollingState, setSidebarState }: HomeHeaderProps) {
   const signIn = 'homeHeader';
   const signUp= 'sign-up-button';
   const inputClass = 'input-delivery-address header-input-delivery-address';
@@ -32,7 +33,9 @@ export function HomeHeader({ scrollingState }: {scrollingState: boolean}) {
   return (
     <div style={headerStyle} className="h-header">
       <div className="h-header-left">
-        <HamburgerMenu />
+        <HamburgerMenu 
+          setSidebarState={setSidebarState}
+        />
         <Logo />
       </div>
       <div style={headerMiddleStyle} className="h-header-middle">

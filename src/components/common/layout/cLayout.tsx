@@ -1,6 +1,7 @@
 import { SignInButton, RegisterButton } from "../Buttons";
 import { UnderSiteLinks } from "../../home/elements/links";
 import { Logo } from "../Pics";
+import { useState, useEffect } from "react";
 
 
 export function Footer() {
@@ -63,7 +64,7 @@ export function Footer() {
   )
 }
 
-export function Sidebar() {
+export function Sidebar({ sidebarState }: {sidebarState: boolean}) {
   const signIn = 'sidebar';
   const signUp = 'register-button';
   const linkClass = 'sidebar-link';
@@ -72,9 +73,20 @@ export function Sidebar() {
     'Füge dein Restaurant hinzu',
     'Registriere dich als Kurier'
   ]
+  const [sidebarStyle, setSidebarStyle] = useState({})
+
+  useEffect(() => {
+    if (sidebarState === true) {
+      setSidebarStyle({left: '0px'})
+      console.log(sidebarState)
+    } else {
+      setSidebarStyle({left: '-300px'})
+      console.log(sidebarState)
+    }
+  }, [sidebarState])
 
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={sidebarStyle}>
       <div className="sidebar-container">
         <div className="upper-sidebar">
           <RegisterButton 

@@ -1,11 +1,20 @@
 import { HomeHeader, Delivery, PictureOptions, Countries } from "./layout/hLayout";
 import { Footer, Sidebar } from "../common/layout/cLayout";
 import { useEffect, useState } from "react";
+import { HomeProps } from "../../types/home/HomeSiteTypes";
 
 
-function Home() {
-  const [scrolling, setScrolling] = useState<boolean>(false)
+function Home({ sidebarState, setSidebarState }: HomeProps) {
+  const [scrolling, setScrolling] = useState<boolean>(false);
+  const [overlayStyle, setOverlayStyle] = useState({});
+  
+  function changeState() {
+    if(sidebarState) {
+      setSidebarState(false);
+    }
+  }
 
+//scroller
   useEffect(() => {
     let isScrolling = false;
 
@@ -33,14 +42,26 @@ function Home() {
     }
   }, [])
 
+//overlaystyle
+  useEffect(() => {
+    if(sidebarState) {
+      setOverlayStyle({display: 'block'})
+    } else {
+      setOverlayStyle({display: 'none'})
+    }
+  }, [sidebarState])
+
 
   return (
-    <div className="main-site">
-      <div className="overlay"></div>
+    <div onClick={changeState} className="main-site">
+      <div style={overlayStyle} className="overlay"></div>
       <HomeHeader 
+        setSidebarState={setSidebarState}
         scrollingState={scrolling}
       />
-      <Sidebar />
+      <Sidebar 
+        sidebarState={sidebarState}
+      />
       <Delivery />
       <PictureOptions />
       <Countries />
