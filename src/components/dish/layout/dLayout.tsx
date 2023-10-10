@@ -2,13 +2,15 @@ import { HamburgerMenu, Logo } from "../../common/Pics";
 import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { SlideshowElement, Category } from "../elements/dElements";
 
-export function DishHeader() {
+export function DishHeader({ setSidebarState }: {setSidebarState: React.Dispatch<React.SetStateAction<boolean>>}) {
   const signIn = 'dishHeader';
   const signUp = 'header-right-register'
   return (
     <div className="dish-header">
       <div className="d-header-left">
-        <HamburgerMenu />
+        <HamburgerMenu
+          setSidebarState={setSidebarState}
+        />
         <Logo />
         <div className="deliver-collection-container">
           <div className="white-choose-field"></div>

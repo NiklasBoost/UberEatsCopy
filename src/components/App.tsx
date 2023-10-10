@@ -11,7 +11,10 @@ function App() {
           sidebarState={sidebarState}
           setSidebarState={setSidebarState}
         />} />
-        <Route path="/dish" element={<Dish />} />
+        <Route path="/dish" element={<Dish 
+          sidebarState={sidebarState}
+          setSidebarState={setSidebarState}
+        />} />
       </Routes>
   )
 }
