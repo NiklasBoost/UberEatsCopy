@@ -132,3 +132,5 @@ const restaurants = [
   //   newbie: false
   // }
 ];
+
+export default restaurants;

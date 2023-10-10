@@ -1,8 +1,9 @@
 import { HamburgerMenu, Logo } from "../../common/Pics";
 import { SignInButton, RegisterButton } from "../../common/Buttons";
-import { SlideshowElement, Category } from "../elements/dElements";
+import { SlideshowElement, Category, Restaurant } from "../elements/dElements";
 import { useEffect, useState } from "react";
 import categoryObjects from "../../../data/categories";
+import restaurants from "../../../data/restaurants";
 
 export function DishHeader({ setSidebarState }: {setSidebarState: React.Dispatch<React.SetStateAction<boolean>>}) {
   const signIn = 'dishHeader';
@@ -132,5 +133,16 @@ function Filter() {
 }
 
 function Restaurants() {
-  return   <div className="meals">choose meal (this have to be generating by js)</div>
+  return (
+    <div className="meals">
+      {restaurants.map((restaurant, index) => (
+        <Restaurant
+          restaurantImg={restaurants[index].restaurantImg}
+          name={restaurants[index].name}
+          ratingAverage={restaurants[index].rating.average}
+          deliveryFee={restaurants[index].deliveryFee}
+        />
+      ))}
+    </div>
+  );
 }

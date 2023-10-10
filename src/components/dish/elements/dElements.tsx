@@ -1,4 +1,4 @@
-import { CategoryProps } from "../../../types/dish/elements/dElementsTypes"
+import { CategoryProps, RestaurantProps } from "../../../types/dish/elements/dElementsTypes"
 
 
 export function Category({ categoryImg, categoryText }: CategoryProps) {
@@ -22,6 +22,26 @@ export function SlideshowElement() {
         <img />
       </a>
     </div>
+  )
+}
+
+export function Restaurant({ restaurantImg, name, ratingAverage, deliveryFee }: RestaurantProps) {
+
+  const deliveryFeeEUR = deliveryFee / 100;
+
+  return (
+    <>
+      <div>
+        <img src={restaurantImg}></img>
+      </div>
+      <div>
+        <h3>{name}</h3>
+        <div>{ratingAverage}</div>
+      </div>
+      <div>
+        <p>{deliveryFeeEUR} € Liefergebühr</p>  
+      </div>
+    </>
   )
 }
 
