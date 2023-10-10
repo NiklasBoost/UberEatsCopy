@@ -58,6 +58,18 @@ const categoryObjects = [
   {
     img: '/public/img/fastfood.png',
     text: 'Fast Food'
+  },
+  {
+    img: '/public/img/pizza.png',
+    text: 'Pizza'
+  },
+  {
+    img: '/public/img/korean.png',
+    text: 'Koreanisch'
+  },
+  {
+    img: '/public/img/indian.png',
+    text: 'Indisch'
   }
 
 ];
