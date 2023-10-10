@@ -154,3 +154,40 @@ export function Slideshow() {
     </div>
   )
 }
+
+export function MealChoose() {
+  return (
+    <div className="meal-choose">
+      <Filter />
+      <Restaurants />
+    </div>
+  )
+}
+
+function Filter() {
+  return (
+    <div className="filter">
+      <div className="sort-dropdown-container">
+        <div className="dropdown-text">Sortieren</div>
+        <svg className="dropdown-svg dropdown-svg-js" width="25px" height="16px" fill="none" viewBox="0 0 48 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z" fill="currentColor"></path>
+        </svg>
+      </div>
+      <div className="sort-dropdown-values">
+        <div>Für dich ausgesucht (Standard)</div>
+        <div>Am beliebtesten</div>
+        <div>Bewertung</div>
+        <div>Lieferzeit</div>
+      </div>
+
+      <div>Von Uber Eats</div>
+      <div>Preisklasse</div>
+      <div>Max. Liefergebühr</div>
+      <div>Besondere Diätvorschriften</div>
+    </div>
+  )
+}
+
+function Restaurants() {
+  return   <div className="meals">choose meal (this have to be generating by js)</div>
+}

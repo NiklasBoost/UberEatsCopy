@@ -1,4 +1,4 @@
-import { DishHeader, Categories, Slideshow } from "./layout/dLayout";
+import { DishHeader, Categories, Slideshow, MealChoose } from "./layout/dLayout";
 import { Footer, Sidebar } from "../common/layout/cLayout";
 import { DishOverviewProps } from "../../types/dish/DishOverviewTypes";
 import { useState, useEffect } from "react";
@@ -31,6 +31,7 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
         />
         <Categories />
         <Slideshow />
+        <MealChoose />
         <Footer />
     </div>
   )
