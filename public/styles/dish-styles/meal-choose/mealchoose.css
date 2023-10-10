@@ -2,7 +2,7 @@
   background-color: lightcyan;
   margin-left: 41px;
   width: 300px;
-  height: 700px;
+  height: 100%;
 }
 
 .sort-dropdown-container {
@@ -14,15 +14,47 @@
   margin-right: 80px;
 }
 
-.dropdown-svg {
-
-}
-
 .sort-dropdown-values {
   display: block;
 }
 
-.meals {
-  background-color: lightgreen;
+.restaurants {
+  /* background-color: lightgreen; */
   flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 5px;
+  row-gap: 0px;
+}
+
+.restaurant-container {
+  background-color: aquamarine;
+  width: 302px;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.restaurant-name-rating-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurant-name {
+  margin: 0;
+}
+
+.restaurant-rating-average {
+  font-size: 15px;
+  background-color: rgba(128, 128, 128, 0.19);
+  padding: 6px 5px;
+  border-radius: 30px;
 }

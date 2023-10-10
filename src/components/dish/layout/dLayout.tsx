@@ -134,7 +134,7 @@ function Filter() {
 
 function Restaurants() {
   return (
-    <div className="meals">
+    <div className="restaurants">
       {restaurants.map((restaurant, index) => (
         <Restaurant
           restaurantImg={restaurants[index].restaurantImg}

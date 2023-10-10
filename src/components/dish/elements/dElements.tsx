@@ -27,21 +27,21 @@ export function SlideshowElement() {
 
 export function Restaurant({ restaurantImg, name, ratingAverage, deliveryFee }: RestaurantProps) {
 
-  const deliveryFeeEUR = deliveryFee / 100;
+  const deliveryFeeEUR = (deliveryFee / 100).toFixed(2);
 
   return (
-    <>
-      <div>
-        <img src={restaurantImg}></img>
+    <div className="restaurant-container"> 
+      <div className="restaurant-img-container">
+        <img className="restaurant-img" src={restaurantImg}></img>
       </div>
-      <div>
-        <h3>{name}</h3>
-        <div>{ratingAverage}</div>
+      <div className="restaurant-name-rating-container">
+        <h3 className="restaurant-name">{name}</h3>
+        <div className="restaurant-rating-average">{ratingAverage}</div>
       </div>
-      <div>
-        <p>{deliveryFeeEUR} € Liefergebühr</p>  
+      <div className="restaurant-delivery-fee-container">
+        <p className="restaurant-delivery-fee" >{deliveryFeeEUR} € Liefergebühr</p>  
       </div>
-    </>
+    </div>
   )
 }
 
