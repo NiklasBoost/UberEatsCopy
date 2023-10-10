@@ -1,41 +1,40 @@
-import { DishHeader, Categories, Slideshow, MealChoose } from "./layout/dLayout";
+import {
+  DishHeader,
+  Categories,
+  Slideshow,
+  MealChoose,
+} from "./layout/dLayout";
 import { Footer, Sidebar } from "../common/layout/cLayout";
 import { DishOverviewProps } from "../../types/dish/DishOverviewTypes";
 import { useState, useEffect } from "react";
 
-
 function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   const [overlayStyle, setOverlayStyle] = useState({});
   function changeState() {
-    if(sidebarState) {
+    if (sidebarState) {
       setSidebarState(false);
     }
   }
 
   useEffect(() => {
-    if(sidebarState) {
-      setOverlayStyle({display: 'block'})
+    if (sidebarState) {
+      setOverlayStyle({ display: "block" });
     } else {
-      setOverlayStyle({display: 'none'})
+      setOverlayStyle({ display: "none" });
     }
-  }, [sidebarState])
-  
+  }, [sidebarState]);
+
   return (
     <div onClick={changeState}>
       <div style={overlayStyle} className="overlay"></div>
-        <DishHeader 
-          setSidebarState={setSidebarState}
-        />
-        <Sidebar 
-          sidebarState={sidebarState}
-        />
-        <Categories />
-        <Slideshow />
-        <MealChoose />
-        <Footer />
+      <DishHeader setSidebarState={setSidebarState} />
+      <Sidebar sidebarState={sidebarState} />
+      <Categories />
+      <Slideshow />
+      <MealChoose />
+      <Footer />
     </div>
-  )
+  );
 }
-
 
 export default Dish;
