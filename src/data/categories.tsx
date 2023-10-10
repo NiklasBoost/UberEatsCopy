@@ -54,7 +54,12 @@ const categoryObjects = [
   {
     img: '/public/img/healthy.png',
     text: 'Gesundes',
+  }, 
+  {
+    img: '/public/img/fastfood.png',
+    text: 'Fast Food'
   }
+
 ];
 
 export default categoryObjects;
