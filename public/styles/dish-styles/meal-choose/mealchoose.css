@@ -1,8 +1,8 @@
 .filter {
   background-color: lightcyan;
   margin-left: 41px;
-  width: 300px;
-  height: 100%;
+  width: 450px;
+  
 }
 
 .sort-dropdown-container {
@@ -23,14 +23,26 @@
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 5px;
-  row-gap: 0px;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-right: 35px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1700px) {
+  .restaurants {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .restaurants {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .restaurant-container {
-  background-color: aquamarine;
-  width: 302px;
-  height: 185px;
+  /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
 }
@@ -38,6 +50,7 @@
 .restaurant-img {
   border-radius: 10px;
   width: 100%;
+  margin-bottom: 8px;
 }
 
 .restaurant-name-rating-container {
@@ -46,6 +59,8 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3px;
+  margin-left: 2px;
 }
 
 .restaurant-name {
@@ -53,8 +68,13 @@
 }
 
 .restaurant-rating-average {
-  font-size: 15px;
+  font-size: 13px;
   background-color: rgba(128, 128, 128, 0.19);
   padding: 6px 5px;
   border-radius: 30px;
+}
+
+.restaurant-delivery-fee {
+  font-size: 13px;
+  margin-left: 2px;
 }

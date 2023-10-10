@@ -36,10 +36,10 @@ export function Restaurant({ restaurantImg, name, ratingAverage, deliveryFee }: 
       </div>
       <div className="restaurant-name-rating-container">
         <h3 className="restaurant-name">{name}</h3>
-        <div className="restaurant-rating-average">{ratingAverage}</div>
+        {ratingAverage ? <div className="restaurant-rating-average">{ratingAverage}</div> : null}
       </div>
       <div className="restaurant-delivery-fee-container">
-        <p className="restaurant-delivery-fee" >{deliveryFeeEUR} € Liefergebühr</p>  
+        <p className="restaurant-delivery-fee" >{deliveryFeeEUR} € Liefergebühr &#8226; xy Lieferzeit</p>  
       </div>
     </div>
   )
