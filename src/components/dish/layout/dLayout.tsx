@@ -350,6 +350,7 @@ function Restaurants() {
     <div className="restaurants">
       {restaurants.map((restaurant, index) => (
         <Restaurant
+          key={index}
           restaurantImg={restaurants[index].restaurantImg}
           name={restaurants[index].name}
           ratingAverage={restaurants[index].rating.average}
