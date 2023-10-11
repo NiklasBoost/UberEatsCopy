@@ -11,12 +11,19 @@
 .deliveryfee-dropdown-container,
 .diet-dropdown-container {
   display: flex;
+  flex-direction: row;
+  /* background-color: beige; */
+  justify-content: space-between;
   margin-top: 30px;
+
 }
 
 .dropdown-text {
   font-size: 18px;
-  margin-right: 80px;
+}
+
+.dropdown-svg {
+  margin-right: 175px;
 }
 
 .sort-dropdown-values,
@@ -54,7 +61,7 @@
 
 .switch{
   margin-top: 9px;
-  margin-left: 13px;
+  margin-left: 60px;
   position: relative;
   width: 30px;
   height: 14px;
@@ -131,6 +138,10 @@ input:checked + .slider:before {
 .best-ones-img {
   height: 15px;
   margin-right: 2px;
+}
+
+.best-ones-img {
+  margin-right: 10px;
 }
 
 .restaurants {
