@@ -1,12 +1,17 @@
 .filter {
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
   margin-left: 41px;
   width: 450px;
   
 }
 
-.sort-dropdown-container {
+.sort-dropdown-container,
+.ubereats-dropdown-container,
+.prices-dropdown-container,
+.deliveryfee-dropdown-container,
+.diet-dropdown-container {
   display: flex;
+  margin-top: 30px;
 }
 
 .dropdown-text {
@@ -14,8 +19,61 @@
   margin-right: 80px;
 }
 
-.sort-dropdown-values {
-  display: block;
+.sort-dropdown-values,
+.ubereats-dropdown-values,
+.prices-dropdown-values,
+.deliveryfee-dropdown-values,
+.diet-dropdown-values {
+  margin-top: 15px;
+}
+
+.ubereats-dropdown-values {
+  display: flex;
+  flex-direction: row;
+}
+
+.sort-dropdown-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sort-dropdown {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  border-color: black;
+  background-color: lightgray;
+}
+
+.sort-dropdown:checked {
+  border-color: black;
+  background-color: black;
+}
+
+
+.prices-dropdown-values, 
+.diet-dropdown-values {
+  display: flex;
+  flex-direction: row;
+}
+
+.diet-button,
+.price-button {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  border: none;
+  margin-right: 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.diet-button-icon,
+.best-ones-img {
+  height: 15px;
+  margin-right: 2px;
 }
 
 .restaurants {
@@ -27,6 +85,7 @@
   row-gap: 40px;
   margin-right: 35px;
   margin-bottom: 50px;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 1700px) {
@@ -72,6 +131,7 @@
   background-color: rgba(128, 128, 128, 0.19);
   padding: 6px 5px;
   border-radius: 30px;
+  border: none;
 }
 
 .restaurant-delivery-fee {

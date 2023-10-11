@@ -133,16 +133,136 @@ function Filter() {
         </svg>
       </div>
       <div className="sort-dropdown-values">
-        <div>Für dich ausgesucht (Standard)</div>
-        <div>Am beliebtesten</div>
-        <div>Bewertung</div>
-        <div>Lieferzeit</div>
+        <label className="sort-dropdown-label">
+          <input className="sort-dropdown" type="radio" name="sortDropdown" value="forYou" /> 
+          <div>Für dich ausgesucht (Standard)</div>
+        </label>
+        <label className="sort-dropdown-label">
+          <input className="sort-dropdown" type="radio" name="sortDropdown" value="mostPopular" /> 
+          <div>Am beliebtesten</div>
+        </label>
+        <label className="sort-dropdown-label">
+          <input className="sort-dropdown" type="radio" name="sortDropdown" value="rating" /> 
+          <div>Bewertung</div>
+        </label>
+        <label className="sort-dropdown-label">
+          <input className="sort-dropdown" type="radio" name="sortDropdown" value="deliveryTime" />
+          <div>Lieferzeit</div> 
+        </label>      
       </div>
 
-      <div>Von Uber Eats</div>
-      <div>Preisklasse</div>
-      <div>Max. Liefergebühr</div>
-      <div>Besondere Diätvorschriften</div>
+      <div className="ubereats-dropdown-container">
+        <div className="dropdown-text">Von Uber Eats</div>
+        <svg
+          className="dropdown-svg dropdown-svg-js"
+          width="25px"
+          height="16px"
+          fill="none"
+          viewBox="0 0 48 20"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+      <div className="ubereats-dropdown-values">
+        <img className="best-ones-img" src="/public/icons/gold-medal.png" alt="best of the best" />
+        <div>Beste Gesamtleistung</div>
+        <label className="switch">
+          <input type="checkbox" />
+          <span className="slider round"></span>
+        </label>
+
+      </div>
+
+      <div className="prices-dropdown-container">
+        <div className="dropdown-text">Preisklasse</div>
+        <svg
+          className="dropdown-svg dropdown-svg-js"
+          width="25px"
+          height="16px"
+          fill="none"
+          viewBox="0 0 48 20"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+      <div className="prices-dropdown-values">
+        <button className="price-button">&#8364;</button>
+        <button className="price-button">&#8364;&#8364;</button>
+        <button className="price-button">&#8364;&#8364;&#8364;</button>
+        <button className="price-button">&#8364;&#8364;&#8364;&#8364;</button>
+      </div>
+      
+      <div className="deliveryfee-dropdown-container">
+        <div className="dropdown-text">Max. Liefergebühr</div>
+        <svg
+          className="dropdown-svg dropdown-svg-js"
+          width="25px"
+          height="16px"
+          fill="none"
+          viewBox="0 0 48 20"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+      <div className="deliveryfee-dropdown-values">
+
+      </div>
+
+      <div className="diet-dropdown-container">
+        <div className="dropdown-text">Besondere Diätvorschriften</div>
+        <svg
+          className="dropdown-svg dropdown-svg-js"
+          width="25px"
+          height="16px"
+          fill="none"
+          viewBox="0 0 48 20"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+          >
+          <path
+            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+      <div className="diet-dropdown-values">
+        
+        <button className="diet-button">
+          <img className="diet-button-icon" src="/public/icons/leaf.png" alt="Vegetarisch" />
+          <div>Vegetarisch</div>
+        </button>
+
+        <button className="diet-button">
+          <img className="diet-button-icon" src="/public/icons/heart.png" alt="Vegan"/>
+          <div>Vegan</div>
+        </button>
+        
+        <button className="diet-button">
+          <img className="diet-button-icon" src="/public/icons/wheat.png" alt="Glutenfrei" />
+          <div>Glutenfrei</div>
+        </button>
+
+      </div>
+      
     </div>
   );
 }
