@@ -29,5 +29,10 @@ button, a, svg, select {
   z-index: 5;
 }
 
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
 
 
