@@ -1,7 +1,7 @@
 import { HamburgerMenu, Logo } from "../../common/Pics";
 import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { SlideshowElement, Category, Restaurant } from "../elements/dElements";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import categoryObjects from "../../../data/categories";
 import restaurants from "../../../data/restaurants";
 
@@ -112,11 +112,59 @@ export function MealChoose() {
 }
 
 function Filter() {
+  const [sortFolded, setSortFolded] = useState(false);
+  const [uberEatsFolded, setUberEatsFolded] = useState(false);
+  const [pricesFolded, setPricesFolded] = useState(false);
+  const [dietFolded, setDietFolded] = useState(false);
+
+  const [sortStyle, setSortStyle] = useState({});
+  const [uberEatsStyle, setUberEatsStyle] = useState({});
+  const [pricesStyle, setPricesStyle] = useState({});
+  const [dietStyle, setDietStyle] = useState({});
+
+  function changeDropdownState(setState: Dispatch<SetStateAction<boolean>>) {
+    setState((prevState: boolean) => !prevState);
+  }
+
+  useEffect(() => {
+    if(sortFolded) {
+      setSortStyle({ display: 'none' });
+    } else {
+      setSortStyle({ display: 'block' });
+    }
+  }, [sortFolded])
+
+  useEffect(() => {
+    if(uberEatsFolded) {
+      setUberEatsStyle({ display: 'none' });
+    } else {
+      setUberEatsStyle({ display: 'flex' });
+    }
+  }, [uberEatsFolded])
+
+  useEffect(() => {
+    if(pricesFolded) {
+      setPricesStyle({ display: 'none' });
+    } else {
+      setPricesStyle({ display: 'flex' });
+    }
+  }, [pricesFolded])
+
+  useEffect(() => {
+    if(dietFolded) {
+      setDietStyle({ display: 'none' });
+    } else {
+      setDietStyle({ display: 'flex' });
+    }
+  }, [dietFolded])
+
+
   return (
     <div className="filter">
       <div className="sort-dropdown-container">
         <div className="dropdown-text">Sortieren</div>
         <svg
+          onClick={() => changeDropdownState(setSortFolded)}
           className="dropdown-svg dropdown-svg-js"
           width="25px"
           height="16px"
@@ -126,13 +174,20 @@ function Filter() {
           aria-hidden="true"
           focusable="false"
         >
-          <path
-            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
-            fill="currentColor"
-          ></path>
+          {sortFolded ? (
+            <path
+              d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+              fill="currentColor"
+            ></path>
+          ) : (
+            <path
+              d="M14 5.08398L24 12.084L34 5.08398V7.25044L24 14.2504L14 7.25044V5.08398Z"
+              fill="currentColor"
+            ></path>
+          )}
         </svg>
       </div>
-      <div className="sort-dropdown-values">
+      <div className="sort-dropdown-values" style={sortStyle}>
         <label className="sort-dropdown-label">
           <input className="sort-dropdown" type="radio" name="sortDropdown" value="forYou" /> 
           <div>Für dich ausgesucht (Standard)</div>
@@ -150,10 +205,10 @@ function Filter() {
           <div>Lieferzeit</div> 
         </label>      
       </div>
-
       <div className="ubereats-dropdown-container">
         <div className="dropdown-text">Von Uber Eats</div>
         <svg
+          onClick={() => changeDropdownState(setUberEatsFolded)}
           className="dropdown-svg dropdown-svg-js"
           width="25px"
           height="16px"
@@ -163,13 +218,20 @@ function Filter() {
           aria-hidden="true"
           focusable="false"
         >
-          <path
-            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
-            fill="currentColor"
-          ></path>
+          {uberEatsFolded ? (
+            <path
+              d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+              fill="currentColor"
+            ></path>
+          ) : (
+            <path
+              d="M14 5.08398L24 12.084L34 5.08398V7.25044L24 14.2504L14 7.25044V5.08398Z"
+              fill="currentColor"
+            ></path>
+          )}
         </svg>
       </div>
-      <div className="ubereats-dropdown-values">
+      <div className="ubereats-dropdown-values" style={uberEatsStyle}>
         <img className="best-ones-img" src="/public/icons/gold-medal.png" alt="best of the best" />
         <div>Beste Gesamtleistung</div>
         <label className="switch">
@@ -182,6 +244,7 @@ function Filter() {
       <div className="prices-dropdown-container">
         <div className="dropdown-text">Preisklasse</div>
         <svg
+          onClick={() => changeDropdownState(setPricesFolded)}
           className="dropdown-svg dropdown-svg-js"
           width="25px"
           height="16px"
@@ -191,20 +254,27 @@ function Filter() {
           aria-hidden="true"
           focusable="false"
         >
-          <path
-            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
-            fill="currentColor"
-          ></path>
+          {pricesFolded ? (
+            <path
+              d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+              fill="currentColor"
+            ></path>
+          ) : (
+            <path
+              d="M14 5.08398L24 12.084L34 5.08398V7.25044L24 14.2504L14 7.25044V5.08398Z"
+              fill="currentColor"
+            ></path>
+          )}
         </svg>
       </div>
-      <div className="prices-dropdown-values">
+      <div className="prices-dropdown-values" style={pricesStyle}>
         <button className="price-button">&#8364;</button>
         <button className="price-button">&#8364;&#8364;</button>
         <button className="price-button">&#8364;&#8364;&#8364;</button>
         <button className="price-button">&#8364;&#8364;&#8364;&#8364;</button>
       </div>
       
-      <div className="deliveryfee-dropdown-container">
+      {/* <div className="deliveryfee-dropdown-container">
         <div className="dropdown-text">Max. Liefergebühr</div>
         <svg
           className="dropdown-svg dropdown-svg-js"
@@ -224,11 +294,12 @@ function Filter() {
       </div>
       <div className="deliveryfee-dropdown-values">
 
-      </div>
+      </div> */}
 
       <div className="diet-dropdown-container">
         <div className="dropdown-text">Besondere Diätvorschriften</div>
         <svg
+          onClick={() => changeDropdownState(setDietFolded)}
           className="dropdown-svg dropdown-svg-js"
           width="25px"
           height="16px"
@@ -238,13 +309,20 @@ function Filter() {
           aria-hidden="true"
           focusable="false"
           >
-          <path
-            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
-            fill="currentColor"
-          ></path>
+          {dietFolded ? (
+            <path
+              d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+              fill="currentColor"
+            ></path>
+          ) : (
+            <path
+              d="M14 5.08398L24 12.084L34 5.08398V7.25044L24 14.2504L14 7.25044V5.08398Z"
+              fill="currentColor"
+            ></path>
+          )}
         </svg>
       </div>
-      <div className="diet-dropdown-values">
+      <div className="diet-dropdown-values" style={dietStyle}>
         
         <button className="diet-button">
           <img className="diet-button-icon" src="/public/icons/leaf.png" alt="Vegetarisch" />
