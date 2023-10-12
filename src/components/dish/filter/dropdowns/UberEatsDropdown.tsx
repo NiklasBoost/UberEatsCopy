@@ -1,4 +1,4 @@
-import { UberEatsDropdownProps } from "../../../../types/dish/layout/dLayoutTypes";
+import { UberEatsDropdownProps } from "../../../../types/dish/filter/dropdowns/UberEatsDropdownTypes";
 import { useState, useEffect } from "react";
 
 function UberEatsDropdown({ 

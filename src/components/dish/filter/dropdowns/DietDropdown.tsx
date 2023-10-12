@@ -1,4 +1,4 @@
-import { DietDropdownProps } from "../../../../types/dish/layout/dLayoutTypes";
+import { DietDropdownProps } from "../../../../types/dish/filter/dropdowns/DietDropdownTypes";
 import { useState, useEffect } from "react";
 
 function DietDropdown({ 

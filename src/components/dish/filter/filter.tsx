@@ -2,7 +2,7 @@ import SortDropdown from "./dropdowns/SortDropdown";
 import UberEatsDropdown from "./dropdowns/UberEatsDropdown";
 import PricesDropdown from "./dropdowns/PricesDropdown";
 import DietDropdown from "./dropdowns/DietDropdown";
-import { FilterProps } from "../../../types/dish/layout/dLayoutTypes";
+import { FilterProps } from "../../../types/dish/filter/filterTypes";
 import { SetStateAction, Dispatch } from "react";
 
 

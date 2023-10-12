@@ -1,4 +1,4 @@
-import { PricesDropdownProps } from "../../../../types/dish/layout/dLayoutTypes";
+import { PricesDropdownProps } from "../../../../types/dish/filter/dropdowns/PricesDropdownTypes";
 import { useState, useEffect } from "react";
 
 function PricesDropdown({ 

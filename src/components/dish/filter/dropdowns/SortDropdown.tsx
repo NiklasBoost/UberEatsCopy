@@ -1,4 +1,4 @@
-import { SortDropdownProps } from "../../../../types/dish/layout/dLayoutTypes";
+import { SortDropdownProps } from "../../../../types/dish/filter/dropdowns/SortDropdownTypes";
 import { useState, useEffect } from "react";
 
 
