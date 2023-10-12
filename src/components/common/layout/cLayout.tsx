@@ -78,10 +78,8 @@ export function Sidebar({ sidebarState }: {sidebarState: boolean}) {
   useEffect(() => {
     if (sidebarState === true) {
       setSidebarStyle({left: '0px'})
-      console.log(sidebarState)
     } else {
       setSidebarStyle({left: '-300px'})
-      console.log(sidebarState)
     }
   }, [sidebarState])
 
