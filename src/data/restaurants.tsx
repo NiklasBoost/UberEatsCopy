@@ -9,7 +9,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Fast Food',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: true
   },
   {
     restaurantImg: '/public/restaurant-img/El-Ezz.jpeg',
@@ -21,7 +24,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'top_eats',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Breggfast.jpeg',
@@ -33,7 +39,10 @@ const restaurants = [
     deliveryFee: 220,
     priceRange: '€€€',
     categorie: 'Sandwich',
-    newbie: true
+    newbie: true,
+    veggy: true,
+    vegan: true,
+    glutenfree: true
   },
   {
     restaurantImg: '/public/restaurant-img/Food-Brother.jpeg',
@@ -45,7 +54,10 @@ const restaurants = [
     deliveryFee: 349,
     priceRange: '€€€€',
     categorie: 'Sandwich',
-    newbie: false
+    newbie: false, 
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Juicy-Burger.jpeg',
@@ -57,7 +69,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'Fast Food',
-    newbie: true
+    newbie: true,
+    veggy: true,
+    vegan: false,
+    glutenfree: true
   },
   {
     restaurantImg: '/public/restaurant-img/Mr-Nam.jpeg',
@@ -69,7 +84,10 @@ const restaurants = [
     deliveryFee: null,
     priceRange: '€',
     categorie: 'Asiatisch',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: true
   },
   {
     restaurantImg: '/public/restaurant-img/Die-Frische-Kuh.jpeg', 
@@ -81,7 +99,10 @@ const restaurants = [
     deliveryFee: 200,
     priceRange: '€€€€',
     categorie: 'Gesundes',
-    newbie: true
+    newbie: true,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Freshnuts.jpeg', 
@@ -93,7 +114,10 @@ const restaurants = [
     deliveryFee: 100,
     priceRange: '€€€',
     categorie: 'Dessert',
-    newbie: true
+    newbie: true,
+    veggy: false,
+    vegan: true,
+    glutenfree: true
   },
   {
     restaurantImg: '/public/restaurant-img/Burger-Brothers.jpeg',
@@ -105,7 +129,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€€',
     categorie: 'Burger',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Moodys-Cafe.jpeg',
@@ -117,7 +144,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'dessert',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: true
   },
   {
     restaurantImg: '/public/restaurant-img/Sole-Pizza-Holsterhausen.jpeg',
@@ -129,7 +159,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'Pizza',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Burger-Loop.jpeg', 
@@ -141,7 +174,10 @@ const restaurants = [
     deliveryFee: 0,
     priceRange: '€€€€',
     categorie: 'Fast Food',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Bab-Toma.jpeg',
@@ -153,7 +189,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'Fast Food',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Sajcom.jpeg',
@@ -165,7 +204,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Fast Food',
-    newbie: true
+    newbie: true,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Scary-Donuts.jpeg',
@@ -177,7 +219,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'Dessert',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/KFC.jpeg', 
@@ -189,7 +234,10 @@ const restaurants = [
     deliveryFee: 449,
     priceRange: '€',
     categorie: 'Fast Food',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Five-Guys.jpeg',
@@ -201,7 +249,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Burger',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Dominos.jpeg',
@@ -213,7 +264,10 @@ const restaurants = [
     deliveryFee: 0,
     priceRange: '€€',
     categorie: 'Pizza',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Starbucks.jpeg',
@@ -225,7 +279,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€€€',
     categorie: 'Allgemeines Zeug',
-    newbie: false
+    newbie: false,
+    veggy: true,
+    vegan: true,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Han-Cup.jpeg', 
@@ -237,7 +294,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'Koreanisch',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: true,
+    glutenfree: true
   },
   {
     restaurantImg: '/public/restaurant-img/Chill-n-beef.jpeg',
@@ -249,7 +309,10 @@ const restaurants = [
     deliveryFee: 399,
     priceRange: '€',
     categorie: 'Amerikanisch',
-    newbie: true
+    newbie: true,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Opas-Haus-Restaurant.jpeg',
@@ -261,7 +324,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'Bestes Essen',
-    newbie: false
+    newbie: false,
+    veggy: true,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Joud-Broasted.jpeg',
@@ -273,7 +339,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Bestes Essen',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Traumkuh.jpeg', 
@@ -285,7 +354,10 @@ const restaurants = [
     deliveryFee: 449,
     priceRange: '€€',
     categorie: 'Burger',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Wonder-Waffel.jpeg',
@@ -297,7 +369,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Dessert',
-    newbie: false
+    newbie: false,
+    veggy: true,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Mari-La-Mora.jpeg',
@@ -309,7 +384,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Dessert',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/City-Pizzaria.jpeg', 
@@ -321,7 +399,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'Pizza',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Dude-Pizza.jpeg',
@@ -333,7 +414,10 @@ const restaurants = [
     deliveryFee: 0,
     priceRange: '€€',
     categorie: 'Pizza',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Classic-India.jpeg',
@@ -345,7 +429,10 @@ const restaurants = [
     deliveryFee: 399,
     priceRange: '€€',
     categorie: 'Indisch',
-    newbie: false
+    newbie: false,
+    veggy: true,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Okinii.jpeg',
@@ -357,7 +444,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Sushi',
-    newbie: true
+    newbie: true,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Anisa-Food.jpeg',
@@ -369,7 +459,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Angebote',
-    newbie: false
+    newbie: false,
+    veggy: true,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/DuoDuo.jpeg',
@@ -381,7 +474,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€',
     categorie: 'Asiatisch',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Taste-it-india.jpeg',
@@ -393,7 +489,10 @@ const restaurants = [
     deliveryFee: 149,
     priceRange: '€€',
     categorie: 'Indisch',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Asia-JoJi.jpeg',
@@ -405,7 +504,10 @@ const restaurants = [
     deliveryFee: 249,
     priceRange: '€',
     categorie: 'Asiatisch',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   },
   {
     restaurantImg: '/public/restaurant-img/Pottsalat.jpeg', 
@@ -417,7 +519,10 @@ const restaurants = [
     deliveryFee: 290,
     priceRange: '€',
     categorie: 'Gesundes',
-    newbie: false
+    newbie: false,
+    veggy: false,
+    vegan: false,
+    glutenfree: false
   }
 ];
 

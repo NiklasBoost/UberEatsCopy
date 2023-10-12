@@ -164,7 +164,19 @@ export function MealChoose() {
         setGlutenFreeFilter={setGlutenFreeFilter}
         onlyOneFilterTrue={onlyOneFilterTrue}
       />
-      <Restaurants />
+      <Restaurants 
+        forYouFilter={forYouFilter}
+        popularFilter={popularFilter}
+        ratingFilter={ratingFilter}
+        uberEatsFilter={uberEatsFilter}
+        oneEURFilter={oneEURFilter}
+        twoEURFilter={twoEURFilter}
+        threeEURFilter={threeEURFilter}
+        fourEURFilter={fourEURFilter}
+        veggyFilter={veggyFilter}
+        veganFilter={veganFilter}
+        glutenFreeFilter={glutenFreeFilter}
+      />
     </div>
   );
 }
