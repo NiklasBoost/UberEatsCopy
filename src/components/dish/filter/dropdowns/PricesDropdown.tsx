@@ -1,0 +1,128 @@
+import { PricesDropdownProps } from "../../../../types/dish/layout/dLayoutTypes";
+import { useState, useEffect } from "react";
+
+function PricesDropdown({ 
+  changeDropdownState,
+  oneEURFilter,
+  setOneEURFilter,
+  twoEURFilter,
+  setTwoEURFilter,
+  threeEURFilter,
+  setThreeEURFilter,
+  fourEURFilter,
+  setFourEURFilter,
+  onlyOneFilterTrue }: PricesDropdownProps) {
+  const [pricesFolded, setPricesFolded] = useState(false);
+  const [pricesStyle, setPricesStyle] = useState({});
+
+  const [oneButtonActiv, setOneButtonActiv] = useState({});
+  const [twoButtonActiv, setTwoButtonActiv] = useState({});
+  const [threeButtonActiv, setThreeButtonActiv] = useState({});
+  const [fourButtonActiv, setFourButtonActiv] = useState({});
+  
+  useEffect(() => {
+    if(pricesFolded) {
+      setPricesStyle({ display: 'none' });
+    } else {
+      setPricesStyle({ display: 'flex' });
+    }
+  }, [pricesFolded])
+
+
+  useEffect(() => {
+    if(oneEURFilter) {
+      setOneButtonActiv({ filter: 'brightness(0.7)' });
+    } else {
+      setOneButtonActiv({ filter: 'none' });
+    }
+  }, [oneEURFilter])
+  
+  useEffect(() => {
+    if(twoEURFilter) {
+      setTwoButtonActiv({ filter: 'brightness(0.7)' });
+    } else {
+      setTwoButtonActiv({ filter: 'none' });
+    }
+  }, [twoEURFilter])
+
+  useEffect(() => {
+    if(threeEURFilter) {
+      setThreeButtonActiv({ filter: 'brightness(0.7)' });
+    } else {
+      setThreeButtonActiv({ filter: 'none' });
+    }
+  }, [threeEURFilter])
+
+  useEffect(() => {
+    if(fourEURFilter) {
+      setFourButtonActiv({ filter: 'brightness(0.7)' });
+    } else {
+      setFourButtonActiv({ filter: 'none' });
+    }
+  }, [fourEURFilter])
+
+
+
+
+  return (
+    <>
+      <div className="prices-dropdown-container">
+        <div className="dropdown-text">Preisklasse</div>
+        <svg
+          onClick={() => changeDropdownState(setPricesFolded)}
+          className="dropdown-svg dropdown-svg-js"
+          width="25px"
+          height="16px"
+          fill="none"
+          viewBox="0 0 48 20"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+          >
+          {pricesFolded ? (
+            <path
+            d="M34 11.7494V14.916L24 7.91602L14 14.916V11.7494L24 4.74939L34 11.7494Z"
+            fill="currentColor"
+            ></path>
+            ) : (
+              <path
+              d="M14 5.08398L24 12.084L34 5.08398V7.25044L24 14.2504L14 7.25044V5.08398Z"
+              fill="currentColor"
+              ></path>
+              )}
+        </svg>
+      </div>
+      <div className="prices-dropdown-values" style={pricesStyle}>
+        <button 
+          onClick={() => onlyOneFilterTrue(setOneEURFilter)} className="price-button"
+          style={oneButtonActiv}
+        >
+          &#8364;
+        </button>
+
+        <button 
+          onClick={() => onlyOneFilterTrue(setTwoEURFilter)} className="price-button"
+          style={twoButtonActiv}
+        >
+          &#8364;&#8364;
+        </button>
+
+        <button 
+          onClick={() => onlyOneFilterTrue(setThreeEURFilter)} className="price-button"
+          style={threeButtonActiv}
+        >
+          &#8364;&#8364;&#8364;
+        </button>
+
+        <button 
+          onClick={() => onlyOneFilterTrue(setFourEURFilter)} className="price-button"
+          style={fourButtonActiv}
+        >
+          &#8364;&#8364;&#8364;&#8364;
+        </button>
+      </div>  
+    </>
+  ) 
+}
+
+export default PricesDropdown;
