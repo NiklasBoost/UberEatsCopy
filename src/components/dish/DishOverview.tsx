@@ -14,7 +14,7 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   const [CategoryBannerProps, setCategoryBannerProps] = useState<{ name: string; img: string }>({name: '', img: ''});
 
   // States for Filters
-  const [forYouFilter, setForYouFilter] = useState(false);
+  const [forYouFilter, setForYouFilter] = useState(true);
   const [popularFilter, setPopularFilter] = useState(false);
   const [ratingFilter, setRatingFilter] = useState(false);
   const [deliveryTimeFilter, setDeliveryTimeFilter] = useState(false);
