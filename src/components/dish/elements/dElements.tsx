@@ -27,7 +27,10 @@ export function SlideshowElement() {
 
 export function Restaurant({ restaurantImg, name, ratingAverage, deliveryFee }: RestaurantProps) {
 
-  const deliveryFeeEUR = (deliveryFee / 100).toFixed(2);
+  const deliveryFeeEUR = (deliveryFee !== null && deliveryFee !== undefined) 
+    ? (deliveryFee / 100).toFixed(2) 
+    : 0;
+
 
   return (
     <div className="restaurant-container"> 

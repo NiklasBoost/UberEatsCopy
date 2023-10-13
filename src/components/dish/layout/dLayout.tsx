@@ -69,7 +69,7 @@ export function Categories() {
 
   //category randomizer
   useEffect(() => {
-    const remainingCategories = [...categoryObjects.slice(2)];
+    let remainingCategories = categoryObjects.slice(2);
     for (let i = remainingCategories.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [remainingCategories[i], remainingCategories[j]] = [
@@ -77,6 +77,8 @@ export function Categories() {
         remainingCategories[i],
       ];
     }
+
+    remainingCategories = remainingCategories.slice(0, 14);
 
     const firstTwoCategories = categoryObjects.slice(0, 2);
 
