@@ -5,11 +5,13 @@ import {
   MealChoose,
 } from "./layout/dLayout";
 import { Footer, Sidebar } from "../common/layout/cLayout";
+import { CategoryBanner } from "./elements/category-banner";
 import { DishOverviewProps } from "../../types/dish/DishOverviewTypes";
 import { useState, useEffect } from "react";
 
 function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   const [overlayStyle, setOverlayStyle] = useState({});
+  const [CategoryBannerProps, setCategoryBannerProps] = useState<{ name: string; img: string }>({name: '', img: ''});
   function changeState() {
     if (sidebarState) {
       setSidebarState(false);
@@ -29,8 +31,19 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
       <div style={overlayStyle} className="overlay"></div>
       <DishHeader setSidebarState={setSidebarState} />
       <Sidebar sidebarState={sidebarState} />
-      <Categories />
-      <Slideshow />
+      {CategoryBannerProps.name ? (
+        <CategoryBanner 
+          CategoryName={CategoryBannerProps.name}
+          CategoryIMG={CategoryBannerProps.img}
+        />
+      ) : (
+        <>
+          <Categories 
+            setCategoryBannerProps={setCategoryBannerProps}
+          />
+          <Slideshow />
+        </>
+      )}
       <MealChoose />
       <Footer />
     </div>

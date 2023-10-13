@@ -11,6 +11,7 @@ import { Navigation, A11y } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { CategoriesProps } from "../../../types/dish/layout/dLayoutTypes";
 
 
 export function DishHeader({
@@ -62,7 +63,7 @@ export function DishHeader({
   );
 }
 
-export function Categories() {
+export function Categories({ setCategoryBannerProps }: CategoriesProps) {
   const [categories, setCategories] = useState<{ img: string; text: string }[]>(
     []
   );
@@ -94,6 +95,7 @@ export function Categories() {
           key={index}
           categoryImg={category.img}
           categoryText={category.text}
+          setCategoryBannerProps={setCategoryBannerProps}
         />
       ))}
     </div>

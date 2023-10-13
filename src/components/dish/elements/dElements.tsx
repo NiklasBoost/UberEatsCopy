@@ -1,9 +1,17 @@
 import { CategoryProps, RestaurantProps } from "../../../types/dish/elements/dElementsTypes"
 
 
-export function Category({ categoryImg, categoryText }: CategoryProps) {
+export function Category({ categoryImg, categoryText, setCategoryBannerProps }: CategoryProps) {
+  function handleCategoryClick() {
+    const CategoryBannerProps = {
+      name: categoryText,
+      img: categoryImg,
+    };
+    setCategoryBannerProps(CategoryBannerProps)
+  }
+
   return (
-    <div className="category-container">
+    <div className="category-container" onClick={handleCategoryClick}>
       <img className="category-pictures" src={categoryImg} /> 
       <p className="category-text">{categoryText}</p>
     </div> 
