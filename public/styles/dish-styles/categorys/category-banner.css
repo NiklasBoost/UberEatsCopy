@@ -1,0 +1,17 @@
+.Category-Banner-Container {
+  display: flex;
+  background-color: rgba(116, 140, 148, 0.288);
+  height: 250px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.Category-Banner-Name {
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+.Category-Banner-img {
+  margin-right: 120px;
+}

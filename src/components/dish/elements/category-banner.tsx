@@ -3,9 +3,9 @@ import { CategoryBannerProps } from "../../../types/dish/elements/categoryBanner
 export function CategoryBanner({ CategoryName, CategoryIMG }: CategoryBannerProps) {
 
   return (
-    <div>
-      <h1>{CategoryName}</h1>
-      <img src={CategoryIMG}/>
+    <div className="Category-Banner-Container" >
+      <h1 className="Category-Banner-Name">{CategoryName}</h1>
+      <img className="Category-Banner-img" src={CategoryIMG}/>
     </div>
   )
 }
