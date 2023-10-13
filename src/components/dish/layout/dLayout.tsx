@@ -5,6 +5,13 @@ import { useEffect, useState, Dispatch, SetStateAction } from "react";
 import categoryObjects from "../../../data/categories";
 import Restaurants from "../views/restaurants";
 import Filter from "../filter/filter";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, A11y } from "swiper/modules";
+
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 
 export function DishHeader({
   setSidebarState,
@@ -95,9 +102,40 @@ export function Slideshow() {
   return (
     <div className="slideshow">
       <div className="slideshow-list">
-        <SlideshowElement />
-        <SlideshowElement />
-        <SlideshowElement />
+        <Swiper
+          modules={[Navigation, A11y]}
+          spaceBetween={20}
+          loop={true}
+          direction="horizontal"
+          slidesPerView={3}
+          navigation
+          onSlideChange={() => console.log('slide goes on')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <SlideshowElement />
+          </SwiperSlide>
+          
+          <SwiperSlide>
+            <SlideshowElement />
+          </SwiperSlide>
+          
+          <SwiperSlide>
+            <SlideshowElement />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SlideshowElement />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SlideshowElement />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SlideshowElement />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );
