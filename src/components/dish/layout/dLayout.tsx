@@ -11,7 +11,7 @@ import { Navigation, A11y } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { CategoriesProps } from "../../../types/dish/layout/dLayoutTypes";
+import { CategoriesProps, MealChooseProps } from "../../../types/dish/layout/dLayoutTypes";
 
 
 export function DishHeader({
@@ -63,7 +63,26 @@ export function DishHeader({
   );
 }
 
-export function Categories({ setCategoryBannerProps }: CategoriesProps) {
+export function Categories({
+  setCategoryBannerProps, 
+  setDealsCat, 
+  setBestEatCat,
+  setAlcoholCat,
+  setBurgerCat,
+  setChineseCat,
+  setSandwichCat,
+  setThaiCat,
+  setSushiCat,
+  setDessertCat,
+  setAsiaCat,
+  setAmericanCat,
+  setGeneralStuffCat,
+  setAnimalCareCat,
+  setHealthyCat,
+  setFastFoodCat,
+  setPizzaCat,
+  setKoreanCat,
+  setIndianCat}: CategoriesProps) {
   const [categories, setCategories] = useState<{ img: string; text: string }[]>(
     []
   );
@@ -96,6 +115,24 @@ export function Categories({ setCategoryBannerProps }: CategoriesProps) {
           categoryImg={category.img}
           categoryText={category.text}
           setCategoryBannerProps={setCategoryBannerProps}
+          setDealsCat={setDealsCat}
+          setBestEatCat={setBestEatCat}
+          setAlcoholCat={setAlcoholCat}
+          setBurgerCat={setBurgerCat}
+          setChineseCat={setChineseCat}
+          setSandwichCat={setSandwichCat}
+          setThaiCat={setThaiCat}
+          setSushiCat={setSushiCat}
+          setDessertCat={setDessertCat}
+          setAsiaCat={setAsiaCat}
+          setAmericanCat={setAmericanCat}
+          setGeneralStuffCat={setGeneralStuffCat}
+          setAnimalCareCat={setAnimalCareCat}
+          setHealthyCat={setHealthyCat}
+          setFastFoodCat={setFastFoodCat}
+          setPizzaCat={setPizzaCat}
+          setKoreanCat={setKoreanCat}
+          setIndianCat={setIndianCat}
         />
       ))}
     </div>
@@ -145,7 +182,44 @@ export function Slideshow() {
   );
 }
 
-export function MealChoose() {
+export function MealChoose({ 
+  dealsCat,
+  bestEatCat,
+  alcoholCat,
+  burgerCat,
+  chineseCat,
+  thaiCat,
+  sandwichCat,
+  sushiCat,
+  dessertCat,
+  asiaCat,
+  americanCat,
+  generalStuffCat,
+  animalCareCat,
+  healthyCat,
+  fastFoodCat,
+  pizzaCat,
+  koreanCat,
+  indianCat,
+  setDealsCat, 
+  setBestEatCat,
+  setAlcoholCat,
+  setBurgerCat,
+  setChineseCat,
+  setSandwichCat,
+  setThaiCat,
+  setSushiCat,
+  setDessertCat,
+  setAsiaCat,
+  setAmericanCat,
+  setGeneralStuffCat,
+  setAnimalCareCat,
+  setHealthyCat,
+  setFastFoodCat,
+  setPizzaCat,
+  setKoreanCat,
+  setIndianCat  }: MealChooseProps) {
+
   const [forYouFilter, setForYouFilter] = useState(false);
   const [popularFilter, setPopularFilter] = useState(false);
   const [ratingFilter, setRatingFilter] = useState(false);
@@ -173,6 +247,24 @@ export function MealChoose() {
     setVeggyFilter(false);
     setVeganFilter(false);
     setGlutenFreeFilter(false);
+    setDealsCat(false);
+    setBestEatCat(false);
+    setAlcoholCat(false);
+    setBurgerCat(false);
+    setChineseCat(false);
+    setSandwichCat(false);
+    setThaiCat(false);
+    setSushiCat(false);
+    setDessertCat(false);
+    setAsiaCat(false);
+    setAmericanCat(false);
+    setGeneralStuffCat(false);
+    setAnimalCareCat(false);
+    setHealthyCat(false);
+    setFastFoodCat(false);
+    setPizzaCat(false);
+    setKoreanCat(false);
+    setIndianCat(false);
 
     setState(true);
   }
@@ -218,6 +310,24 @@ export function MealChoose() {
         veggyFilter={veggyFilter}
         veganFilter={veganFilter}
         glutenFreeFilter={glutenFreeFilter}
+        dealsCat={dealsCat}
+        bestEatCat={bestEatCat}
+        alcoholCat={alcoholCat}
+        burgerCat={burgerCat}
+        chineseCat={chineseCat}
+        sandwichCat={sandwichCat}
+        thaiCat={thaiCat}
+        sushiCat={sushiCat}
+        dessertCat={dessertCat}
+        asiaCat={asiaCat}
+        americanCat={americanCat}
+        generalStuffCat={generalStuffCat}
+        animalCareCat={animalCareCat}
+        healthyCat={healthyCat}
+        fastFoodCat={fastFoodCat}
+        pizzaCat={pizzaCat}
+        koreanCat={koreanCat}
+        indianCat={indianCat}
       />
     </div>
   );

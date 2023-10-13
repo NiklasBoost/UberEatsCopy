@@ -72,6 +72,6 @@ export function RatingsView() {
   );
 }
 
-function DeliveryFeeView() {
+// function DeliveryFeeView() {
   
-}
+// }

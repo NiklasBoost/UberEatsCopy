@@ -1,13 +1,74 @@
 import { CategoryProps, RestaurantProps } from "../../../types/dish/elements/dElementsTypes"
 
 
-export function Category({ categoryImg, categoryText, setCategoryBannerProps }: CategoryProps) {
+export function Category({ 
+  categoryImg, 
+  categoryText, 
+  setCategoryBannerProps, 
+  setDealsCat, 
+  setBestEatCat,
+  setAlcoholCat,
+  setBurgerCat,
+  setChineseCat,
+  setSandwichCat,
+  setThaiCat,
+  setSushiCat,
+  setDessertCat,
+  setAsiaCat,
+  setAmericanCat,
+  setGeneralStuffCat,
+  setAnimalCareCat,
+  setHealthyCat,
+  setFastFoodCat,
+  setPizzaCat,
+  setKoreanCat,
+  setIndianCat }: CategoryProps) {
+
   function handleCategoryClick() {
     const CategoryBannerProps = {
       name: categoryText,
       img: categoryImg,
     };
     setCategoryBannerProps(CategoryBannerProps)
+
+    // set State, for showing up the right views
+    if(categoryText === 'Angebote') {
+      setDealsCat(prevState => !prevState);
+    } else if(categoryText === 'Bestes Essen') {
+      setBestEatCat(prevState => !prevState);
+    } else if(categoryText === 'Alkohol') {
+      setAlcoholCat(prevState => !prevState);
+    } else if(categoryText === 'Burger') {
+      setBurgerCat(prevState => !prevState);
+    } else if(categoryText === 'Chinesisch') {
+      setChineseCat(prevState => !prevState);
+    } else if(categoryText === 'Sandwich') {
+      setSandwichCat(prevState => !prevState);
+    } else if(categoryText === 'Thailändisch') {
+      setThaiCat(prevState => !prevState);
+    } else if(categoryText === 'Sushi') {
+      setSushiCat(prevState => !prevState);
+    } else if(categoryText === 'Dessert') {
+      setDessertCat(prevState => !prevState);
+    } else if(categoryText === 'Asiatisch') {
+      setAsiaCat(prevState => !prevState);
+    } else if(categoryText === 'Amerikanisch') {
+      setAmericanCat(prevState => !prevState);
+    } else if(categoryText === 'Allgemeines Zeug') {
+      setGeneralStuffCat(prevState => !prevState);
+    } else if(categoryText === 'Tierversorgung') {
+      setAnimalCareCat(prevState => !prevState);
+    } else if(categoryText === 'Gesundes') {
+      setHealthyCat(prevState => !prevState);
+    } else if(categoryText === 'Fast Food') {
+      setFastFoodCat(prevState => !prevState);
+    } else if(categoryText === 'Pizza') {
+      setPizzaCat(prevState => !prevState);
+    } else if(categoryText === 'Koreanisch') {
+      setKoreanCat(prevState => !prevState);
+    } else if(categoryText === 'Indisch') {
+      setIndianCat(prevState => !prevState);
+    } 
   }
 
   return (
