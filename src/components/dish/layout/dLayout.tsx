@@ -1,7 +1,7 @@
 import { HamburgerMenu, Logo } from "../../common/Pics";
 import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { SlideshowElement, Category } from "../elements/dElements";
-import { useEffect, useState, Dispatch, SetStateAction } from "react";
+import { useEffect, useState } from "react";
 import categoryObjects from "../../../data/categories";
 import Restaurants from "../views/restaurants";
 import Filter from "../filter/filter";
@@ -65,6 +65,7 @@ export function DishHeader({
 
 export function Categories({
   setCategoryBannerProps, 
+  onlyOneFilterTrue,
   setDealsCat, 
   setBestEatCat,
   setAlcoholCat,
@@ -133,6 +134,7 @@ export function Categories({
           setPizzaCat={setPizzaCat}
           setKoreanCat={setKoreanCat}
           setIndianCat={setIndianCat}
+          onlyOneFilterTrue={onlyOneFilterTrue}
         />
       ))}
     </div>
@@ -183,6 +185,7 @@ export function Slideshow() {
 }
 
 export function MealChoose({ 
+  setCategoryBannerProps,
   dealsCat,
   bestEatCat,
   alcoholCat,
@@ -201,73 +204,48 @@ export function MealChoose({
   pizzaCat,
   koreanCat,
   indianCat,
-  setDealsCat, 
-  setBestEatCat,
-  setAlcoholCat,
-  setBurgerCat,
-  setChineseCat,
-  setSandwichCat,
-  setThaiCat,
-  setSushiCat,
-  setDessertCat,
-  setAsiaCat,
-  setAmericanCat,
-  setGeneralStuffCat,
-  setAnimalCareCat,
-  setHealthyCat,
-  setFastFoodCat,
-  setPizzaCat,
-  setKoreanCat,
-  setIndianCat  }: MealChooseProps) {
+  forYouFilter, 
+  setForYouFilter, 
+  popularFilter, 
+  setPopularFilter, 
+  ratingFilter, 
+  setRatingFilter, 
+  deliveryTimeFilter, 
+  setDeliveryTimeFilter, 
+  uberEatsFilter, 
+  setUberEatsFilter, 
+  oneEURFilter, 
+  setOneEURFilter, 
+  twoEURFilter, 
+  setTwoEURFilter, 
+  threeEURFilter, 
+  setThreeEURFilter, 
+  fourEURFilter, 
+  setFourEURFilter,
+  veggyFilter, 
+  setVeggyFilter, 
+  veganFilter, 
+  setVeganFilter, 
+  glutenFreeFilter, 
+  setGlutenFreeFilter, 
+  onlyOneFilterTrue,   }: MealChooseProps) {
 
-  const [forYouFilter, setForYouFilter] = useState(false);
-  const [popularFilter, setPopularFilter] = useState(false);
-  const [ratingFilter, setRatingFilter] = useState(false);
-  const [deliveryTimeFilter, setDeliveryTimeFilter] = useState(false);
-  const [uberEatsFilter, setUberEatsFilter] = useState(false);
-  const [oneEURFilter, setOneEURFilter] = useState(false);
-  const [twoEURFilter, setTwoEURFilter] = useState(false);
-  const [threeEURFilter, setThreeEURFilter] = useState(false);
-  const [fourEURFilter, setFourEURFilter] = useState(false);
-  const [veggyFilter, setVeggyFilter] = useState(false);
-  const [veganFilter, setVeganFilter] = useState(false);
-  const [glutenFreeFilter, setGlutenFreeFilter] = useState(false);
 
-  
- function onlyOneFilterTrue(setState: Dispatch<SetStateAction<boolean>>) {
-    setForYouFilter(false);
-    setPopularFilter(false);
-    setRatingFilter(false);
-    setDeliveryTimeFilter(false);
-    setUberEatsFilter(false);
-    setOneEURFilter(false);
-    setTwoEURFilter(false);
-    setThreeEURFilter(false);
-    setFourEURFilter(false);
-    setVeggyFilter(false);
-    setVeganFilter(false);
-    setGlutenFreeFilter(false);
-    setDealsCat(false);
-    setBestEatCat(false);
-    setAlcoholCat(false);
-    setBurgerCat(false);
-    setChineseCat(false);
-    setSandwichCat(false);
-    setThaiCat(false);
-    setSushiCat(false);
-    setDessertCat(false);
-    setAsiaCat(false);
-    setAmericanCat(false);
-    setGeneralStuffCat(false);
-    setAnimalCareCat(false);
-    setHealthyCat(false);
-    setFastFoodCat(false);
-    setPizzaCat(false);
-    setKoreanCat(false);
-    setIndianCat(false);
+  useEffect(() => {
+    setCategoryBannerProps({name: '', img:''});
+  }, [forYouFilter, 
+      popularFilter, 
+      ratingFilter, 
+      deliveryTimeFilter, 
+      uberEatsFilter, 
+      oneEURFilter, 
+      twoEURFilter, 
+      threeEURFilter, 
+      fourEURFilter, 
+      veggyFilter, 
+      veganFilter, 
+      glutenFreeFilter])
 
-    setState(true);
-  }
 
   return (
     <div className="meal-choose">

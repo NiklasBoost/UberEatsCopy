@@ -7,11 +7,25 @@ import {
 import { Footer, Sidebar } from "../common/layout/cLayout";
 import { CategoryBanner } from "./elements/category-banner";
 import { DishOverviewProps } from "../../types/dish/DishOverviewTypes";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
 function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   const [overlayStyle, setOverlayStyle] = useState({});
   const [CategoryBannerProps, setCategoryBannerProps] = useState<{ name: string; img: string }>({name: '', img: ''});
+
+  // States for Filters
+  const [forYouFilter, setForYouFilter] = useState(false);
+  const [popularFilter, setPopularFilter] = useState(false);
+  const [ratingFilter, setRatingFilter] = useState(false);
+  const [deliveryTimeFilter, setDeliveryTimeFilter] = useState(false);
+  const [uberEatsFilter, setUberEatsFilter] = useState(false);
+  const [oneEURFilter, setOneEURFilter] = useState(false);
+  const [twoEURFilter, setTwoEURFilter] = useState(false);
+  const [threeEURFilter, setThreeEURFilter] = useState(false);
+  const [fourEURFilter, setFourEURFilter] = useState(false);
+  const [veggyFilter, setVeggyFilter] = useState(false);
+  const [veganFilter, setVeganFilter] = useState(false);
+  const [glutenFreeFilter, setGlutenFreeFilter] = useState(false);
 
   // States for CategoriesClicks
   const [dealsCat, setDealsCat] = useState(false);
@@ -48,6 +62,41 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
     }
   }, [sidebarState]);
 
+  function onlyOneFilterTrue(setState: Dispatch<SetStateAction<boolean>>) {
+    setForYouFilter(false);
+    setPopularFilter(false);
+    setRatingFilter(false);
+    setDeliveryTimeFilter(false);
+    setUberEatsFilter(false);
+    setOneEURFilter(false);
+    setTwoEURFilter(false);
+    setThreeEURFilter(false);
+    setFourEURFilter(false);
+    setVeggyFilter(false);
+    setVeganFilter(false);
+    setGlutenFreeFilter(false);
+    setDealsCat(false);
+    setBestEatCat(false);
+    setAlcoholCat(false);
+    setBurgerCat(false);
+    setChineseCat(false);
+    setSandwichCat(false);
+    setThaiCat(false);
+    setSushiCat(false);
+    setDessertCat(false);
+    setAsiaCat(false);
+    setAmericanCat(false);
+    setGeneralStuffCat(false);
+    setAnimalCareCat(false);
+    setHealthyCat(false);
+    setFastFoodCat(false);
+    setPizzaCat(false);
+    setKoreanCat(false);
+    setIndianCat(false);
+
+    setState(true);
+  }
+
   return (
     <div onClick={changeState}>
       <div style={overlayStyle} className="overlay"></div>
@@ -61,6 +110,7 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
       ) : (
         <>
           <Categories 
+            onlyOneFilterTrue={onlyOneFilterTrue}
             setCategoryBannerProps={setCategoryBannerProps}
             setDealsCat={setDealsCat}
             setBestEatCat={setBestEatCat}
@@ -84,7 +134,35 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
           <Slideshow />
         </>
       )}
-      <MealChoose 
+      <MealChoose
+        onlyOneFilterTrue={onlyOneFilterTrue}
+        setCategoryBannerProps={setCategoryBannerProps} 
+
+        forYouFilter={forYouFilter}
+        setForYouFilter={setForYouFilter}
+        popularFilter={popularFilter}
+        setPopularFilter={setPopularFilter}
+        ratingFilter={ratingFilter}
+        setRatingFilter={setRatingFilter}
+        deliveryTimeFilter={deliveryTimeFilter}
+        setDeliveryTimeFilter={setDeliveryTimeFilter}
+        uberEatsFilter={uberEatsFilter}
+        setUberEatsFilter={setUberEatsFilter}
+        oneEURFilter={oneEURFilter}
+        setOneEURFilter={setOneEURFilter}
+        twoEURFilter={twoEURFilter}
+        setTwoEURFilter={setTwoEURFilter}
+        threeEURFilter={threeEURFilter}
+        setThreeEURFilter={setThreeEURFilter}
+        fourEURFilter={fourEURFilter}
+        setFourEURFilter={setFourEURFilter}
+        veggyFilter={veggyFilter}
+        setVeggyFilter={setVeggyFilter}
+        veganFilter={veganFilter}
+        setVeganFilter={setVeganFilter}
+        glutenFreeFilter={glutenFreeFilter}
+        setGlutenFreeFilter={setGlutenFreeFilter}
+
         dealsCat={dealsCat}
         bestEatCat={bestEatCat}
         alcoholCat={alcoholCat}

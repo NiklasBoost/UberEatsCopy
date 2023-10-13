@@ -5,6 +5,7 @@ export interface CategoryProps {
   categoryImg: string,
   categoryText: string,
   setCategoryBannerProps: Dispatch<SetStateAction<{ name: string, img: string }>>,
+  onlyOneFilterTrue: (setState: Dispatch<SetStateAction<boolean>>) => void,
   setDealsCat: Dispatch<SetStateAction<boolean>>, 
   setBestEatCat: Dispatch<SetStateAction<boolean>>,
   setAlcoholCat: Dispatch<SetStateAction<boolean>>,
