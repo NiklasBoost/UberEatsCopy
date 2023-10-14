@@ -3,6 +3,13 @@ import { Dispatch, SetStateAction } from "react";
 export interface DishHeaderProps {
   setSidebarState: React.Dispatch<React.SetStateAction<boolean>>,
   setOverlayStyle: React.Dispatch<React.SetStateAction<object>>,
+  setDissappearElements: React.Dispatch<React.SetStateAction<boolean>>,
+}
+
+export interface SearchbarHeaderProps {
+  setSidebarState: React.Dispatch<React.SetStateAction<boolean>>,
+  setOverlayStyle: React.Dispatch<React.SetStateAction<object>>,
+  setDissappearElements: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
 export interface CategoriesProps {

@@ -3,6 +3,7 @@ import {
   Categories,
   Slideshow,
   MealChoose,
+  SearchbarHeader,
 } from "./layout/dLayout";
 import { Footer, Sidebar } from "../common/layout/cLayout";
 import { CategoryBanner } from "./elements/category-banner";
@@ -47,6 +48,7 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   const [koreanCat, setKoreanCat] = useState(false);
   const [indianCat, setIndianCat] = useState(false);
 
+  const [dissappearElements, setDissappearElements] = useState(false);
 
   function changeState() {
     if (sidebarState) {
@@ -100,10 +102,22 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   return (
     <div onClick={changeState}>
       <div style={overlayStyle} className="overlay"></div>
-      <DishHeader 
-        setSidebarState={setSidebarState} 
-        setOverlayStyle={setOverlayStyle}
-      />
+      {dissappearElements ? (
+        <SearchbarHeader 
+          setOverlayStyle={setOverlayStyle}
+          dissappearElements={dissappearElements}
+          setDissappearElements={setDissappearElements}
+          setSidebarState={setSidebarState}
+        />
+      ) : (
+        <DishHeader 
+          setSidebarState={setSidebarState} 
+          setOverlayStyle={setOverlayStyle}
+          dissappearElements={dissappearElements}
+          setDissappearElements={setDissappearElements}
+        />
+      )
+      }
       <Sidebar sidebarState={sidebarState} />
       {CategoryBannerProps.name ? (
         <CategoryBanner 
