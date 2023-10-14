@@ -13,6 +13,7 @@
   flex: 1;
   /* background-color: green; */
   display: flex;
+  align-items: center;
   margin-right: 50px;
 }
 
@@ -22,6 +23,7 @@
   width: 430px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   /* background-color: orange; */
 }
 

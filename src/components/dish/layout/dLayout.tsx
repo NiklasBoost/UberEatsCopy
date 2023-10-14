@@ -17,21 +17,35 @@ import { CategoriesProps, DishHeaderProps, MealChooseProps } from "../../../type
 export function DishHeader({ 
   setSidebarState, 
   setOverlayStyle }: DishHeaderProps) {
-  const [headerStyle, setHeaderStyle] = useState({});  
+  
+  const [dissappearElements, setDissappearElements] = useState(false);
+  const [elementStyles, setElementStyles] = useState({});
+  const [headerStyle, setHeaderStyle] = useState({});
+  const [closeInputStyle, setCloseInputStyle] = useState({});  
   const signIn = "dishHeader";
   const signUp = "header-right-register";
+
+  useEffect(() => {
+    if(dissappearElements) {
+      setCloseInputStyle({display: 'block'});
+      setElementStyles({display: 'none'});
+    } else {
+      setCloseInputStyle({display: 'none'});
+      setElementStyles({display: 'flex'});
+    }
+  }, [dissappearElements])
 
   function transformHeader() {
     if(Object.keys(headerStyle).length === 0) {
       setHeaderStyle({
+        backgroundColor: 'white',
         height: '580px',
         position: 'fixed',
-        marginTop: '0',
-        paddingTop: '25px',
-        top:'-50',
+        top:'0',
         left: '0',
         right: '0',
-        alignItems: 'flex-start'
+        zIndex: '5',
+        
       });
       setOverlayStyle({display: 'block'});
     } else {
@@ -41,44 +55,62 @@ export function DishHeader({
   }
 
   return (
-    <div className="dish-header" style={headerStyle}>
-      <div className="d-header-left">
-        <HamburgerMenu setSidebarState={setSidebarState} />
-        <Logo />
-        <div className="deliver-collection-container">
-          <div className="white-choose-field"></div>
-          <div className="deliver-collection">
-            <div className="delivery">Lieferung</div>
-            <div className="collection">Abholung</div>
+    <div style={headerStyle}>
+      <div className="dish-header">
+        <div className="d-header-left">
+          <HamburgerMenu setSidebarState={setSidebarState} />
+          <Logo />
+          <div className="deliver-collection-container" style={elementStyles}>
+            <div className="white-choose-field"></div>
+            <div className="deliver-collection">
+              <div className="delivery">Lieferung</div>
+              <div className="collection">Abholung</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="d-header-middle">
-        <div className="location">
-          <a></a>
-        </div>
-        <div className="input-header-container">
-          <img className="magnifier-img" src="public/icons/magnifier.png" />
-          <input
-            className="input-header"
-            onFocus={transformHeader}
-            onBlur={transformHeader}
-            placeholder="Essen, Lebensmittel, Getränke usw."
+        <div className="d-header-middle">
+          <div className="location" style={elementStyles}>
+            <a></a>
+          </div>
+          <div className="input-header-container">
+            <img className="magnifier-img" src="public/icons/magnifier.png" />
+            <input
+              className="input-header"
+              onFocus={() => {
+                transformHeader();
+                setDissappearElements(true);
+              } }
+              onBlur={() => {
+                transformHeader();
+                setDissappearElements(false);
+              } }
+              placeholder="Essen, Lebensmittel, Getränke usw."
+            />
+          </div>
+          <img 
+            src="public/icons/close.png" 
+            alt="close" 
+            className="close-input" 
+            style={closeInputStyle}
           />
         </div>
-      </div>
-      <div className="d-header-right">
-        <button className="header-right-shopping-cart">
-          <div className="shopping-cart-container">
-            <img
-              className="shopping-cart-icon"
-              src="public/icons/shopping-cart-white.png"
-            />
-            <p className="shopping-cart-text">Warenkorb &#8226; 0</p>
-          </div>
-        </button>
-        <SignInButton signIn={signIn} />
-        <RegisterButton signUp={signUp} />
+        <div className="d-header-right" style={elementStyles}>
+          <button className="header-right-shopping-cart">
+            <div className="shopping-cart-container">
+              <img
+                className="shopping-cart-icon"
+                src="public/icons/shopping-cart-white.png"
+              />
+              <p className="shopping-cart-text">Warenkorb &#8226; 0</p>
+            </div>
+          </button>
+          <SignInButton 
+            signIn={signIn} 
+          />
+          <RegisterButton 
+            signUp={signUp} 
+          />
+        </div>
       </div>
     </div>
   );
