@@ -11,18 +11,37 @@ import { Navigation, A11y } from "swiper/modules";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { CategoriesProps, MealChooseProps } from "../../../types/dish/layout/dLayoutTypes";
+import { CategoriesProps, DishHeaderProps, MealChooseProps } from "../../../types/dish/layout/dLayoutTypes";
 
 
-export function DishHeader({
-  setSidebarState,
-}: {
-  setSidebarState: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
+export function DishHeader({ 
+  setSidebarState, 
+  setOverlayStyle }: DishHeaderProps) {
+  const [headerStyle, setHeaderStyle] = useState({});  
   const signIn = "dishHeader";
   const signUp = "header-right-register";
+
+  function transformHeader() {
+    if(Object.keys(headerStyle).length === 0) {
+      setHeaderStyle({
+        height: '580px',
+        position: 'fixed',
+        marginTop: '0',
+        paddingTop: '25px',
+        top:'-50',
+        left: '0',
+        right: '0',
+        alignItems: 'flex-start'
+      });
+      setOverlayStyle({display: 'block'});
+    } else {
+      setHeaderStyle({});
+      setOverlayStyle({display: 'none'});
+    }
+  }
+
   return (
-    <div className="dish-header">
+    <div className="dish-header" style={headerStyle}>
       <div className="d-header-left">
         <HamburgerMenu setSidebarState={setSidebarState} />
         <Logo />
@@ -42,6 +61,8 @@ export function DishHeader({
           <img className="magnifier-img" src="public/icons/magnifier.png" />
           <input
             className="input-header"
+            onFocus={transformHeader}
+            onBlur={transformHeader}
             placeholder="Essen, Lebensmittel, Getränke usw."
           />
         </div>

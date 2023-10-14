@@ -100,7 +100,10 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   return (
     <div onClick={changeState}>
       <div style={overlayStyle} className="overlay"></div>
-      <DishHeader setSidebarState={setSidebarState} />
+      <DishHeader 
+        setSidebarState={setSidebarState} 
+        setOverlayStyle={setOverlayStyle}
+      />
       <Sidebar sidebarState={sidebarState} />
       {CategoryBannerProps.name ? (
         <CategoryBanner 

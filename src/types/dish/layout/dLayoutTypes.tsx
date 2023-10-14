@@ -1,5 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
 
+export interface DishHeaderProps {
+  setSidebarState: React.Dispatch<React.SetStateAction<boolean>>,
+  setOverlayStyle: React.Dispatch<React.SetStateAction<object>>,
+}
+
 export interface CategoriesProps {
   setCategoryBannerProps: Dispatch<SetStateAction<{ name: string, img: string }>>,
   setDealsCat: Dispatch<SetStateAction<boolean>>, 
