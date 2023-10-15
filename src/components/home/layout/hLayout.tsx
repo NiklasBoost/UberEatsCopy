@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { HamburgerMenu, Logo } from "../../common/Pics";
 import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { InputDeliveryAddress } from "../../common/Inputs";
@@ -58,6 +59,13 @@ export function HomeHeader({ scrollingState, setSidebarState }: HomeHeaderProps)
 
 export function Delivery() {
   const inputClass = 'input-delivery-address';
+  const navigate = useNavigate();
+  
+  function goToDish() {
+    navigate('/dish');
+    
+  }
+
   return (
     <div className="middlepart-with-background middlepart-with-background-js">
       <div className="find-eat-container">
@@ -70,7 +78,12 @@ export function Delivery() {
               <option className="input-delivery-time-now">Jetzt liefern</option>
               <option className="input-delivery-time-later">Für später planen</option>
             </select>
-            <button className="find-eat-button">Essen finden</button>
+            <button 
+              onClick={goToDish} 
+              className="find-eat-button"
+            >
+              Essen finden
+            </button>
 
         </div>
         <p>
