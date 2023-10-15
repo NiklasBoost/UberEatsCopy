@@ -1,0 +1,25 @@
+.search-result-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+
+}
+
+.search-result-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.search-result-name {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.search-result-textcontainer {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+}

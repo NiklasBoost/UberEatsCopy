@@ -5,13 +5,15 @@ import { useEffect, useState } from "react";
 import categoryObjects from "../../../data/categories";
 import Restaurants from "../views/restaurants";
 import Filter from "../filter/filter";
+import { SearchResults } from "../elements/searchbar-elements";
+import { CategoriesProps, DishHeaderProps, MealChooseProps, SearchbarHeaderProps } from "../../../types/dish/layout/dLayoutTypes";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper/modules";
 
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { CategoriesProps, DishHeaderProps, MealChooseProps, SearchbarHeaderProps } from "../../../types/dish/layout/dLayoutTypes";
+
 
 
 export function DishHeader({ 
@@ -80,10 +82,17 @@ export function SearchbarHeader({
   setOverlayStyle,  
   setDissappearElements, 
   setSidebarState }: SearchbarHeaderProps) { 
+  
+  const [inputValue, setInputValue] = useState('');
 
   function transformHeader() {
       setOverlayStyle({display: 'none'});
     }
+
+
+    function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
+      setInputValue(event.target.value);
+    };
 
   return (
       <div style={{
@@ -109,6 +118,8 @@ export function SearchbarHeader({
               <input
                 className="input-header"
                 placeholder="Essen, Lebensmittel, Getränke usw."
+                value={inputValue}
+                onChange={handleInput}
               />
             </div>
             <img 
@@ -122,6 +133,9 @@ export function SearchbarHeader({
             />
           </div>
         </div>
+        <SearchResults 
+          inputValue={inputValue}
+        />
       </div>
   );
 }
