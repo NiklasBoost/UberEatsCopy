@@ -105,7 +105,6 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
       {dissappearElements ? (
         <SearchbarHeader 
           setOverlayStyle={setOverlayStyle}
-          dissappearElements={dissappearElements}
           setDissappearElements={setDissappearElements}
           setSidebarState={setSidebarState}
         />
@@ -113,7 +112,6 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
         <DishHeader 
           setSidebarState={setSidebarState} 
           setOverlayStyle={setOverlayStyle}
-          dissappearElements={dissappearElements}
           setDissappearElements={setDissappearElements}
         />
       )

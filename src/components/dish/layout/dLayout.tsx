@@ -14,8 +14,6 @@ import { Navigation, A11y } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-
-
 export function DishHeader({ 
   setSidebarState, 
   setOverlayStyle,
@@ -23,10 +21,21 @@ export function DishHeader({
   
   const signIn = "dishHeader";
   const signUp = "header-right-register";
-
+  const [chooseFieldStyle, setChooseFieldStyle] = useState('white-choose-field');
+    
   function transformHeader() {
       setOverlayStyle({display: 'block'});
+  }
+
+
+  function movingChooseField() {
+    if(chooseFieldStyle === 'white-choose-field') {
+      setChooseFieldStyle('white-choose-field white-choose-field-moved');
+    } else {
+      setChooseFieldStyle('white-choose-field');
     }
+  }
+
 
   return (
     <div className="dish-header">
@@ -34,10 +43,31 @@ export function DishHeader({
         <HamburgerMenu setSidebarState={setSidebarState} />
         <Logo />
         <div className="deliver-collection-container">
-          <div className="white-choose-field"></div>
+          <div 
+            className={chooseFieldStyle}
+          ></div>
           <div className="deliver-collection">
-            <div className="delivery">Lieferung</div>
-            <div className="collection">Abholung</div>
+            <div 
+              onClick={() => {
+                if(chooseFieldStyle === 'white-choose-field white-choose-field-moved') {
+                  movingChooseField();
+                }
+              }} 
+              className="delivery"
+            >
+              Lieferung
+            </div>
+            <div 
+              onClick={() => {
+                if(chooseFieldStyle === 'white-choose-field') {
+                  movingChooseField();
+
+                }
+              }}
+              className="collection"
+            >
+              Abholung
+            </div>
           </div>
         </div>
       </div>

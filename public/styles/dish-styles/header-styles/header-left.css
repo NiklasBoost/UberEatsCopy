@@ -19,6 +19,12 @@
   width: 85px;
   height: 36px;
   border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.white-choose-field-moved {
+  left: 98px
 }
 
 .deliver-collection {
@@ -32,10 +38,12 @@
 
   .delivery {
     margin-right: 30px;
+    cursor: pointer;
     z-index: 2;
     
   }
 
   .collection {
+    cursor: pointer;
     z-index: 2;
   }
