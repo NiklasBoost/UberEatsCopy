@@ -15,18 +15,20 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   const [CategoryBannerProps, setCategoryBannerProps] = useState<{ name: string; img: string }>({name: '', img: ''});
 
   // States for Filters
-  const [forYouFilter, setForYouFilter] = useState(true);
-  const [popularFilter, setPopularFilter] = useState(false);
-  const [ratingFilter, setRatingFilter] = useState(false);
-  const [deliveryTimeFilter, setDeliveryTimeFilter] = useState(false);
-  const [uberEatsFilter, setUberEatsFilter] = useState(false);
-  const [oneEURFilter, setOneEURFilter] = useState(false);
-  const [twoEURFilter, setTwoEURFilter] = useState(false);
-  const [threeEURFilter, setThreeEURFilter] = useState(false);
-  const [fourEURFilter, setFourEURFilter] = useState(false);
-  const [veggyFilter, setVeggyFilter] = useState(false);
-  const [veganFilter, setVeganFilter] = useState(false);
-  const [glutenFreeFilter, setGlutenFreeFilter] = useState(false);
+  const [filter, setFilter] = useState({
+    forYouFilter: true,
+    popularFilter: false,
+    ratingFilter: false,
+    deliveryTimeFilter: false,
+    uberEatsFilter: false,
+    oneEURFilter: false,
+    twoEURFilter: false,
+    threeEURFilter: false,
+    fourEURFilter: false,
+    veggyFilter: false,
+    veganFilter: false,
+    glutenFreeFilter: false,
+  });
 
   // States for CategoriesClicks
   const [dealsCat, setDealsCat] = useState(false);
@@ -65,18 +67,23 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   }, [sidebarState]);
 
   function onlyOneFilterTrue(setState: Dispatch<SetStateAction<boolean>>) {
-    setForYouFilter(false);
-    setPopularFilter(false);
-    setRatingFilter(false);
-    setDeliveryTimeFilter(false);
-    setUberEatsFilter(false);
-    setOneEURFilter(false);
-    setTwoEURFilter(false);
-    setThreeEURFilter(false);
-    setFourEURFilter(false);
-    setVeggyFilter(false);
-    setVeganFilter(false);
-    setGlutenFreeFilter(false);
+    const updatedFilter = {
+      forYouFilter: false,
+      popularFilter: false,
+      ratingFilter: false,
+      deliveryTimeFilter: false,
+      uberEatsFilter: false,
+      oneEURFilter: false,
+      twoEURFilter: false,
+      threeEURFilter: false,
+      fourEURFilter: false,
+      veggyFilter: false,
+      veganFilter: false,
+      glutenFreeFilter: false,
+    };
+    
+    setFilter(updatedFilter);
+    
     setDealsCat(false);
     setBestEatCat(false);
     setAlcoholCat(false);
@@ -96,7 +103,7 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
     setKoreanCat(false);
     setIndianCat(false);
 
-    setState(true);
+    setFilter({...filter, setState: true});
   }
 
   return (
@@ -153,30 +160,8 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
         onlyOneFilterTrue={onlyOneFilterTrue}
         setCategoryBannerProps={setCategoryBannerProps} 
 
-        forYouFilter={forYouFilter}
-        setForYouFilter={setForYouFilter}
-        popularFilter={popularFilter}
-        setPopularFilter={setPopularFilter}
-        ratingFilter={ratingFilter}
-        setRatingFilter={setRatingFilter}
-        deliveryTimeFilter={deliveryTimeFilter}
-        setDeliveryTimeFilter={setDeliveryTimeFilter}
-        uberEatsFilter={uberEatsFilter}
-        setUberEatsFilter={setUberEatsFilter}
-        oneEURFilter={oneEURFilter}
-        setOneEURFilter={setOneEURFilter}
-        twoEURFilter={twoEURFilter}
-        setTwoEURFilter={setTwoEURFilter}
-        threeEURFilter={threeEURFilter}
-        setThreeEURFilter={setThreeEURFilter}
-        fourEURFilter={fourEURFilter}
-        setFourEURFilter={setFourEURFilter}
-        veggyFilter={veggyFilter}
-        setVeggyFilter={setVeggyFilter}
-        veganFilter={veganFilter}
-        setVeganFilter={setVeganFilter}
-        glutenFreeFilter={glutenFreeFilter}
-        setGlutenFreeFilter={setGlutenFreeFilter}
+        filter={filter}
+        setFilter={setFilter}
 
         dealsCat={dealsCat}
         bestEatCat={bestEatCat}

@@ -7,30 +7,8 @@ import { SetStateAction, Dispatch } from "react";
 
 
 function Filter({ 
-  forYouFilter, 
-  setForYouFilter, 
-  popularFilter, 
-  setPopularFilter, 
-  ratingFilter, 
-  setRatingFilter, 
-  deliveryTimeFilter, 
-  setDeliveryTimeFilter, 
-  uberEatsFilter, 
-  setUberEatsFilter, 
-  oneEURFilter, 
-  setOneEURFilter, 
-  twoEURFilter, 
-  setTwoEURFilter, 
-  threeEURFilter, 
-  setThreeEURFilter, 
-  fourEURFilter, 
-  setFourEURFilter,
-  veggyFilter, 
-  setVeggyFilter, 
-  veganFilter, 
-  setVeganFilter, 
-  glutenFreeFilter, 
-  setGlutenFreeFilter, 
+  filter,
+  setFilter, 
   onlyOneFilterTrue }: FilterProps) {
   
   function changeDropdownState(setState: Dispatch<SetStateAction<boolean>>) {
@@ -41,42 +19,26 @@ function Filter({
     <div className="filter">
       <SortDropdown 
         changeDropdownState={changeDropdownState}
-        forYouFilter={forYouFilter}
-        setForYouFilter={setForYouFilter}
-        popularFilter={popularFilter}
-        setPopularFilter={setPopularFilter}
-        ratingFilter={ratingFilter}
-        setRatingFilter={setRatingFilter}
-        deliveryTimeFilter={deliveryTimeFilter}
-        setDeliveryTimeFilter={setDeliveryTimeFilter}
+        filter={filter}
+        setFilter={setFilter}
         onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <UberEatsDropdown 
         changeDropdownState={changeDropdownState}
-        uberEatsFilter={uberEatsFilter}
-        setUberEatsFilter={setUberEatsFilter}
+        filter={filter}
+        setFilter={setFilter}
         onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <PricesDropdown 
         changeDropdownState={changeDropdownState}
-        oneEURFilter={oneEURFilter}
-        setOneEURFilter={setOneEURFilter}
-        twoEURFilter={twoEURFilter}
-        setTwoEURFilter={setTwoEURFilter}
-        threeEURFilter={threeEURFilter}
-        setThreeEURFilter={setThreeEURFilter}
-        fourEURFilter={fourEURFilter}
-        setFourEURFilter={setFourEURFilter}
+        filter={filter}
+        setFilter={setFilter}
         onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <DietDropdown 
         changeDropdownState={changeDropdownState}
-        veggyFilter={veggyFilter}
-        setVeggyFilter={setVeggyFilter}
-        veganFilter={veganFilter}
-        setVeganFilter={setVeganFilter}
-        glutenFreeFilter={glutenFreeFilter}
-        setGlutenFreeFilter={setGlutenFreeFilter}
+        filter={filter}
+        setFilter={setFilter}
         onlyOneFilterTrue={onlyOneFilterTrue}
       />
     </div>

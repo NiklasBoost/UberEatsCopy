@@ -3,12 +3,8 @@ import { useState, useEffect } from "react";
 
 function DietDropdown({ 
   changeDropdownState,
-  veggyFilter,
-  setVeggyFilter,
-  veganFilter,
-  setVeganFilter,
-  glutenFreeFilter,
-  setGlutenFreeFilter,
+  filter,
+  setFilter, 
   onlyOneFilterTrue }: DietDropdownProps) { 
   const [dietFolded, setDietFolded] = useState(false);
   const [dietStyle, setDietStyle] = useState({});
@@ -26,28 +22,28 @@ function DietDropdown({
   }, [dietFolded])
 
   useEffect(() => {
-    if(veggyFilter) {
+    if(filter.veggyFilter) {
       setVeggyButtonActiv({ filter: 'brightness(0.7)' });
     } else {
       setVeggyButtonActiv({ filter: 'none' });
     }
-  }, [veggyFilter])
+  }, [filter.veggyFilter])
 
   useEffect(() => {
-    if(veganFilter) {
+    if(filter.veganFilter) {
       setVeganButtonActiv({ filter: 'brightness(0.7)' });
     } else {
       setVeganButtonActiv({ filter: 'none' });
     }
-  }, [veganFilter])
+  }, [filter.veganFilter])
 
   useEffect(() => {
-    if(glutenFreeFilter) {
+    if(filter.glutenFreeFilter) {
       setGlutenFreeButtonActiv({ filter: 'brightness(0.7)' });
     } else {
       setGlutenFreeButtonActiv({ filter: 'none' });
     }
-  }, [glutenFreeFilter])
+  }, [filter.glutenFreeFilter])
   
   return (
     <>

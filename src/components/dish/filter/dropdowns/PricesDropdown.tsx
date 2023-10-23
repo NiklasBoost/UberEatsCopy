@@ -3,14 +3,8 @@ import { useState, useEffect } from "react";
 
 function PricesDropdown({ 
   changeDropdownState,
-  oneEURFilter,
-  setOneEURFilter,
-  twoEURFilter,
-  setTwoEURFilter,
-  threeEURFilter,
-  setThreeEURFilter,
-  fourEURFilter,
-  setFourEURFilter,
+  filter,
+  setFilter,
   onlyOneFilterTrue }: PricesDropdownProps) {
   const [pricesFolded, setPricesFolded] = useState(false);
   const [pricesStyle, setPricesStyle] = useState({});
@@ -30,36 +24,36 @@ function PricesDropdown({
 
 
   useEffect(() => {
-    if(oneEURFilter) {
+    if(filter.oneEURFilter) {
       setOneButtonActiv({ filter: 'brightness(0.7)' });
     } else {
       setOneButtonActiv({ filter: 'none' });
     }
-  }, [oneEURFilter])
+  }, [filter.oneEURFilter])
   
   useEffect(() => {
-    if(twoEURFilter) {
+    if(filter.twoEURFilter) {
       setTwoButtonActiv({ filter: 'brightness(0.7)' });
     } else {
       setTwoButtonActiv({ filter: 'none' });
     }
-  }, [twoEURFilter])
+  }, [filter.twoEURFilter])
 
   useEffect(() => {
-    if(threeEURFilter) {
+    if(filter.threeEURFilter) {
       setThreeButtonActiv({ filter: 'brightness(0.7)' });
     } else {
       setThreeButtonActiv({ filter: 'none' });
     }
-  }, [threeEURFilter])
+  }, [filter.threeEURFilter])
 
   useEffect(() => {
-    if(fourEURFilter) {
+    if(filter.fourEURFilter) {
       setFourButtonActiv({ filter: 'brightness(0.7)' });
     } else {
       setFourButtonActiv({ filter: 'none' });
     }
-  }, [fourEURFilter])
+  }, [filter.fourEURFilter])
 
 
 

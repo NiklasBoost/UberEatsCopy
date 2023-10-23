@@ -311,90 +311,26 @@ export function MealChoose({
   pizzaCat,
   koreanCat,
   indianCat,
-  forYouFilter, 
-  setForYouFilter, 
-  popularFilter, 
-  setPopularFilter, 
-  ratingFilter, 
-  setRatingFilter, 
-  deliveryTimeFilter, 
-  setDeliveryTimeFilter, 
-  uberEatsFilter, 
-  setUberEatsFilter, 
-  oneEURFilter, 
-  setOneEURFilter, 
-  twoEURFilter, 
-  setTwoEURFilter, 
-  threeEURFilter, 
-  setThreeEURFilter, 
-  fourEURFilter, 
-  setFourEURFilter,
-  veggyFilter, 
-  setVeggyFilter, 
-  veganFilter, 
-  setVeganFilter, 
-  glutenFreeFilter, 
-  setGlutenFreeFilter, 
-  onlyOneFilterTrue,   }: MealChooseProps) {
+  onlyOneFilterTrue,
+  filter,
+  setFilter   }: MealChooseProps) {
 
 
   useEffect(() => {
     setCategoryBannerProps({name: '', img:''});
-  }, [forYouFilter, 
-      popularFilter, 
-      ratingFilter, 
-      deliveryTimeFilter, 
-      uberEatsFilter, 
-      oneEURFilter, 
-      twoEURFilter, 
-      threeEURFilter, 
-      fourEURFilter, 
-      veggyFilter, 
-      veganFilter, 
-      glutenFreeFilter])
+  }, [filter])
 
 
   return (
     <div className="meal-choose">
       <Filter 
-        forYouFilter={forYouFilter}
-        setForYouFilter={setForYouFilter}
-        popularFilter={popularFilter}
-        setPopularFilter={setPopularFilter}
-        ratingFilter={ratingFilter}
-        setRatingFilter={setRatingFilter}
-        deliveryTimeFilter={deliveryTimeFilter}
-        setDeliveryTimeFilter={setDeliveryTimeFilter}
-        uberEatsFilter={uberEatsFilter}
-        setUberEatsFilter={setUberEatsFilter}
-        oneEURFilter={oneEURFilter}
-        setOneEURFilter={setOneEURFilter}
-        twoEURFilter={twoEURFilter}
-        setTwoEURFilter={setTwoEURFilter}
-        threeEURFilter={threeEURFilter}
-        setThreeEURFilter={setThreeEURFilter}
-        fourEURFilter={fourEURFilter}
-        setFourEURFilter={setFourEURFilter}
-        veggyFilter={veggyFilter}
-        setVeggyFilter={setVeggyFilter}
-        veganFilter={veganFilter}
-        setVeganFilter={setVeganFilter}
-        glutenFreeFilter={glutenFreeFilter}
-        setGlutenFreeFilter={setGlutenFreeFilter}
+        filter={filter}
+        setFilter={setFilter}
         onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <Restaurants 
-        forYouFilter={forYouFilter}
-        popularFilter={popularFilter}
-        ratingFilter={ratingFilter}
-        uberEatsFilter={uberEatsFilter}
-        oneEURFilter={oneEURFilter}
-        twoEURFilter={twoEURFilter}
-        threeEURFilter={threeEURFilter}
-        fourEURFilter={fourEURFilter}
-        veggyFilter={veggyFilter}
-        veganFilter={veganFilter}
-        glutenFreeFilter={glutenFreeFilter}
+        filter={filter}
+        setFilter={setFilter}
         dealsCat={dealsCat}
         bestEatCat={bestEatCat}
         alcoholCat={alcoholCat}

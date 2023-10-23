@@ -4,14 +4,8 @@ import { useState, useEffect } from "react";
 
 function SortDropdown({ 
   changeDropdownState, 
-  forYouFilter, 
-  setForYouFilter,
-  popularFilter,
-  setPopularFilter,
-  ratingFilter,
-  setRatingFilter,
-  deliveryTimeFilter,
-  setDeliveryTimeFilter,
+  filter,
+  setFilter,
   onlyOneFilterTrue }: SortDropdownProps) {
 
   const [sortFolded, setSortFolded] = useState(false);

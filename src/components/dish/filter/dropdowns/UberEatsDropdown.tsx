@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 
 function UberEatsDropdown({ 
   changeDropdownState,
-  uberEatsFilter,
-  setUberEatsFilter,
+  filter,
+  setFilter,
   onlyOneFilterTrue }: UberEatsDropdownProps) {
   const [uberEatsFolded, setUberEatsFolded] = useState(false);
   const [uberEatsStyle, setUberEatsStyle] = useState({});

@@ -9,17 +9,8 @@ import { ForYouView, PopularsView, RatingsView } from "./filterviews/sort";
 
 
 function Restaurants({ 
-  forYouFilter, 
-  popularFilter, 
-  ratingFilter, 
-  uberEatsFilter,
-  oneEURFilter,
-  twoEURFilter,
-  threeEURFilter,
-  fourEURFilter,
-  veggyFilter,
-  veganFilter,
-  glutenFreeFilter,
+  filter,
+  setFilter,
   dealsCat,
   bestEatCat,
   alcoholCat,
@@ -39,27 +30,27 @@ function Restaurants({
   koreanCat,
   indianCat }: RestaurantsProps) {
 
-  if(forYouFilter) {
+  if(filter.forYouFilter) {
     return <ForYouView />
-  } else if (popularFilter) {
+  } else if (filter.popularFilter) {
     return <PopularsView />
-  } else if(ratingFilter) {
+  } else if(filter.ratingFilter) {
     return <RatingsView />
-  } else if(uberEatsFilter) {
+  } else if(filter.uberEatsFilter) {
     return <BestOverallPerformanceView />
-  } else if(oneEURFilter) {
+  } else if(filter.oneEURFilter) {
     return <PriceView EUR={'€'} />
-  } else if (twoEURFilter) {
+  } else if (filter.twoEURFilter) {
     return <PriceView EUR={'€€'} />
-  } else if (threeEURFilter) {
+  } else if (filter.threeEURFilter) {
     return <PriceView EUR={'€€€'} />
-  } else if (fourEURFilter) {
+  } else if (filter.fourEURFilter) {
     return <PriceView EUR={'€€€€'} />
-  } else if (veggyFilter) {
+  } else if (filter.veggyFilter) {
     return <VeggyView />
-  } else if (veganFilter) {
+  } else if (filter.veganFilter) {
     return <VeganView />
-  } else if (glutenFreeFilter) {
+  } else if (filter.glutenFreeFilter) {
     return <GlutenfreeView />
   } else if(dealsCat) {
     return <CategoryView cat={'Angebote'} />
