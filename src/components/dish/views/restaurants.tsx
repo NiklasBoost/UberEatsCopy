@@ -11,24 +11,7 @@ import { ForYouView, PopularsView, RatingsView } from "./filterviews/sort";
 function Restaurants({ 
   filter,
   setFilter,
-  dealsCat,
-  bestEatCat,
-  alcoholCat,
-  burgerCat,
-  chineseCat,
-  thaiCat,
-  sandwichCat,
-  sushiCat,
-  dessertCat,
-  asiaCat,
-  americanCat,
-  generalStuffCat,
-  animalCareCat,
-  healthyCat,
-  fastFoodCat,
-  pizzaCat,
-  koreanCat,
-  indianCat }: RestaurantsProps) {
+  categoriesState }: RestaurantsProps) {
 
   if(filter.forYouFilter) {
     return <ForYouView />
@@ -52,41 +35,41 @@ function Restaurants({
     return <VeganView />
   } else if (filter.glutenFreeFilter) {
     return <GlutenfreeView />
-  } else if(dealsCat) {
+  } else if(categoriesState.dealsCat) {
     return <CategoryView cat={'Angebote'} />
-  } else if(bestEatCat) {
+  } else if(categoriesState.bestEatCat) {
     return <CategoryView cat={'Bestes Essen'} />
-  } else if(alcoholCat) {
+  } else if(categoriesState.alcoholCat) {
     return <CategoryView cat={'Alkohol'} />
-  } else if(burgerCat) {
+  } else if(categoriesState.burgerCat) {
     return <CategoryView cat={'Burger'} />
-  } else if(chineseCat) {
+  } else if(categoriesState.chineseCat) {
     return <CategoryView cat={'Chinesisch'} />
-  } else if(sandwichCat) {
+  } else if(categoriesState.sandwichCat) {
     return <CategoryView cat={'Sandwich'} />
-  } else if(thaiCat) {
+  } else if(categoriesState.thaiCat) {
     return <CategoryView cat={'Thailändisch'} />    
-  } else if(sushiCat) {
+  } else if(categoriesState.sushiCat) {
     return <CategoryView cat={'Sushi'} />
-  } else if(dessertCat) {
+  } else if(categoriesState.dessertCat) {
     return <CategoryView cat={'Dessert'} />
-  } else if(asiaCat) {
+  } else if(categoriesState.asiaCat) {
     return <CategoryView cat={'Asiatisch'} />
-  } else if(americanCat) {
+  } else if(categoriesState.americanCat) {
     return <CategoryView cat={'Amerikanisch'} /> 
-  } else if(generalStuffCat) {
+  } else if(categoriesState.generalStuffCat) {
     return <CategoryView cat={'Allgemeines Zeug'} />
-  } else if(animalCareCat) {
+  } else if(categoriesState.animalCareCat) {
     return <CategoryView cat={'Tierversorgung'} />
-  } else if(healthyCat) {
+  } else if(categoriesState.healthyCat) {
     return <CategoryView cat={'Gesundes'} />
-  } else if(fastFoodCat) {
+  } else if(categoriesState.fastFoodCat) {
     return <CategoryView cat={'Fast Food'} />
-  } else if(pizzaCat) {
+  } else if(categoriesState.pizzaCat) {
     return <CategoryView cat={'Pizza'} />
-  } else if(koreanCat) {
+  } else if(categoriesState.koreanCat) {
     return <CategoryView cat={'Koreanisch'} />
-  } else if(indianCat) {
+  } else if(categoriesState.indianCat) {
     return <CategoryView cat={'Indisch'} />
   }else {
     return (

@@ -173,24 +173,7 @@ export function SearchbarHeader({
 export function Categories({
   setCategoryBannerProps, 
   onlyOneFilterTrue,
-  setDealsCat, 
-  setBestEatCat,
-  setAlcoholCat,
-  setBurgerCat,
-  setChineseCat,
-  setSandwichCat,
-  setThaiCat,
-  setSushiCat,
-  setDessertCat,
-  setAsiaCat,
-  setAmericanCat,
-  setGeneralStuffCat,
-  setAnimalCareCat,
-  setHealthyCat,
-  setFastFoodCat,
-  setPizzaCat,
-  setKoreanCat,
-  setIndianCat}: CategoriesProps) {
+  setCategoriesState}: CategoriesProps) {
   const [categories, setCategories] = useState<{ img: string; text: string }[]>(
     []
   );
@@ -223,24 +206,7 @@ export function Categories({
           categoryImg={category.img}
           categoryText={category.text}
           setCategoryBannerProps={setCategoryBannerProps}
-          setDealsCat={setDealsCat}
-          setBestEatCat={setBestEatCat}
-          setAlcoholCat={setAlcoholCat}
-          setBurgerCat={setBurgerCat}
-          setChineseCat={setChineseCat}
-          setSandwichCat={setSandwichCat}
-          setThaiCat={setThaiCat}
-          setSushiCat={setSushiCat}
-          setDessertCat={setDessertCat}
-          setAsiaCat={setAsiaCat}
-          setAmericanCat={setAmericanCat}
-          setGeneralStuffCat={setGeneralStuffCat}
-          setAnimalCareCat={setAnimalCareCat}
-          setHealthyCat={setHealthyCat}
-          setFastFoodCat={setFastFoodCat}
-          setPizzaCat={setPizzaCat}
-          setKoreanCat={setKoreanCat}
-          setIndianCat={setIndianCat}
+          setCategoriesState={setCategoriesState}
           onlyOneFilterTrue={onlyOneFilterTrue}
         />
       ))}
@@ -293,24 +259,7 @@ export function Slideshow() {
 
 export function MealChoose({ 
   setCategoryBannerProps,
-  dealsCat,
-  bestEatCat,
-  alcoholCat,
-  burgerCat,
-  chineseCat,
-  thaiCat,
-  sandwichCat,
-  sushiCat,
-  dessertCat,
-  asiaCat,
-  americanCat,
-  generalStuffCat,
-  animalCareCat,
-  healthyCat,
-  fastFoodCat,
-  pizzaCat,
-  koreanCat,
-  indianCat,
+  categoriesState,
   onlyOneFilterTrue,
   filter,
   setFilter   }: MealChooseProps) {
@@ -331,24 +280,7 @@ export function MealChoose({
       <Restaurants 
         filter={filter}
         setFilter={setFilter}
-        dealsCat={dealsCat}
-        bestEatCat={bestEatCat}
-        alcoholCat={alcoholCat}
-        burgerCat={burgerCat}
-        chineseCat={chineseCat}
-        sandwichCat={sandwichCat}
-        thaiCat={thaiCat}
-        sushiCat={sushiCat}
-        dessertCat={dessertCat}
-        asiaCat={asiaCat}
-        americanCat={americanCat}
-        generalStuffCat={generalStuffCat}
-        animalCareCat={animalCareCat}
-        healthyCat={healthyCat}
-        fastFoodCat={fastFoodCat}
-        pizzaCat={pizzaCat}
-        koreanCat={koreanCat}
-        indianCat={indianCat}
+        categoriesState={categoriesState}
       />
     </div>
   );

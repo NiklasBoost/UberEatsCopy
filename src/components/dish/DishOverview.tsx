@@ -31,24 +31,26 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   });
 
   // States for CategoriesClicks
-  const [dealsCat, setDealsCat] = useState(false);
-  const [bestEatCat, setBestEatCat] = useState(false);
-  const [alcoholCat, setAlcoholCat] = useState(false);
-  const [burgerCat, setBurgerCat] = useState(false);
-  const [chineseCat, setChineseCat] = useState(false);
-  const [sandwichCat, setSandwichCat] = useState(false);
-  const [thaiCat, setThaiCat] = useState(false);
-  const [sushiCat, setSushiCat] = useState(false);
-  const [dessertCat, setDessertCat] = useState(false);
-  const [asiaCat, setAsiaCat] = useState(false);
-  const [americanCat, setAmericanCat] = useState(false);
-  const [generalStuffCat, setGeneralStuffCat] = useState(false);
-  const [animalCareCat, setAnimalCareCat] = useState(false)
-  const [healthyCat, setHealthyCat] = useState(false);
-  const [fastFoodCat, setFastFoodCat] = useState(false);
-  const [pizzaCat, setPizzaCat] = useState(false);
-  const [koreanCat, setKoreanCat] = useState(false);
-  const [indianCat, setIndianCat] = useState(false);
+  const [categoriesState, setCategoriesState] = useState({
+    dealsCat: false,
+    bestEatCat: false,
+    alcoholCat: false,
+    burgerCat: false,
+    chineseCat: false,
+    sandwichCat: false,
+    thaiCat: false,
+    sushiCat: false,
+    dessertCat: false,
+    asiaCat: false,
+    americanCat: false,
+    generalStuffCat: false,
+    animalCareCat: false,
+    healthyCat: false,
+    fastFoodCat: false,
+    pizzaCat: false,
+    koreanCat: false,
+    indianCat: false,
+  });
 
   const [dissappearElements, setDissappearElements] = useState(false);
 
@@ -82,27 +84,30 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
       glutenFreeFilter: false,
     };
     
-    setFilter(updatedFilter);
-    
-    setDealsCat(false);
-    setBestEatCat(false);
-    setAlcoholCat(false);
-    setBurgerCat(false);
-    setChineseCat(false);
-    setSandwichCat(false);
-    setThaiCat(false);
-    setSushiCat(false);
-    setDessertCat(false);
-    setAsiaCat(false);
-    setAmericanCat(false);
-    setGeneralStuffCat(false);
-    setAnimalCareCat(false);
-    setHealthyCat(false);
-    setFastFoodCat(false);
-    setPizzaCat(false);
-    setKoreanCat(false);
-    setIndianCat(false);
+    const updatedCategories = {
+      dealsCat: false,
+      bestEatCat: false,
+      alcoholCat: false,
+      burgerCat: false,
+      chineseCat: false,
+      sandwichCat: false,
+      thaiCat: false,
+      sushiCat: false,
+      dessertCat: false,
+      asiaCat: false,
+      americanCat: false,
+      generalStuffCat: false,
+      animalCareCat: false,
+      healthyCat: false,
+      fastFoodCat: false,
+      pizzaCat: false,
+      koreanCat: false,
+      indianCat: false,
+    }
 
+    setFilter(updatedFilter);
+    setCategoriesState(updatedCategories);
+    
     setFilter({...filter, setState: true});
   }
 
@@ -134,24 +139,8 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
           <Categories 
             onlyOneFilterTrue={onlyOneFilterTrue}
             setCategoryBannerProps={setCategoryBannerProps}
-            setDealsCat={setDealsCat}
-            setBestEatCat={setBestEatCat}
-            setAlcoholCat={setAlcoholCat}
-            setBurgerCat={setBurgerCat}
-            setChineseCat={setChineseCat}
-            setSandwichCat={setSandwichCat}
-            setThaiCat={setThaiCat}
-            setSushiCat={setSushiCat}
-            setDessertCat={setDessertCat}
-            setAsiaCat={setAsiaCat}
-            setAmericanCat={setAmericanCat}
-            setGeneralStuffCat={setGeneralStuffCat}
-            setAnimalCareCat={setAnimalCareCat}
-            setHealthyCat={setHealthyCat}
-            setFastFoodCat={setFastFoodCat}
-            setPizzaCat={setPizzaCat}
-            setKoreanCat={setKoreanCat}
-            setIndianCat={setIndianCat}
+
+            setCategoriesState={setCategoriesState}
           />
           <Slideshow />
         </>
@@ -163,42 +152,7 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
         filter={filter}
         setFilter={setFilter}
 
-        dealsCat={dealsCat}
-        bestEatCat={bestEatCat}
-        alcoholCat={alcoholCat}
-        burgerCat={burgerCat}
-        chineseCat={chineseCat}
-        sandwichCat={sandwichCat}
-        thaiCat={thaiCat}
-        sushiCat={sushiCat}
-        dessertCat={dessertCat}
-        asiaCat={asiaCat}
-        americanCat={americanCat}
-        generalStuffCat={generalStuffCat}
-        animalCareCat={animalCareCat}
-        healthyCat={healthyCat}
-        fastFoodCat={fastFoodCat}
-        pizzaCat={pizzaCat}
-        koreanCat={koreanCat}
-        indianCat={indianCat}
-        setDealsCat={setDealsCat}
-        setBestEatCat={setBestEatCat}
-        setAlcoholCat={setAlcoholCat}
-        setBurgerCat={setBurgerCat}
-        setChineseCat={setChineseCat}
-        setSandwichCat={setSandwichCat}
-        setThaiCat={setThaiCat}
-        setSushiCat={setSushiCat}
-        setDessertCat={setDessertCat}
-        setAsiaCat={setAsiaCat}
-        setAmericanCat={setAmericanCat}
-        setGeneralStuffCat={setGeneralStuffCat}
-        setAnimalCareCat={setAnimalCareCat}
-        setHealthyCat={setHealthyCat}
-        setFastFoodCat={setFastFoodCat}
-        setPizzaCat={setPizzaCat}
-        setKoreanCat={setKoreanCat}
-        setIndianCat={setIndianCat}
+        categoriesState={categoriesState}
       />
       <Footer />
     </div>
