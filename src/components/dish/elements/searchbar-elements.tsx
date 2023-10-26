@@ -4,7 +4,7 @@ import { SearchResultElementProps } from "../../../types/dish/elements/searchbar
 export function SearchResults({ inputValue }: {inputValue: string}) {
   
   const searchResults = restaurants.filter((restaurant) => {
-    return restaurant.name.toLowerCase().includes(inputValue.toLowerCase());;
+    return restaurant.name.toLowerCase().includes(inputValue.toLowerCase());
   });
 
   return (
