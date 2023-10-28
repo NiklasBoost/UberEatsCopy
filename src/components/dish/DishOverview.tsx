@@ -9,10 +9,12 @@ import { Footer, Sidebar } from "../common/layout/cLayout";
 import { CategoryBanner } from "./elements/category-banner";
 import { DishOverviewProps } from "../../types/dish/DishOverviewTypes";
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import restaurants from "../../data/restaurants";
 
 function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   const [overlayStyle, setOverlayStyle] = useState({});
   const [CategoryBannerProps, setCategoryBannerProps] = useState<{ name: string; img: string }>({name: '', img: ''});
+  const [filteredRestaurants, setFilteredRestaurants] = useState(restaurants);
 
   // States for Filters
   const [filter, setFilter] = useState({
@@ -68,48 +70,48 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
     }
   }, [sidebarState]);
 
-  function onlyOneFilterTrue(setState: Dispatch<SetStateAction<boolean>>) {
-    const updatedFilter = {
-      forYouFilter: false,
-      popularFilter: false,
-      ratingFilter: false,
-      deliveryTimeFilter: false,
-      uberEatsFilter: false,
-      oneEURFilter: false,
-      twoEURFilter: false,
-      threeEURFilter: false,
-      fourEURFilter: false,
-      veggyFilter: false,
-      veganFilter: false,
-      glutenFreeFilter: false,
-    };
+  // function onlyOneFilterTrue(setState: Dispatch<SetStateAction<boolean>>) {
+  //   const updatedFilter = {
+  //     forYouFilter: false,
+  //     popularFilter: false,
+  //     ratingFilter: false,
+  //     deliveryTimeFilter: false,
+  //     uberEatsFilter: false,
+  //     oneEURFilter: false,
+  //     twoEURFilter: false,
+  //     threeEURFilter: false,
+  //     fourEURFilter: false,
+  //     veggyFilter: false,
+  //     veganFilter: false,
+  //     glutenFreeFilter: false,
+  //   };
     
-    const updatedCategories = {
-      dealsCat: false,
-      bestEatCat: false,
-      alcoholCat: false,
-      burgerCat: false,
-      chineseCat: false,
-      sandwichCat: false,
-      thaiCat: false,
-      sushiCat: false,
-      dessertCat: false,
-      asiaCat: false,
-      americanCat: false,
-      generalStuffCat: false,
-      animalCareCat: false,
-      healthyCat: false,
-      fastFoodCat: false,
-      pizzaCat: false,
-      koreanCat: false,
-      indianCat: false,
-    }
+  //   const updatedCategories = {
+  //     dealsCat: false,
+  //     bestEatCat: false,
+  //     alcoholCat: false,
+  //     burgerCat: false,
+  //     chineseCat: false,
+  //     sandwichCat: false,
+  //     thaiCat: false,
+  //     sushiCat: false,
+  //     dessertCat: false,
+  //     asiaCat: false,
+  //     americanCat: false,
+  //     generalStuffCat: false,
+  //     animalCareCat: false,
+  //     healthyCat: false,
+  //     fastFoodCat: false,
+  //     pizzaCat: false,
+  //     koreanCat: false,
+  //     indianCat: false,
+  //   }
 
-    setFilter(updatedFilter);
-    setCategoriesState(updatedCategories);
+  //   setFilter(updatedFilter);
+  //   setCategoriesState(updatedCategories);
     
-    setFilter({...filter, setState: true});
-  }
+  //   setFilter({...filter, setState: true});
+  // }
 
   return (
     <div onClick={changeState}>
@@ -137,7 +139,7 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
       ) : (
         <>
           <Categories 
-            onlyOneFilterTrue={onlyOneFilterTrue}
+            // onlyOneFilterTrue={onlyOneFilterTrue}
             setCategoryBannerProps={setCategoryBannerProps}
 
             setCategoriesState={setCategoriesState}
@@ -146,9 +148,10 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
         </>
       )}
       <MealChoose
-        onlyOneFilterTrue={onlyOneFilterTrue}
+        // onlyOneFilterTrue={onlyOneFilterTrue}
         setCategoryBannerProps={setCategoryBannerProps} 
 
+        filteredRestaurants={filteredRestaurants}
         filter={filter}
         setFilter={setFilter}
 

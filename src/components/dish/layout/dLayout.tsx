@@ -261,6 +261,7 @@ export function MealChoose({
   setCategoryBannerProps,
   categoriesState,
   onlyOneFilterTrue,
+  filteredRestaurants,
   filter,
   setFilter   }: MealChooseProps) {
 
@@ -275,12 +276,13 @@ export function MealChoose({
       <Filter 
         filter={filter}
         setFilter={setFilter}
-        onlyOneFilterTrue={onlyOneFilterTrue}
+        // onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <Restaurants 
         filter={filter}
         setFilter={setFilter}
-        categoriesState={categoriesState}
+        filteredRestaurants={filteredRestaurants}
+        // categoriesState={categoriesState}
       />
     </div>
   );
