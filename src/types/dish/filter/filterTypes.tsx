@@ -18,7 +18,6 @@ export interface FilterState {
 export interface FilterProps {
   filter: FilterState,
   setFilter: Dispatch<SetStateAction<FilterState>>, 
-  onlyOneFilterTrue: (setState: Dispatch<SetStateAction<boolean>>) => void;
 }
 
 

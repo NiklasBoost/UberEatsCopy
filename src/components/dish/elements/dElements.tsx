@@ -1,5 +1,6 @@
 import { CategoryProps, RestaurantProps } from "../../../types/dish/elements/dElementsTypes";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
 
 export function Category({ 
   categoryImg, 
@@ -8,13 +9,14 @@ export function Category({
   categoriesState, 
   setCategoriesState }: CategoryProps) {
 
-  function handleCategoryClick() {
-    const CategoryBannerProps = {
-      name: categoryText,
-      img: categoryImg,
-    };
-    setCategoryBannerProps(CategoryBannerProps)
+  const [categoryStateUpdated, setCategoryStateUpdated] = useState(false);
 
+  function handleCategoryClick() {
+    changeCategoryState();
+    setCategoryStateUpdated(true);
+  }
+  
+  function changeCategoryState() {
     setCategoriesState({
       dealsCat: false,
       bestEatCat: false,
@@ -34,102 +36,58 @@ export function Category({
       pizzaCat: false,
       koreanCat: false,
       indianCat: false,
-    })
+    });
+    
     if(categoryText === 'Angebote') {
       setCategoriesState((prevState) => ({...prevState, dealsCat: true}));
-           
     } else if(categoryText === 'Bestes Essen') {
-      setCategoriesState((prevState) => ({
-        ...prevState,
-        bestEatCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, bestEatCat: true}));
     } else if(categoryText === 'Alkohol') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        alcoholCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, alcoholCat: true}));
     } else if(categoryText === 'Burger') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        burgerCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, burgerCat: true}));
     } else if(categoryText === 'Chinesisch') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        chineseCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, chineseCat: true}));
     } else if(categoryText === 'Sandwich') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        sandwichCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, sandwichCat: true}));
     } else if(categoryText === 'Thailändisch') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        thaiCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, thaiCat: true}));
     } else if(categoryText === 'Sushi') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        sushiCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, sushiCat: true}));
     } else if(categoryText === 'Dessert') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        dessertCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, dessertCat: true}));
     } else if(categoryText === 'Asiatisch') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        asiaCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, asiaCat: true}));
     } else if(categoryText === 'Amerikanisch') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        americanCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, americanCat: true}));
     } else if(categoryText === 'Allgemeines Zeug') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        generalStuffCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, generalStuffCat: true}));
     } else if(categoryText === 'Tierversorgung') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        animalCareCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, animalCareCat: true}));
     } else if(categoryText === 'Gesundes') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        healthyCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, healthyCat: true}));
     } else if(categoryText === 'Fast Food') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        fastFoodCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, fastFoodCat: true}));
     } else if(categoryText === 'Pizza') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        pizzaCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, pizzaCat: true}));
     } else if(categoryText === 'Koreanisch') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        koreanCat: true,
-      }));
+      setCategoriesState((prevState) => ({...prevState, koreanCat: true}));
     } else if(categoryText === 'Indisch') {
-       setCategoriesState((prevState) => ({
-        ...prevState,
-        indianCat: true,
-      }));
-    } 
+      setCategoriesState((prevState) => ({...prevState, indianCat: true}));
+    }
   }
-
+  
   useEffect(() => {
-    console.log(categoriesState);
-  }, [categoriesState])
-
+    if(categoryStateUpdated) {
+      const categoryBannerProps = {
+        name: categoryText,
+        img: categoryImg,
+      };
+      setCategoryBannerProps(categoryBannerProps);
+    }
+  }, [categoriesState, categoryStateUpdated]);
+  
+  
   return (
     <div className="category-container" onClick={handleCategoryClick}>
       <img className="category-pictures" src={categoryImg} /> 

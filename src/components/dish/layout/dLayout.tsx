@@ -193,11 +193,8 @@ export function Categories({
     }
 
     remainingCategories = remainingCategories.slice(0, 14);
-
     const firstTwoCategories = categoryObjects.slice(0, 2);
-
     const displayCategories = [...firstTwoCategories, ...remainingCategories];
-
     setCategories(displayCategories);
   }, []);
 
@@ -212,7 +209,6 @@ export function Categories({
           setCategoryBannerProps={setCategoryBannerProps}
           categoriesState={categoriesState}
           setCategoriesState={setCategoriesState}
-          
         />
       ))}
     </div>
@@ -231,7 +227,7 @@ export function Slideshow() {
           slidesPerView={3}
           navigation
           onSlideChange={() => console.log('slide goes on')}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <SlideshowElement />
@@ -313,7 +309,7 @@ export function MealChoose({
     }
     if (filter.glutenFreeFilter) {
       glutenfreeFilter(setFilteredRestaurants);
-    }}, [filter])
+    }}, [filter, categoriesState])
 
   return (
     <div className="meal-choose">
