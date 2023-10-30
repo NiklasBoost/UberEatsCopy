@@ -36,19 +36,32 @@ export interface SearchbarHeaderProps {
 
 export interface CategoriesProps {
   setCategoryBannerProps: Dispatch<SetStateAction<{ name: string, img: string }>>,
-  setCategories: Dispatch<SetStateAction<CatState>>,
-  onlyOneFilterTrue: (setState: Dispatch<SetStateAction<boolean>>) => void,
+  categoriesState: CatState,
+  setCategoriesState: Dispatch<SetStateAction<CatState>>,
+
 } 
 
 export interface MealChooseProps {
   setCategoryBannerProps: Dispatch<SetStateAction<{ name: string, img: string }>>,
-  
   filter: FilterState,
   setFilter: Dispatch<SetStateAction<FilterState>>, 
+  categoriesState: CatState, 
+  filteredRestaurants: Restaurant[],
+  setFilteredRestaurants: Dispatch<SetStateAction<Restaurant[]>>
+}
 
-  onlyOneFilterTrue: (setState: Dispatch<SetStateAction<boolean>>) => void,
-  
-  categories: CatState
-  setCategories: Dispatch<SetStateAction<CatState>>, 
-   
+export interface Restaurant {
+  restaurantImg: string;
+  name: string;
+  rating: {
+    count: number | null;
+    average: number | null;
+  };
+  deliveryFee: number | null;
+  priceRange: string;
+  categorie: string;
+  newbie: boolean;
+  veggy: boolean;
+  vegan: boolean;
+  glutenfree: boolean;
 }

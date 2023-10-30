@@ -1,12 +1,10 @@
-import { SortDropdownProps } from "../../../../types/dish/filter/dropdowns/SortDropdownTypes";
+import { SortDropdownProps } from "../../../../../types/dish/filter/dropdowns/SortDropdownTypes";
 import { useState, useEffect } from "react";
 
 
 function SortDropdown({ 
   changeDropdownState, 
-  filter,
-  setFilter,
-  onlyOneFilterTrue }: SortDropdownProps) {
+  setFilter}: SortDropdownProps) {
 
   const [sortFolded, setSortFolded] = useState(false);
   const [sortStyle, setSortStyle] = useState({});
@@ -54,10 +52,17 @@ function SortDropdown({
             type="radio" 
             name="sortDropdown" 
             value="forYou" 
-            checked={forYouFilter} 
+            // checked={filter.forYouFilter} 
             onClick={() => {
-              onlyOneFilterTrue(setForYouFilter)
-            }}/> 
+              setFilter((prevFilter) => ({
+                ...prevFilter, 
+                forYouFilter: true, 
+                popularFilter: false, 
+                ratingFilter: false, 
+                deliveryTimeFilter: false
+              }));
+            }}
+          /> 
           <div>Für dich ausgesucht (Standard)</div>
         </label>
         
@@ -67,10 +72,17 @@ function SortDropdown({
             type="radio" 
             name="sortDropdown"
             value="mostPopular"
-            checked={popularFilter}
+            // checked={filter.popularFilter}
             onClick={() => {
-              onlyOneFilterTrue(setPopularFilter)
-            }} /> 
+              setFilter((prevFilter) => ({
+                ...prevFilter, 
+                forYouFilter: false, 
+                popularFilter: true, 
+                ratingFilter: false, 
+                deliveryTimeFilter: false
+              }))
+            }}
+          /> 
           <div>Am beliebtesten</div>
         </label>
         
@@ -80,10 +92,18 @@ function SortDropdown({
             type="radio" 
             name="sortDropdown" 
             value="rating" 
-            checked={ratingFilter}
+            // checked={filter.ratingFilter}
             onClick={() => {
-              onlyOneFilterTrue(setRatingFilter)
-            }}/> 
+              setFilter((prevFilter) => ({
+                ...prevFilter, 
+                ratingFilter: true,
+                forYouFilter: false, 
+                popularFilter: false, 
+                deliveryTimeFilter: false
+              
+              }))
+            }}
+          /> 
           <div>Bewertung</div>
         </label>
         
@@ -93,10 +113,17 @@ function SortDropdown({
             type="radio" 
             name="sortDropdown" 
             value="deliveryTime" 
-            checked={deliveryTimeFilter}
+            // checked={filter.deliveryTimeFilter}
             onClick={() => {
-              onlyOneFilterTrue(setDeliveryTimeFilter)
-            }} />
+              setFilter((prevFilter) => ({
+                ...prevFilter, 
+                deliveryTimeFilter: true,
+                forYouFilter: false, 
+                popularFilter: false, 
+                ratingFilter: false,
+              }))
+            }}
+          />
           <div>Lieferzeit</div> 
         </label>      
       </div>

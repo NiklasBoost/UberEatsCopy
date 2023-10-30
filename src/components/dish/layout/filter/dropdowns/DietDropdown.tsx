@@ -1,11 +1,10 @@
-import { DietDropdownProps } from "../../../../types/dish/filter/dropdowns/DietDropdownTypes";
+import { DietDropdownProps } from "../../../../../types/dish/filter/dropdowns/DietDropdownTypes";
 import { useState, useEffect } from "react";
 
 function DietDropdown({ 
   changeDropdownState,
   filter,
-  setFilter, 
-  onlyOneFilterTrue }: DietDropdownProps) { 
+  setFilter }: DietDropdownProps) { 
   const [dietFolded, setDietFolded] = useState(false);
   const [dietStyle, setDietStyle] = useState({});
   
@@ -76,7 +75,13 @@ function DietDropdown({
       <div className="diet-dropdown-values" style={dietStyle}>
         
         <button 
-          onClick={() => onlyOneFilterTrue(setVeggyFilter)} className="diet-button"
+          onClick={() => {
+            setFilter((prevFilter) => ({
+              ...prevFilter,
+              veggyFilter: !prevFilter.veggyFilter
+            }));
+          }} 
+          className="diet-button"
           style={veggyButtonActiv}
         >
           <img className="diet-button-icon" src="/public/icons/leaf.png" alt="Vegetarisch" />
@@ -84,7 +89,13 @@ function DietDropdown({
         </button>
 
         <button 
-          onClick={() => onlyOneFilterTrue(setVeganFilter)} className="diet-button"
+          onClick={() => {
+            setFilter((prevFilter) => ({
+              ...prevFilter,
+              veganFilter: !prevFilter.veganFilter
+            }));
+          }}  
+          className="diet-button"
           style={veganButtonActiv}
         >
           <img className="diet-button-icon" src="/public/icons/heart.png" alt="Vegan"/>
@@ -92,7 +103,13 @@ function DietDropdown({
         </button>
         
         <button 
-          onClick={() => onlyOneFilterTrue(setGlutenFreeFilter)} className="diet-button"
+          onClick={() => {
+            setFilter((prevFilter) => ({
+              ...prevFilter,
+              glutenFreeFilter: !prevFilter.glutenFreeFilter
+            }));
+          }} 
+          className="diet-button"
           style={glutenFreeButtonActiv}
         >
           <img className="diet-button-icon" src="/public/icons/wheat.png" alt="Glutenfrei" />

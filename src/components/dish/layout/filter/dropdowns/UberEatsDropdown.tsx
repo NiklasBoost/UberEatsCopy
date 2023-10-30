@@ -1,11 +1,10 @@
-import { UberEatsDropdownProps } from "../../../../types/dish/filter/dropdowns/UberEatsDropdownTypes";
+import { UberEatsDropdownProps } from "../../../../../types/dish/filter/dropdowns/UberEatsDropdownTypes";
 import { useState, useEffect } from "react";
 
 function UberEatsDropdown({ 
   changeDropdownState,
   filter,
-  setFilter,
-  onlyOneFilterTrue }: UberEatsDropdownProps) {
+  setFilter }: UberEatsDropdownProps) {
   const [uberEatsFolded, setUberEatsFolded] = useState(false);
   const [uberEatsStyle, setUberEatsStyle] = useState({});
   
@@ -51,8 +50,14 @@ function UberEatsDropdown({
         <label className="switch">
           <input 
             type="checkbox" 
-            checked={uberEatsFilter} 
-            onClick={() => onlyOneFilterTrue(setUberEatsFilter)}/>
+            checked={filter.uberEatsFilter} 
+            onClick={() => {
+              setFilter((prevFilter) => ({
+                ...prevFilter,
+                uberEatsFilter: !prevFilter.uberEatsFilter
+              }));
+            }} 
+          />
           <span className="slider round"></span>
         </label>
       </div>

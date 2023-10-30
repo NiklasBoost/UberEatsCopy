@@ -3,16 +3,19 @@ import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { SlideshowElement, Category } from "../elements/dElements";
 import { useEffect, useState } from "react";
 import categoryObjects from "../../../data/categories";
-import Restaurants from "../views/restaurants";
-import Filter from "../filter/filter";
+import Restaurants from "./view/restaurants";
+import Filter from "./filter/filter";
 import { SearchResults } from "../elements/searchbar-elements";
 import { CategoriesProps, DishHeaderProps, MealChooseProps, SearchbarHeaderProps } from "../../../types/dish/layout/dLayoutTypes";
+import { bestOverAllFilter, forYouSort, glutenfreeFilter, popularSort, priceFilter, ratingsSort, veganFilter, veggyFilter } from "../filter-logic/filter-functions";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper/modules";
+import { categoryFilter } from "../filter-logic/category-functions";
 
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import restaurants from "../../../data/restaurants";
 
 export function DishHeader({ 
   setSidebarState, 
@@ -172,7 +175,7 @@ export function SearchbarHeader({
 
 export function Categories({
   setCategoryBannerProps, 
-  onlyOneFilterTrue,
+  categoriesState,
   setCategoriesState}: CategoriesProps) {
   const [categories, setCategories] = useState<{ img: string; text: string }[]>(
     []
@@ -198,6 +201,7 @@ export function Categories({
     setCategories(displayCategories);
   }, []);
 
+
   return (
     <div className="categorys-container">
       {categories.map((category, index) => (
@@ -206,8 +210,9 @@ export function Categories({
           categoryImg={category.img}
           categoryText={category.text}
           setCategoryBannerProps={setCategoryBannerProps}
+          categoriesState={categoriesState}
           setCategoriesState={setCategoriesState}
-          onlyOneFilterTrue={onlyOneFilterTrue}
+          
         />
       ))}
     </div>
@@ -260,8 +265,8 @@ export function Slideshow() {
 export function MealChoose({ 
   setCategoryBannerProps,
   categoriesState,
-  onlyOneFilterTrue,
   filteredRestaurants,
+  setFilteredRestaurants,
   filter,
   setFilter   }: MealChooseProps) {
 
@@ -270,19 +275,54 @@ export function MealChoose({
     setCategoryBannerProps({name: '', img:''});
   }, [filter])
 
+  
+  useEffect(() => {
+    setFilteredRestaurants(restaurants);
+    if(categoriesState) {
+      categoryFilter(setFilteredRestaurants, categoriesState)
+    }
+    if (filter.forYouFilter) {
+      forYouSort(setFilteredRestaurants);
+    }
+    if (filter.popularFilter) {
+      popularSort(setFilteredRestaurants);
+    }
+    if (filter.ratingFilter) {
+      ratingsSort(setFilteredRestaurants);
+    }
+    if (filter.uberEatsFilter) {
+      bestOverAllFilter(setFilteredRestaurants);
+    }
+    if (filter.oneEURFilter) {
+      priceFilter(setFilteredRestaurants, '€');
+    }
+    if (filter.twoEURFilter) {
+      priceFilter(setFilteredRestaurants, '€€');
+    } 
+    if (filter.threeEURFilter) {
+      priceFilter(setFilteredRestaurants, '€€€');
+    }
+    if (filter.fourEURFilter) {
+      priceFilter(setFilteredRestaurants, '€€€€');
+    }
+    if (filter.veganFilter) {      
+      veganFilter(setFilteredRestaurants);
+    }
+    if (filter.veggyFilter) {
+      veggyFilter(setFilteredRestaurants);
+    }
+    if (filter.glutenFreeFilter) {
+      glutenfreeFilter(setFilteredRestaurants);
+    }}, [filter])
 
   return (
     <div className="meal-choose">
       <Filter 
         filter={filter}
         setFilter={setFilter}
-        // onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <Restaurants 
-        filter={filter}
-        setFilter={setFilter}
         filteredRestaurants={filteredRestaurants}
-        // categoriesState={categoriesState}
       />
     </div>
   );

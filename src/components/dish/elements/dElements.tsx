@@ -1,12 +1,12 @@
-import { CategoryProps, RestaurantProps } from "../../../types/dish/elements/dElementsTypes"
-
+import { CategoryProps, RestaurantProps } from "../../../types/dish/elements/dElementsTypes";
+import { useEffect } from "react";
 
 export function Category({ 
   categoryImg, 
   categoryText, 
-  setCategoryBannerProps, 
-  setCategoriesState,
-  onlyOneFilterTrue }: CategoryProps) {
+  setCategoryBannerProps,
+  categoriesState, 
+  setCategoriesState }: CategoryProps) {
 
   function handleCategoryClick() {
     const CategoryBannerProps = {
@@ -15,46 +15,120 @@ export function Category({
     };
     setCategoryBannerProps(CategoryBannerProps)
 
-    // set State, for showing up the right views
+    setCategoriesState({
+      dealsCat: false,
+      bestEatCat: false,
+      alcoholCat: false,
+      burgerCat: false,
+      chineseCat: false,
+      sandwichCat: false,
+      thaiCat: false,
+      sushiCat: false,
+      dessertCat: false,
+      asiaCat: false,
+      americanCat: false,
+      generalStuffCat: false,
+      animalCareCat: false,
+      healthyCat: false,
+      fastFoodCat: false,
+      pizzaCat: false,
+      koreanCat: false,
+      indianCat: false,
+    })
     if(categoryText === 'Angebote') {
-      console.log(onlyOneFilterTrue);
-      onlyOneFilterTrue(setDealsCat);
+      setCategoriesState((prevState) => ({...prevState, dealsCat: true}));
+           
     } else if(categoryText === 'Bestes Essen') {
-      onlyOneFilterTrue(setBestEatCat); 
+      setCategoriesState((prevState) => ({
+        ...prevState,
+        bestEatCat: true,
+      }));
     } else if(categoryText === 'Alkohol') {
-      onlyOneFilterTrue(setAlcoholCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        alcoholCat: true,
+      }));
     } else if(categoryText === 'Burger') {
-      onlyOneFilterTrue(setBurgerCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        burgerCat: true,
+      }));
     } else if(categoryText === 'Chinesisch') {
-      onlyOneFilterTrue(setChineseCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        chineseCat: true,
+      }));
     } else if(categoryText === 'Sandwich') {
-      onlyOneFilterTrue(setSandwichCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        sandwichCat: true,
+      }));
     } else if(categoryText === 'Thailändisch') {
-      onlyOneFilterTrue(setThaiCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        thaiCat: true,
+      }));
     } else if(categoryText === 'Sushi') {
-      onlyOneFilterTrue(setSushiCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        sushiCat: true,
+      }));
     } else if(categoryText === 'Dessert') {
-      onlyOneFilterTrue(setDessertCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        dessertCat: true,
+      }));
     } else if(categoryText === 'Asiatisch') {
-      onlyOneFilterTrue(setAsiaCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        asiaCat: true,
+      }));
     } else if(categoryText === 'Amerikanisch') {
-      onlyOneFilterTrue(setAmericanCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        americanCat: true,
+      }));
     } else if(categoryText === 'Allgemeines Zeug') {
-      onlyOneFilterTrue(setGeneralStuffCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        generalStuffCat: true,
+      }));
     } else if(categoryText === 'Tierversorgung') {
-      onlyOneFilterTrue(setAnimalCareCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        animalCareCat: true,
+      }));
     } else if(categoryText === 'Gesundes') {
-      onlyOneFilterTrue(setHealthyCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        healthyCat: true,
+      }));
     } else if(categoryText === 'Fast Food') {
-      onlyOneFilterTrue(setFastFoodCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        fastFoodCat: true,
+      }));
     } else if(categoryText === 'Pizza') {
-      onlyOneFilterTrue(setPizzaCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        pizzaCat: true,
+      }));
     } else if(categoryText === 'Koreanisch') {
-      onlyOneFilterTrue(setKoreanCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        koreanCat: true,
+      }));
     } else if(categoryText === 'Indisch') {
-      onlyOneFilterTrue(setIndianCat); 
+       setCategoriesState((prevState) => ({
+        ...prevState,
+        indianCat: true,
+      }));
     } 
   }
+
+  useEffect(() => {
+    console.log(categoriesState);
+  }, [categoriesState])
 
   return (
     <div className="category-container" onClick={handleCategoryClick}>

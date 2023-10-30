@@ -1,4 +1,6 @@
-const restaurants = [
+import { Restaurant } from "../types/dish/layout/dLayoutTypes";
+
+const restaurants: Restaurant[] = [
   {
     restaurantImg: '/public/restaurant-img/Mc-Donalds.jpeg',
     name: `McDonald's Hans-Böckler-Str.`,

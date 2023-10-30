@@ -1,11 +1,10 @@
-import { PricesDropdownProps } from "../../../../types/dish/filter/dropdowns/PricesDropdownTypes";
+import { PricesDropdownProps } from "../../../../../types/dish/filter/dropdowns/PricesDropdownTypes";
 import { useState, useEffect } from "react";
 
 function PricesDropdown({ 
   changeDropdownState,
   filter,
-  setFilter,
-  onlyOneFilterTrue }: PricesDropdownProps) {
+  setFilter }: PricesDropdownProps) {
   const [pricesFolded, setPricesFolded] = useState(false);
   const [pricesStyle, setPricesStyle] = useState({});
 
@@ -88,28 +87,52 @@ function PricesDropdown({
       </div>
       <div className="prices-dropdown-values" style={pricesStyle}>
         <button 
-          onClick={() => onlyOneFilterTrue(setOneEURFilter)} className="price-button"
+          onClick={() => {
+            setFilter((prevFilter) => ({
+              ...prevFilter,
+              oneEURFilter: !prevFilter.oneEURFilter
+            }));
+          }} 
+          className="price-button"
           style={oneButtonActiv}
         >
           &#8364;
         </button>
 
         <button 
-          onClick={() => onlyOneFilterTrue(setTwoEURFilter)} className="price-button"
+          onClick={() => {
+            setFilter((prevFilter) => ({
+              ...prevFilter,
+              twoEURFilter: !prevFilter.twoEURFilter
+            }));
+          }} 
+          className="price-button"
           style={twoButtonActiv}
         >
           &#8364;&#8364;
         </button>
 
         <button 
-          onClick={() => onlyOneFilterTrue(setThreeEURFilter)} className="price-button"
+          onClick={() => {
+            setFilter((prevFilter) => ({
+              ...prevFilter,
+              threeEURFilter: !prevFilter.threeEURFilter
+            }));
+          }}  
+          className="price-button"
           style={threeButtonActiv}
         >
           &#8364;&#8364;&#8364;
         </button>
 
         <button 
-          onClick={() => onlyOneFilterTrue(setFourEURFilter)} className="price-button"
+          onClick={() => {
+            setFilter((prevFilter) => ({
+              ...prevFilter,
+              fourEURFilter: !prevFilter.fourEURFilter
+            }));
+          }}  
+          className="price-button"
           style={fourButtonActiv}
         >
           &#8364;&#8364;&#8364;&#8364;
