@@ -6,9 +6,8 @@ import { FilterProps } from "../../../../types/dish/filter/filterTypes";
 import { SetStateAction, Dispatch } from "react";
 
 
-function Filter({ 
-  filter,
-  setFilter }: FilterProps) {
+const Filter = ({ 
+  setFilter }: FilterProps) => {
   
   function changeDropdownState(setState: Dispatch<SetStateAction<boolean>>) {
     setState((prevState: boolean) => !prevState);
@@ -18,27 +17,19 @@ function Filter({
     <div className="filter">
       <SortDropdown 
         changeDropdownState={changeDropdownState}
-        filter={filter}
         setFilter={setFilter}
-        onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <UberEatsDropdown 
         changeDropdownState={changeDropdownState}
-        filter={filter}
         setFilter={setFilter}
-        onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <PricesDropdown 
         changeDropdownState={changeDropdownState}
-        filter={filter}
         setFilter={setFilter}
-        onlyOneFilterTrue={onlyOneFilterTrue}
       />
       <DietDropdown 
         changeDropdownState={changeDropdownState}
-        filter={filter}
         setFilter={setFilter}
-        onlyOneFilterTrue={onlyOneFilterTrue}
       />
     </div>
   );

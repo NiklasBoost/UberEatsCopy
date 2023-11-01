@@ -16,7 +16,6 @@ export interface FilterState {
   glutenFreeFilter: boolean;
 }
 export interface FilterProps {
-  filter: FilterState,
   setFilter: Dispatch<SetStateAction<FilterState>>, 
 }
 
