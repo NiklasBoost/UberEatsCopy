@@ -26,14 +26,18 @@ Dieses Projekt dient als Nachbildung von UberEats, wobei jedoch der Schwerpunkt 
 
 `npm run dev`
 
+
 ## Abhängigkeiten
 
-Das Projekt basiert auf folgenden Abhängigkeiten:
+| Paket                 | Version   |
+| ---------------------  | --------- |
+| @babel/traverse        | 7.23.2    |
+| @types/react-router-dom| 5.3.3     |
+| react                  | 18.2.0    |
+| react-dom              | 18.2.0    |
+| react-router-dom       | 6.16.0    |
+| swiper                | 10.3.1    |
 
-- Swiper
-- React
-
-Es ist ratsam, die Abhängigkeiten regelmäßig zu überprüfen und die README-Datei entsprechend zu aktualisieren, um sicherzustellen, dass die neuesten Abhängigkeiten ordnungsgemäß aufgeführt sind.
 
 ## Mitwirkung
 
