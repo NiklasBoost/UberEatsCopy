@@ -8,8 +8,7 @@ import { SetStateAction, Dispatch } from "react";
 
 function Filter({ 
   filter,
-  setFilter, 
-  onlyOneFilterTrue }: FilterProps) {
+  setFilter }: FilterProps) {
   
   function changeDropdownState(setState: Dispatch<SetStateAction<boolean>>) {
     setState((prevState: boolean) => !prevState);

@@ -1,10 +1,10 @@
 import { DietDropdownProps } from "../../../../../types/dish/filter/dropdowns/DietDropdownTypes";
 import { useState, useEffect } from "react";
 
-function DietDropdown({ 
+const DietDropdown = ({ 
   changeDropdownState,
   filter,
-  setFilter }: DietDropdownProps) { 
+  setFilter }: DietDropdownProps) => { 
   const [dietFolded, setDietFolded] = useState(false);
   const [dietStyle, setDietStyle] = useState({});
   

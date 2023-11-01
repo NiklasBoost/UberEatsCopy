@@ -1,17 +1,17 @@
 import { PricesDropdownProps } from "../../../../../types/dish/filter/dropdowns/PricesDropdownTypes";
 import { useState, useEffect } from "react";
 
-function PricesDropdown({ 
+const PricesDropdown = ({ 
   changeDropdownState,
   filter,
-  setFilter }: PricesDropdownProps) {
+  setFilter }: PricesDropdownProps) => {
   const [pricesFolded, setPricesFolded] = useState(false);
   const [pricesStyle, setPricesStyle] = useState({});
 
-  const [oneButtonActiv, setOneButtonActiv] = useState({});
-  const [twoButtonActiv, setTwoButtonActiv] = useState({});
-  const [threeButtonActiv, setThreeButtonActiv] = useState({});
-  const [fourButtonActiv, setFourButtonActiv] = useState({});
+  const [oneEURButtonActiv, setOneEURButtonActiv] = useState({});
+  const [twoEURButtonActiv, setTwoEURButtonActiv] = useState({});
+  const [threeEURButtonActiv, setThreeEURButtonActiv] = useState({});
+  const [fourEURButtonActiv, setFourEURButtonActiv] = useState({});
   
   useEffect(() => {
     if(pricesFolded) {
@@ -24,33 +24,33 @@ function PricesDropdown({
 
   useEffect(() => {
     if(filter.oneEURFilter) {
-      setOneButtonActiv({ filter: 'brightness(0.7)' });
+      setOneEURButtonActiv({ filter: 'brightness(0.7)' });
     } else {
-      setOneButtonActiv({ filter: 'none' });
+      setOneEURButtonActiv({ filter: 'none' });
     }
   }, [filter.oneEURFilter])
   
   useEffect(() => {
     if(filter.twoEURFilter) {
-      setTwoButtonActiv({ filter: 'brightness(0.7)' });
+      setTwoEURButtonActiv({ filter: 'brightness(0.7)' });
     } else {
-      setTwoButtonActiv({ filter: 'none' });
+      setTwoEURButtonActiv({ filter: 'none' });
     }
   }, [filter.twoEURFilter])
 
   useEffect(() => {
     if(filter.threeEURFilter) {
-      setThreeButtonActiv({ filter: 'brightness(0.7)' });
+      setThreeEURButtonActiv({ filter: 'brightness(0.7)' });
     } else {
-      setThreeButtonActiv({ filter: 'none' });
+      setThreeEURButtonActiv({ filter: 'none' });
     }
   }, [filter.threeEURFilter])
 
   useEffect(() => {
     if(filter.fourEURFilter) {
-      setFourButtonActiv({ filter: 'brightness(0.7)' });
+      setFourEURButtonActiv({ filter: 'brightness(0.7)' });
     } else {
-      setFourButtonActiv({ filter: 'none' });
+      setFourEURButtonActiv({ filter: 'none' });
     }
   }, [filter.fourEURFilter])
 
@@ -94,7 +94,7 @@ function PricesDropdown({
             }));
           }} 
           className="price-button"
-          style={oneButtonActiv}
+          style={oneEURButtonActiv}
         >
           &#8364;
         </button>
@@ -107,7 +107,7 @@ function PricesDropdown({
             }));
           }} 
           className="price-button"
-          style={twoButtonActiv}
+          style={twoEURButtonActiv}
         >
           &#8364;&#8364;
         </button>
@@ -120,7 +120,7 @@ function PricesDropdown({
             }));
           }}  
           className="price-button"
-          style={threeButtonActiv}
+          style={threeEURButtonActiv}
         >
           &#8364;&#8364;&#8364;
         </button>
@@ -133,7 +133,7 @@ function PricesDropdown({
             }));
           }}  
           className="price-button"
-          style={fourButtonActiv}
+          style={fourEURButtonActiv}
         >
           &#8364;&#8364;&#8364;&#8364;
         </button>
