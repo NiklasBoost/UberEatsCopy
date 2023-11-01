@@ -10,7 +10,7 @@ Dieses Projekt dient als Nachbildung von UberEats, wobei jedoch der Schwerpunkt 
 
 2. Kopiere den Projektcode an den Ort deiner Wahl.
 
-`git clone https://github.com/NiklasBoost/Kopfrechentrainer.git`
+`git clone https://github.com/NiklasBoost/UberEatsCopy.git`
 
 
 3. Wechsle in das Projektverzeichnis:
