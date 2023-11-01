@@ -1,5 +1,5 @@
 import { RestaurantsProps } from "../../../../types/dish/views/restraurantsTypes";
-import { Restaurant } from "../../elements/dElements";
+import { RestaurantElement } from "../../elements/dElements";
 
 
 function Restaurants({ 
@@ -8,7 +8,7 @@ function Restaurants({
   return (
     <div className="restaurants">
       {filteredRestaurants.map((restaurant, index) => (
-        <Restaurant
+        <RestaurantElement
           key={index}
           restaurantImg={restaurant.restaurantImg}
           name={restaurant.name}

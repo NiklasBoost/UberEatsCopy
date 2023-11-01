@@ -1,16 +1,16 @@
 import { SignInButton, RegisterButton } from "../Buttons";
 import { UnderSiteLinks } from "../../home/elements/links";
-import { Logo } from "../Pics";
+import { LogoImg } from "../Pics";
 import { useState, useEffect } from "react";
 
 
-export function Footer() {
+export const Footer= () => {
   return (
      <div className="footer">
       <div className="upper-container">
         <div className="logo-and-stores-container">
           <div className="logo-container">
-            <Logo />
+            <LogoImg />
           </div>
           <div className="stores-container">
             <img className="stores-img" src="public/icons/appstore.svg" />
@@ -64,7 +64,7 @@ export function Footer() {
   )
 }
 
-export function Sidebar({ sidebarState }: {sidebarState: boolean}) {
+export const Sidebar = ({ sidebarState }: {sidebarState: boolean}) => {
   const signIn = 'sidebar';
   const signUp = 'register-button';
   const linkClass = 'sidebar-link';

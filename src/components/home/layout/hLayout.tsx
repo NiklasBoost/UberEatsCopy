@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { HamburgerMenu, Logo } from "../../common/Pics";
+import { HamburgerMenu, LogoImg } from "../../common/Pics";
 import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { InputDeliveryAddress } from "../../common/Inputs";
 import { PictureElementGroup } from "../elements/group";
@@ -37,7 +37,7 @@ export function HomeHeader({ scrollingState, setSidebarState }: HomeHeaderProps)
         <HamburgerMenu 
           setSidebarState={setSidebarState}
         />
-        <Logo />
+        <LogoImg />
       </div>
       <div style={headerMiddleStyle} className="h-header-middle">
         <InputDeliveryAddress

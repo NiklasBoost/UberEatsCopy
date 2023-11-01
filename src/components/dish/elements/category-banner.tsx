@@ -1,6 +1,6 @@
 import { CategoryBannerProps } from "../../../types/dish/elements/categoryBannerTypes";
 
-export function CategoryBanner({ CategoryName, CategoryIMG }: CategoryBannerProps) {
+export const CategoryBanner = ({ CategoryName, CategoryIMG }: CategoryBannerProps) => {
 
   return (
     <div className="Category-Banner-Container" >

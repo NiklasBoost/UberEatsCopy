@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router-dom";
 
-export function SignInButton({ signIn }: {signIn: string} ) {
+export const SignInButton = ({ signIn }: {signIn: string}) => {
   
   const navigate = useNavigate();
   
-  function goToAuth() {
+  function goToAuthPage() {
     navigate('/auth');
     
   }
   
   if (signIn === 'homeHeader') {
     return (
-      <button onClick={goToAuth} className="sign-in-button">
+      <button onClick={goToAuthPage} className="sign-in-button">
         <div className="sign-in-button-div">
           <img className="user-img" src="public/icons/User.png" />
           <p className="sign-in-button-text">Anmelden</p>
@@ -20,7 +20,7 @@ export function SignInButton({ signIn }: {signIn: string} ) {
     );
   } else if (signIn === 'dishHeader') {
     return (
-      <button onClick={goToAuth} className="header-right-sign-in">
+      <button onClick={goToAuthPage} className="header-right-sign-in">
         <div className="sign-in-container">
           <img className="user-img" src="public/icons/User.png" />
           <p className="sign-in-text">Anmelden</p>
@@ -29,7 +29,7 @@ export function SignInButton({ signIn }: {signIn: string} ) {
     );
   } else if (signIn === 'sidebar') {
     return (
-      <button onClick={goToAuth} className="login-button">Anmelden</button> 
+      <button onClick={goToAuthPage} className="login-button">Anmelden</button> 
     );
   } else {
     return null;
@@ -37,17 +37,17 @@ export function SignInButton({ signIn }: {signIn: string} ) {
 }
 
 
-export function RegisterButton({ signUp }: {signUp: string}) {
+export const RegisterButton = ({ signUp }: {signUp: string}) => {
   const navigate = useNavigate();
   
-  function goToAuth() {
+  function goToAuthPage() {
     navigate('/auth');
     
   }
 
   return (
     <button 
-      onClick={goToAuth}
+      onClick={goToAuthPage}
       className={signUp}
     >
       Registrieren

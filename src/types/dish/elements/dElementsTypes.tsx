@@ -10,7 +10,7 @@ export interface CategoryProps {
   setCategoriesState: Dispatch<SetStateAction<CatState>>, 
 }
 
-export interface RestaurantProps {
+export interface RestaurantElementProps {
   restaurantImg: string,
   name: string,
   ratingAverage: number | null,

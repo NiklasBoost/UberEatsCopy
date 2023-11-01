@@ -1,4 +1,4 @@
-export function Logo() {
+export const LogoImg = () => {
   return (    
     <a href="">
       <img 
@@ -10,7 +10,7 @@ export function Logo() {
   )
 }
 
-export function HamburgerMenu({ setSidebarState }: {setSidebarState: React.Dispatch<React.SetStateAction<boolean>>}) {
+export const HamburgerMenu = ({ setSidebarState }: {setSidebarState: React.Dispatch<React.SetStateAction<boolean>>}) => {
   function changeState() {
     setSidebarState(true);
   }

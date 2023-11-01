@@ -1,4 +1,4 @@
-export function InputDeliveryAddress ({inputClass}: {inputClass: string}) {
+export const InputDeliveryAddress = ({inputClass}: {inputClass: string}) => {
   return (
     <>
       <input 

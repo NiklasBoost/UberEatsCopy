@@ -1,7 +1,7 @@
 import restaurants from "../../../data/restaurants"
 import { SearchResultElementProps } from "../../../types/dish/elements/searchbar-elementsTypes";
 
-export function SearchResults({ inputValue }: {inputValue: string}) {
+export const SearchResults = ({ inputValue }: {inputValue: string}) => {
   
   const searchResults = restaurants.filter((restaurant) => {
     return restaurant.name.toLowerCase().includes(inputValue.toLowerCase());
@@ -22,7 +22,7 @@ export function SearchResults({ inputValue }: {inputValue: string}) {
   )
 }
 
-function SearchResultElement({img, name, priceRange, category}: SearchResultElementProps) {
+const SearchResultElement = ({img, name, priceRange, category}: SearchResultElementProps) => {
   return (
     <div className="search-result-container">
       <img className="search-result-img" src={img} alt="restaurant" />

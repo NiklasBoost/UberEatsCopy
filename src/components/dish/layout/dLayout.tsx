@@ -1,4 +1,4 @@
-import { HamburgerMenu, Logo } from "../../common/Pics";
+import { HamburgerMenu, LogoImg } from "../../common/Pics";
 import { SignInButton, RegisterButton } from "../../common/Buttons";
 import { SlideshowElement, Category } from "../elements/dElements";
 import { useEffect, useState } from "react";
@@ -44,7 +44,7 @@ export function DishHeader({
     <div className="dish-header">
       <div className="d-header-left">
         <HamburgerMenu setSidebarState={setSidebarState} />
-        <Logo />
+        <LogoImg />
         <div className="deliver-collection-container">
           <div 
             className={chooseFieldStyle}

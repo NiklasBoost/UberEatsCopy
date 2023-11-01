@@ -1,13 +1,13 @@
-import { CategoryProps, RestaurantProps } from "../../../types/dish/elements/dElementsTypes";
+import { CategoryProps, RestaurantElementProps } from "../../../types/dish/elements/dElementsTypes";
 import { useState, useEffect } from "react";
 
 
-export function Category({ 
+export const Category = ({ 
   categoryImg, 
   categoryText, 
   setCategoryBannerProps,
   categoriesState, 
-  setCategoriesState }: CategoryProps) {
+  setCategoriesState }: CategoryProps) => {
 
   const [categoryStateUpdated, setCategoryStateUpdated] = useState(false);
 
@@ -97,8 +97,7 @@ export function Category({
 }
 
 
-// Die jeweiligen inhalte und der img inhalt müssen variable sein. Aber von der Struktur her dürfte es passen
-export function SlideshowElement() {
+export const SlideshowElement = () => {
   return (
     <div className="slideshow-listelement-container">
       <a className="slideshow-listelement">
@@ -111,7 +110,11 @@ export function SlideshowElement() {
   )
 }
 
-export function Restaurant({ restaurantImg, name, ratingAverage, deliveryFee }: RestaurantProps) {
+export const RestaurantElement = ({ 
+  restaurantImg, 
+  name, 
+  ratingAverage, 
+  deliveryFee }: RestaurantElementProps) => {
 
   const deliveryFeeEUR = (deliveryFee !== null && deliveryFee !== undefined) 
     ? (deliveryFee / 100).toFixed(2) 
