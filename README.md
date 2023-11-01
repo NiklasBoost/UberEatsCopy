@@ -6,7 +6,25 @@ Dieses Projekt dient als Nachbildung von UberEats, wobei jedoch der Schwerpunkt 
 
 ## Installation
 
-Die Installation des Projekts erfordert einige Schritte, die hier kurz beschrieben werden. Dieses Projekt wurde ursprünglich mit Vite initialisiert, daher empfehlen wir, die offizielle Dokumentation von Vite und React zu konsultieren, um detaillierte Anweisungen zur Installation und Konfiguration zu erhalten.
+1. Stelle sicher, dass du Node.js und npm installiert hast. Falls nicht, kannst du sie von [nodejs.org](https://nodejs.org/en) und [npmjs.com](https://www.npmjs.com/) herunterladen und installieren.
+
+2. Kopiere den Projektcode an den Ort deiner Wahl.
+
+`git clone https://github.com/NiklasBoost/Kopfrechentrainer.git`
+
+
+3. Wechsle in das Projektverzeichnis:
+
+`cd Kopfrechentrainer`
+
+
+4. Installiere die erforderlichen Abhängigkeiten:
+
+`npm install`
+
+5. Starte den Entwicklungsserver:
+
+`npm run dev`
 
 ## Abhängigkeiten
 
