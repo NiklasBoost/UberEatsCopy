@@ -2,9 +2,9 @@ import { SortDropdownProps } from "../../../../../types/dish/filter/dropdowns/So
 import { useState, useEffect } from "react";
 
 
-function SortDropdown({ 
+const SortDropdown = ({ 
   changeDropdownState, 
-  setFilter}: SortDropdownProps) {
+  setFilter}: SortDropdownProps) => {
 
   const [sortFolded, setSortFolded] = useState(false);
   const [sortStyle, setSortStyle] = useState({});

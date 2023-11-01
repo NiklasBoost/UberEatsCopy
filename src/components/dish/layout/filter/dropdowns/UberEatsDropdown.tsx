@@ -1,10 +1,10 @@
 import { UberEatsDropdownProps } from "../../../../../types/dish/filter/dropdowns/UberEatsDropdownTypes";
 import { useState, useEffect } from "react";
 
-function UberEatsDropdown({ 
+const UberEatsDropdown = ({ 
   changeDropdownState,
   filter,
-  setFilter }: UberEatsDropdownProps) {
+  setFilter }: UberEatsDropdownProps) => {
   const [uberEatsFolded, setUberEatsFolded] = useState(false);
   const [uberEatsStyle, setUberEatsStyle] = useState({});
   
