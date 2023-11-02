@@ -7,6 +7,7 @@ import { SetStateAction, Dispatch } from "react";
 
 
 const Filter = ({ 
+  filter,
   setFilter }: FilterProps) => {
   
   function changeDropdownState(setState: Dispatch<SetStateAction<boolean>>) {
@@ -16,18 +17,22 @@ const Filter = ({
   return (
     <div className="filter">
       <SortDropdown 
+        filter={filter}
         changeDropdownState={changeDropdownState}
         setFilter={setFilter}
       />
-      <UberEatsDropdown 
+      <UberEatsDropdown
+        filter={filter}  
         changeDropdownState={changeDropdownState}
         setFilter={setFilter}
       />
       <PricesDropdown 
+        filter={filter}
         changeDropdownState={changeDropdownState}
         setFilter={setFilter}
       />
-      <DietDropdown 
+      <DietDropdown
+        filter={filter} 
         changeDropdownState={changeDropdownState}
         setFilter={setFilter}
       />

@@ -3,6 +3,7 @@ import { FilterState } from "../filterTypes";
 
 
 export interface UberEatsDropdownProps {
+  filter: boolean,
   setFilter: Dispatch<SetStateAction<FilterState>>, 
   changeDropdownState: (setState: Dispatch<SetStateAction<boolean>>) => void;
 }

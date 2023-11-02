@@ -314,6 +314,7 @@ export const MealChoose = ({
   return (
     <div className="meal-choose">
       <Filter 
+        filter={filter}
         setFilter={setFilter}
       />
       <Restaurants 
