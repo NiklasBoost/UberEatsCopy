@@ -11,12 +11,13 @@ import { DishOverviewProps } from "../../types/dish/DishOverviewTypes";
 import { useState, useEffect } from "react";
 import restaurants from "../../data/restaurants";
 
-function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
+const DishSite = ({ sidebarState, setSidebarState }: DishOverviewProps) => {
   const [overlayStyle, setOverlayStyle] = useState({});
   const [CategoryBannerProps, setCategoryBannerProps] = useState<{
     name: string;
     img: string;
   }>({ name: "", img: "" });
+
   const [filteredRestaurants, setFilteredRestaurants] = useState(restaurants);
 
   // States for Filters
@@ -118,4 +119,4 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
   );
 }
 
-export default Dish;
+export default DishSite;

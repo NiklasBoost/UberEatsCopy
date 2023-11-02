@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./home/HomeSite.tsx";
-import Dish from "./dish/DishOverview.tsx";
+import DishSite from "./dish/DishOverview.tsx";
 import Auth from "./sign-in-up/signInUp.tsx";
 import { useState } from "react";
 
@@ -15,9 +15,9 @@ function App() {
         }
       />
       <Route
-        path="/dish"
+        path="/dishsite"
         element={
-          <Dish sidebarState={sidebarState} setSidebarState={setSidebarState} />
+          <DishSite sidebarState={sidebarState} setSidebarState={setSidebarState} />
         }
       />
       <Route path="/auth" element={<Auth />} />
