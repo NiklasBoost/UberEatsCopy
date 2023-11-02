@@ -1,4 +1,4 @@
-function Auth() {
+const AuthSite = () => {
   return (
     <>
       <div className="header">
@@ -40,4 +40,4 @@ function Auth() {
   )
 }
 
-export default Auth;
+export default AuthSite;
