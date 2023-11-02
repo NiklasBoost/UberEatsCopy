@@ -1,7 +1,7 @@
 import { UnderSiteLinksProps } from "../../../types/home/elements/linksTypes"
 
 
-export function UnderSiteLinks({ linkClass, linkText }: UnderSiteLinksProps) {
+export const UnderSiteLinks = ({ linkClass, linkText }: UnderSiteLinksProps) => {
   return (
     <a 
       href=""
