@@ -22,7 +22,7 @@ export interface CatState {
   indianCat: boolean,  
 }
 
-export interface DishHeaderProps {
+export interface NormalHeaderProps {
   setSidebarState: React.Dispatch<React.SetStateAction<boolean>>,
   setOverlayStyle: React.Dispatch<React.SetStateAction<object>>,
   setDissappearElements: React.Dispatch<React.SetStateAction<boolean>>,

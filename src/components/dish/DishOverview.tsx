@@ -1,5 +1,5 @@
 import {
-  DishHeader,
+  NormalHeader,
   Categories,
   Slideshow,
   MealChoose,
@@ -83,7 +83,7 @@ function Dish({ sidebarState, setSidebarState }: DishOverviewProps) {
           setSidebarState={setSidebarState}
         />
       ) : (
-        <DishHeader
+        <NormalHeader
           setSidebarState={setSidebarState}
           setOverlayStyle={setOverlayStyle}
           setDissappearElements={setDissappearElements}

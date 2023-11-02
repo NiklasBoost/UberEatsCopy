@@ -6,7 +6,7 @@ import categoryObjects from "../../../data/categories";
 import Restaurants from "./view/restaurants";
 import Filter from "./filter/filter";
 import { SearchResults } from "../elements/searchbar-elements";
-import { CategoriesProps, DishHeaderProps, MealChooseProps, SearchbarHeaderProps } from "../../../types/dish/layout/dLayoutTypes";
+import { CategoriesProps, NormalHeaderProps, MealChooseProps, SearchbarHeaderProps } from "../../../types/dish/layout/dLayoutTypes";
 import { bestOverAllFilter, forYouSort, glutenfreeFilter, popularSort, priceFilter, ratingsSort, veganFilter, veggyFilter } from "../filter-logic/filter-functions";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper/modules";
@@ -17,10 +17,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import restaurants from "../../../data/restaurants";
 
-export function DishHeader({ 
+export const NormalHeader = ({ 
   setSidebarState, 
   setOverlayStyle,
-  setDissappearElements }: DishHeaderProps) {
+  setDissappearElements }: NormalHeaderProps) => {
   
   const signIn = "dishHeader";
   const signUp = "header-right-register";
@@ -111,21 +111,20 @@ export function DishHeader({
   );
 }
 
-export function SearchbarHeader({ 
+export const SearchbarHeader = ({ 
   setOverlayStyle,  
   setDissappearElements, 
-  setSidebarState }: SearchbarHeaderProps) { 
+  setSidebarState }: SearchbarHeaderProps) => { 
   
   const [inputValue, setInputValue] = useState('');
 
   function transformHeader() {
       setOverlayStyle({display: 'none'});
-    }
-
-
-    function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
-      setInputValue(event.target.value);
     };
+
+  function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
+    setInputValue(event.target.value);
+  };
 
   return (
       <div style={{
@@ -140,7 +139,7 @@ export function SearchbarHeader({
         <div className="dish-header">
           <div className="d-header-left">
             <HamburgerMenu setSidebarState={setSidebarState} />
-            <Logo />
+            <LogoImg />
           </div>
           <div className="d-header-middle">
             <div className="location">
@@ -173,10 +172,11 @@ export function SearchbarHeader({
   );
 }
 
-export function Categories({
+export const Categories = ({
   setCategoryBannerProps, 
   categoriesState,
-  setCategoriesState}: CategoriesProps) {
+  setCategoriesState}: CategoriesProps) => {
+    
   const [categories, setCategories] = useState<{ img: string; text: string }[]>(
     []
   );
@@ -215,7 +215,7 @@ export function Categories({
   );
 }
 
-export function Slideshow() {
+export const Slideshow = () => {
   return (
     <div className="slideshow">
       <div className="slideshow-list">
@@ -258,13 +258,13 @@ export function Slideshow() {
   );
 }
 
-export function MealChoose({ 
+export const MealChoose = ({ 
   setCategoryBannerProps,
   categoriesState,
   filteredRestaurants,
   setFilteredRestaurants,
   filter,
-  setFilter   }: MealChooseProps) {
+  setFilter   }: MealChooseProps) => {
 
 
   useEffect(() => {
