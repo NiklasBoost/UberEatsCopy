@@ -14,27 +14,27 @@
   max-width: 1450px;
 }
 
-  .magnifier-img {
-    width: 20px;
-    background-color:#eeeeee;
-  }
+.magnifier-img {
+  width: 20px;
+  background-color:#eeeeee;
+}
 
-  .input-header {
-    flex: 1;
-    font-style: inherit;
-    font-size: 17px;
-    border: none;
-    background-color:#eeeeee;
-    margin-left: 12px;
-  }
+.input-header {
+  flex: 1;
+  font-style: inherit;
+  font-size: 17px;
+  border: none;
+  background-color:#eeeeee;
+  margin-left: 12px;
+}
 
-  .input-header:focus {
-    outline: none;
-  }
+.input-header:focus {
+  outline: none;
+}
 
-  .close-input {
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-    cursor: pointer;
-  }
+.close-input {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  cursor: pointer;
+}

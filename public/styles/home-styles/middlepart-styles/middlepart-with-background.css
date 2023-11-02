@@ -4,38 +4,38 @@
   margin-top: -110px; 
 }
 
-  .find-eat-headline {
-    font-size: 50px;
-    margin-bottom: 21px;
-  }
+.find-eat-headline {
+  font-size: 50px;
+  margin-bottom: 21px;
+}
 
-  .find-eat-input-container {
-    margin-bottom: 20px;
-  }
+.find-eat-input-container {
+  margin-bottom: 20px;
+}
 
 
-    .input-delivery-address,
-    .input-delivery-time {
-      height: 45px;
-      border: none;
-    }
+.input-delivery-address,
+.input-delivery-time {
+  height: 45px;
+  border: none;
+}
 
-    .input-delivery-address {
-      width: 550px;
-      margin-right: 4px;
-      padding-left: 45px;
-      background-image: url('/public/icons/location.png');
-      background-size: 20px;
-      background-repeat: no-repeat;
-      background-position: 10px;
-    }
+.input-delivery-address {
+  width: 550px;
+  margin-right: 4px;
+  padding-left: 45px;
+  background-image: url('/public/icons/location.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
 
-    
-    .find-eat-button {
-      margin-left: 5px;
-      border: none;
-      border-radius: 5px;
-      background-color: rgb(64, 29, 29);
-      padding: 15px 15px;
-      color: white;
-    }
+
+.find-eat-button {
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(64, 29, 29);
+  padding: 15px 15px;
+  color: white;
+}

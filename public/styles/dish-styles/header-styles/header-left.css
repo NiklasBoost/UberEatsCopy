@@ -36,14 +36,14 @@
   font-size: 14px;
 }
 
-  .delivery {
-    margin-right: 30px;
-    cursor: pointer;
-    z-index: 2;
-    
-  }
+.delivery {
+  margin-right: 30px;
+  cursor: pointer;
+  z-index: 2;
+  
+}
 
-  .collection {
-    cursor: pointer;
-    z-index: 2;
-  }
+.collection {
+  cursor: pointer;
+  z-index: 2;
+}

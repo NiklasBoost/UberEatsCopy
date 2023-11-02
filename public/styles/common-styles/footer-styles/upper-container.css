@@ -8,19 +8,19 @@
   justify-content: space-between;
 }
 
-  .logo-container {
-    /* background-color: green; */
-  }
+.logo-container {
+  /* background-color: green; */
+}
 
-  .stores-container {
-    /* background-color: red; */
-    margin-bottom: 34px;
-  }
+.stores-container {
+  /* background-color: red; */
+  margin-bottom: 34px;
+}
 
-    .stores-img {
-      height: 40px;
-      margin-right: 13px;
-    }
+.stores-img {
+  height: 40px;
+  margin-right: 13px;
+}
 
 
 .links-container {

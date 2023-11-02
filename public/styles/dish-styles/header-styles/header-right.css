@@ -15,29 +15,29 @@
   border-radius: 18px;
 }
 
-  .header-right-sign-in {
-    border-radius: 18px;
-  }
+.header-right-sign-in {
+  border-radius: 18px;
+}
 
-    .sign-in-container,
-    .shopping-cart-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
+.sign-in-container,
+.shopping-cart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-      .sign-in-text,
-      .shopping-cart-text {
-        margin: 0;
-      }
+.sign-in-text,
+.shopping-cart-text {
+  margin: 0;
+}
 
-        .shopping-cart-text {
-          color: white;
-        }
+.shopping-cart-text {
+  color: white;
+}
 
-      .sign-in-icon,
-      .shopping-cart-icon {
-        width: 15px;
-        height: 16px;
-        margin-right: 5px;
-      }
+.sign-in-icon,
+.shopping-cart-icon {
+  width: 15px;
+  height: 16px;
+  margin-right: 5px;
+}
