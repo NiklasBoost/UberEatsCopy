@@ -1,4 +1,4 @@
-import { HomeHeader, Delivery, PictureOptions, Countries } from "./layout/hLayout";
+import { HomeHeader, DeliveryAddressSection, PictureOptionsSection, CountriesSection } from "./layout/hLayout";
 import { Footer, Sidebar } from "../common/layout/cLayout";
 import { useEffect, useState } from "react";
 import { HomeProps } from "../../types/home/HomeSiteTypes";
@@ -62,9 +62,9 @@ function Home({ sidebarState, setSidebarState }: HomeProps) {
       <Sidebar 
         sidebarState={sidebarState}
       />
-      <Delivery />
-      <PictureOptions />
-      <Countries />
+      <DeliveryAddressSection />
+      <PictureOptionsSection />
+      <CountriesSection />
       <Footer />
     </div>
   )

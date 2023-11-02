@@ -8,7 +8,7 @@ import checkScrollLevel from "../scrollCheck";
 import { HomeHeaderProps } from "../../../types/home/layout/hLayoutTypes";
 
 
-export function HomeHeader({ scrollingState, setSidebarState }: HomeHeaderProps) {
+export const HomeHeader = ({ scrollingState, setSidebarState }: HomeHeaderProps) => {
   const signIn = 'homeHeader';
   const signUp= 'sign-up-button';
   const inputClass = 'input-delivery-address header-input-delivery-address';
@@ -57,12 +57,12 @@ export function HomeHeader({ scrollingState, setSidebarState }: HomeHeaderProps)
 }
 
 
-export function Delivery() {
+export const DeliveryAddressSection = () => {
   const inputClass = 'input-delivery-address';
   const navigate = useNavigate();
   
-  function goToDish() {
-    navigate('/dish');
+  function goToDishSite() {
+    navigate('/dishsite');
     
   }
 
@@ -79,7 +79,7 @@ export function Delivery() {
               <option className="input-delivery-time-later">Für später planen</option>
             </select>
             <button 
-              onClick={goToDish} 
+              onClick={goToDishSite} 
               className="find-eat-button"
             >
               Essen finden
@@ -101,14 +101,15 @@ export function Delivery() {
   ) 
 }
 
-export function PictureOptions() {
+export const PictureOptionsSection = () => {
   const linkTextBusinessAccount = 'Ein Geschäftskonto anlegen'; 
   const linkTextAddRestraurant = 'Füge dein Restaurant hinzu';
   const linkTextCourierRegister = 'Registriere dich als Kurier';
 
-  const maEatHL = 'Deinen Mitarbeitern Essen bestellen';
+  const employeeEatHL = 'Deinen Mitarbeitern Essen bestellen';
   const restaurantDeliveryHL = 'Ein Lieferservice für dein Restaurant';
   const deliveryUberEatsHL = 'Liefere über Uber Eats';
+  
   const imgSourceleft = 'public/pictures/click_on_Laptop.webp';
   const imgSourceMiddle = 'public/pictures/Pan.webp';
   const imgSourceRight = 'public/pictures/rider.webp';
@@ -116,7 +117,7 @@ export function PictureOptions() {
   return (
     <div className="middlepart-with-3-pictures">
       <PictureElementGroup 
-        headLine={maEatHL}
+        headLine={employeeEatHL}
         image={imgSourceleft}
         linkText={linkTextBusinessAccount}
       />
@@ -134,7 +135,7 @@ export function PictureOptions() {
   )
 }
 
-export function Countries() {
+export const CountriesSection = () => {
   return (
     <div className="middlepart-with-countrys">
       <div className="middlepart-with-countrys-row">
