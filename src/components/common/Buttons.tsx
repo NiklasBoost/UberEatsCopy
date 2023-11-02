@@ -5,7 +5,7 @@ export const SignInButton = ({ signIn }: {signIn: string}) => {
   const navigate = useNavigate();
   
   function goToAuthPage() {
-    navigate('/auth');
+    navigate('/authsite');
     
   }
   
