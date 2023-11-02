@@ -3,7 +3,7 @@ import { PictureElementGroupProps } from "../../../types/home/elements/groupType
 
 
 //source und picture headline müssen variable eingefügt werden können
-export function PictureElementGroup ( { headLine, image, linkText }: PictureElementGroupProps ) {
+export const PictureElementGroup = ( { headLine, image, linkText }: PictureElementGroupProps ) => {
   const linkClass = 'link-to-undersite';
   return (
     <div className="one-picture-block">
