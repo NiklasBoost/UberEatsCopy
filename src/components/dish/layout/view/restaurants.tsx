@@ -2,8 +2,8 @@ import { RestaurantsProps } from "../../../../types/dish/views/restraurantsTypes
 import { RestaurantElement } from "../../elements/dElements";
 
 
-function Restaurants({ 
-  filteredRestaurants }: RestaurantsProps) {
+const Restaurants = ({ 
+  filteredRestaurants }: RestaurantsProps) => {
 
   return (
     <div className="restaurants">
