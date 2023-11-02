@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { HomeProps } from "../../types/home/HomeSiteTypes";
 
 
-function Home({ sidebarState, setSidebarState }: HomeProps) {
-  const [scrolling, setScrolling] = useState<boolean>(false);
+const HomeSite = ({ sidebarState, setSidebarState }: HomeProps) => {
+  const [isScrolling, setIsScrolling] = useState<boolean>(false);
   const [overlayStyle, setOverlayStyle] = useState({});
   
   function changeState() {
@@ -21,12 +21,12 @@ function Home({ sidebarState, setSidebarState }: HomeProps) {
     const handleScroll = () => {
       if (!isScrolling) {
         let scrollTimeout
-        setScrolling(true);
+        setIsScrolling(true);
         clearTimeout(scrollTimeout);
         
         // Set a timeout to reset scrolling to false after a brief delay
         scrollTimeout = setTimeout(() => {
-          setScrolling(false);
+          setIsScrolling(false);
           isScrolling = false;
         }, 20); // Adjust the delay as needed
         isScrolling = true;
@@ -57,7 +57,7 @@ function Home({ sidebarState, setSidebarState }: HomeProps) {
       <div style={overlayStyle} className="overlay"></div>
       <HomeHeader 
         setSidebarState={setSidebarState}
-        scrollingState={scrolling}
+        scrollingState={isScrolling}
       />
       <Sidebar 
         sidebarState={sidebarState}
@@ -71,4 +71,4 @@ function Home({ sidebarState, setSidebarState }: HomeProps) {
 }
 
 
-export default Home;
+export default HomeSite;

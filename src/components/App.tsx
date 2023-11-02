@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./home/HomeSite.tsx";
+import HomeSite from "./home/HomeSite.tsx";
 import DishSite from "./dish/DishOverview.tsx";
 import Auth from "./sign-in-up/signInUp.tsx";
 import { useState } from "react";
@@ -11,7 +11,7 @@ function App() {
       <Route
         path="/"
         element={
-          <Home sidebarState={sidebarState} setSidebarState={setSidebarState} />
+          <HomeSite sidebarState={sidebarState} setSidebarState={setSidebarState} />
         }
       />
       <Route
