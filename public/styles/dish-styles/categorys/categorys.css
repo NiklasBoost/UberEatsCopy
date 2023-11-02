@@ -8,20 +8,19 @@
   cursor: pointer;
 }
 
-  .category-pictures {
-    width: 52px;
-    margin-bottom: 5px;
-    background-color: white;
-    padding: 5px;
-    border-radius: 35px;
-  }
-  
-  .category-pictures:hover {
-    background-color: rgba(128, 128, 128, 0.241);
-    border-radius: 35px;
-    padding: 5px;
+.category-pictures {
+  width: 52px;
+  margin-bottom: 5px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 35px;
+}
 
-  }
+.category-pictures:hover {
+  background-color: rgba(128, 128, 128, 0.241);
+  border-radius: 35px;
+  padding: 5px;
+
+}
 
 
-  
