@@ -20,7 +20,7 @@ const DishSite = ({ sidebarState, setSidebarState }: DishOverviewProps) => {
 
   const [filteredRestaurants, setFilteredRestaurants] = useState(restaurants);
 
-  // States for Filters
+  /
   const [filter, setFilter] = useState({
     forYouFilter: false,
     popularFilter: false,
@@ -36,7 +36,6 @@ const DishSite = ({ sidebarState, setSidebarState }: DishOverviewProps) => {
     glutenFreeFilter: false,
   });
 
-  // States for CategoriesClicks
   const [categoriesState, setCategoriesState] = useState({
     dealsCat: false,
     bestEatCat: false,

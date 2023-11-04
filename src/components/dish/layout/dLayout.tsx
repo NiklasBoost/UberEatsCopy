@@ -181,7 +181,7 @@ export const Categories = ({
     []
   );
 
-  //category randomizer
+
   useEffect(() => {
     let remainingCategories = categoryObjects.slice(2);
     for (let i = remainingCategories.length - 1; i > 0; i--) {

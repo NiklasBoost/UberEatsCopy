@@ -14,7 +14,6 @@ const HomeSite = ({ sidebarState, setSidebarState }: HomeProps) => {
     }
   }
 
-//scroller
   useEffect(() => {
     let isScrolling = false;
 
@@ -24,11 +23,10 @@ const HomeSite = ({ sidebarState, setSidebarState }: HomeProps) => {
         setIsScrolling(true);
         clearTimeout(scrollTimeout);
         
-        // Set a timeout to reset scrolling to false after a brief delay
         scrollTimeout = setTimeout(() => {
           setIsScrolling(false);
           isScrolling = false;
-        }, 20); // Adjust the delay as needed
+        }, 20); 
         isScrolling = true;
       }
     }
@@ -42,7 +40,6 @@ const HomeSite = ({ sidebarState, setSidebarState }: HomeProps) => {
     }
   }, [])
 
-//overlaystyle
   useEffect(() => {
     if(sidebarState) {
       setOverlayStyle({display: 'block'})

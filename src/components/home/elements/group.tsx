@@ -1,8 +1,6 @@
 import { UnderSiteLinks } from "./links"
 import { PictureElementGroupProps } from "../../../types/home/elements/groupTypes";
 
-
-//source und picture headline müssen variable eingefügt werden können
 export const PictureElementGroup = ( { headLine, image, linkText }: PictureElementGroupProps ) => {
   const linkClass = 'link-to-undersite';
   return (
