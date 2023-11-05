@@ -1,6 +1,7 @@
+import { Dispatch, SetStateAction } from "react";
+import { Restaurant } from "../../../types/dish/layout/dLayoutTypes";
 
-
-export function forYouSort(sState) {
+export function forYouSort(sState: Dispatch<SetStateAction<Restaurant[]>>) {
   sState((prevSt) => {
     const filtered = prevSt.filter((restaurant) => {
       return restaurant.newbie === true;
@@ -9,14 +10,14 @@ export function forYouSort(sState) {
   })
 }
 
-export function popularSort(sState) {
-  sState((prevSt) => {
+export function popularSort(sState: Dispatch<SetStateAction<Restaurant[]>>) {
+  sState((prevSt) => {    
     const sorted = prevSt.sort((a, b) => b.rating.count - a.rating.count)
     return sorted;
   }) 
 }
 
-export function ratingsSort(sState) {
+export function ratingsSort(sState: Dispatch<SetStateAction<Restaurant[]>>) {
   sState((prevSt) => {
     const sorted = prevSt.sort((a, b) => {
       if(a.rating.average !== b.rating.average) {
@@ -29,7 +30,7 @@ export function ratingsSort(sState) {
   })
 }
 
-export function bestOverAllFilter(sState) {
+export function bestOverAllFilter(sState: Dispatch<SetStateAction<Restaurant[]>>) {
   sState((prevSt) => {
     const filtered = prevSt.filter((restaurant) => {
       return (
@@ -47,7 +48,7 @@ export function bestOverAllFilter(sState) {
 }
 
 
-export function priceFilter(sState, EUR) {
+export function priceFilter(sState: Dispatch<SetStateAction<Restaurant[]>>, EUR: string) {
   sState((prevSt) => {    
     const filtered = prevSt.filter((restaurant) => {
       return restaurant.priceRange === EUR;
@@ -56,7 +57,7 @@ export function priceFilter(sState, EUR) {
   })
 }
 
-export function veganFilter(sState) {
+export function veganFilter(sState: Dispatch<SetStateAction<Restaurant[]>>) {
   sState((prevSt) => {  
     const filtered = prevSt.filter((restaurant) => {
       return restaurant.vegan;
@@ -65,7 +66,7 @@ export function veganFilter(sState) {
   })
 }
 
-export function veggyFilter(sState) {
+export function veggyFilter(sState: Dispatch<SetStateAction<Restaurant[]>>) {
   sState((prevSt) => {  
     const filtered = prevSt.filter((restaurant) => {
       return restaurant.veggy;
@@ -74,7 +75,7 @@ export function veggyFilter(sState) {
   })
 }
 
-export function glutenfreeFilter(sState) {
+export function glutenfreeFilter(sState: Dispatch<SetStateAction<Restaurant[]>>) {
   sState((prevSt) => {  
     const filtered = prevSt.filter((restaurant) => {
       return restaurant.glutenfree;
