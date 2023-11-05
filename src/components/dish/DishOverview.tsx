@@ -20,7 +20,6 @@ const DishSite = ({ sidebarState, setSidebarState }: DishOverviewProps) => {
 
   const [filteredRestaurants, setFilteredRestaurants] = useState(restaurants);
 
-  /
   const [filter, setFilter] = useState({
     forYouFilter: false,
     popularFilter: false,
