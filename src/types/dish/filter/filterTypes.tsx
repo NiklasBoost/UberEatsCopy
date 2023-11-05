@@ -17,7 +17,7 @@ export interface FilterState {
 }
 export interface FilterProps {
   setFilter: Dispatch<SetStateAction<FilterState>>, 
-  filter: boolean,
+  filter: FilterState,
 }
 
 

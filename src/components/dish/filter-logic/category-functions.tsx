@@ -1,6 +1,7 @@
+import { Dispatch, SetStateAction } from "react";
+import { CatState, Restaurant } from "../../../types/dish/layout/dLayoutTypes";
 
-
-export function categoryFilter(sState, state) {
+export function categoryFilter(sState: Dispatch<SetStateAction<Restaurant[]>>, state: CatState) {
   if (state.dealsCat) {
     sState((prevSt) => {
       const filtered = prevSt.filter((restaurant) => {
