@@ -12,7 +12,13 @@ export function forYouSort(sState: Dispatch<SetStateAction<Restaurant[]>>) {
 
 export function popularSort(sState: Dispatch<SetStateAction<Restaurant[]>>) {
   sState((prevSt) => {    
-    const sorted = prevSt.sort((a, b) => b.rating.count - a.rating.count)
+    const sorted = prevSt.sort((a, b) => {
+      if(b.rating.count && a.rating.count) {
+        return b.rating.count - a.rating.count;
+      } else {
+        return 0;
+      }
+    })
     return sorted;
   }) 
 }
@@ -20,10 +26,14 @@ export function popularSort(sState: Dispatch<SetStateAction<Restaurant[]>>) {
 export function ratingsSort(sState: Dispatch<SetStateAction<Restaurant[]>>) {
   sState((prevSt) => {
     const sorted = prevSt.sort((a, b) => {
-      if(a.rating.average !== b.rating.average) {
-        return b.rating.count - a.rating.average;
+      if(b.rating.count && a.rating.count && a.rating.average && b.rating.average) {
+        if(a.rating.average !== b.rating.average) {
+          return b.rating.count - a.rating.average;
+        } else {
+          return b.rating.count - a.rating.count;
+        }
       } else {
-        return b.rating.count - a.rating.count;
+        return 0;
       }
     })
     return sorted;
