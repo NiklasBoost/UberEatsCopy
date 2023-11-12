@@ -22,10 +22,6 @@
 
   }
 
-.upper-sidebar {
-  /* background-color: lightblue; */
-  
-}
 
 .register-button,
 .login-button,
@@ -33,36 +29,10 @@
   display: block;
 }
 
-.register-button,
-.login-button {
-  width: 250px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  font-weight: bold;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 8px;
-}
-
-.register-button {
-  background-color: black;
-  color: white;
-}
-
-.login-button {
-  margin-bottom: 25px;
-}
-
 .sidebar-link {
   color: black;
   margin-bottom: 13px;
   font-size: 15px;
-  
-}
-
-.under-sidebar {
-  /* background-color: lightcoral; */
   
 }
 

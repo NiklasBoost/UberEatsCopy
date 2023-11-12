@@ -1,6 +1,5 @@
 
 .h-header-left {
-  /* background-color: lightblue; */
   margin-left: 35px;
   
   display: flex;
@@ -9,14 +8,10 @@
 
 .burger-menu {
   margin-right: 35px;
-
-  /* justify-content: center; */
 }
 
 .uber-eats-text-picture {
   width: 125px;
-  
-  /* justify-content: center; */
 }
 
 .h-header-middle {
@@ -29,43 +24,8 @@
 }
 
 .h-header-right {
-  /* background-color: lightcoral; */
   margin-right: 35px;
-
   display: flex;
   align-items: center; 
 }
 
-.sign-in-button,
-.sign-up-button {
-  background-color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 12px 15px;
-}
-
-.sign-up-button {
-  color: white;
-  background-color: black;
-  margin-left: 15px;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 12px 15px;
-}
-
-.sign-in-button-div {
-  display: flex;
-  flex-direction: row;
-}
-
-.sign-in-button-text {
-  margin: 0;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.user-img {
-  width: 20px;
-  margin-right: 5px;
-}
