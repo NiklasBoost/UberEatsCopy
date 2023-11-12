@@ -10,7 +10,7 @@ import { HomeHeaderProps } from "../../../types/home/layout/hLayoutTypes";
 
 export const HomeHeader = ({ scrollingState, setSidebarState }: HomeHeaderProps) => {
   const signIn = 'homeHeader';
-  const signUp= 'sign-up-button';
+  const signUp= 'sign-up-button-home';
   const inputClass = 'input-delivery-address header-input-delivery-address';
   const [headerStyle, setHeaderStyle] = useState({});
   const [headerMiddleStyle, setHeaderMiddleStyle] = useState({});

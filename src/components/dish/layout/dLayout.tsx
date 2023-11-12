@@ -22,8 +22,8 @@ export const NormalHeader = ({
   setOverlayStyle,
   setDissappearElements }: NormalHeaderProps) => {
   
-  const signIn = "dishHeader";
-  const signUp = "header-right-register";
+  const signIn = 'dishHeader';
+  const signUp = 'sign-up-button-dish';
   const [chooseFieldStyle, setChooseFieldStyle] = useState('white-choose-field');
     
   function transformHeader() {

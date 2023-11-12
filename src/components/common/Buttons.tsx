@@ -1,29 +1,34 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const SignInButton = ({ signIn }: {signIn: string}) => {
-  
+  const [site, setSite] = useState<string | null>(''); 
   const navigate = useNavigate();
   
+  useEffect(() => {
+    setSite(currentSite)
+  }, [signIn])
+
+  function currentSite() {
+    if (signIn === 'homeHeader') {
+      return 'home'
+    } else if (signIn === 'dishHeader') {
+      return 'dish'
+    } else {
+      return null;
+    }
+  }
+
   function goToAuthPage() {
     navigate('/authsite');
-    
   }
   
-  if (signIn === 'homeHeader') {
+  if (signIn === 'homeHeader' || signIn === 'dishHeader') {
     return (
-      <button onClick={goToAuthPage} className="sign-in-button">
-        <div className="sign-in-button-div">
-          <img className="user-img" src="public/icons/User.png" />
-          <p className="sign-in-button-text">Anmelden</p>
-        </div>
-      </button>
-    );
-  } else if (signIn === 'dishHeader') {
-    return (
-      <button onClick={goToAuthPage} className="header-right-sign-in">
+      <button onClick={goToAuthPage} className={`sign-in-button-${site}`}>
         <div className="sign-in-container">
           <img className="user-img" src="public/icons/User.png" />
-          <p className="sign-in-text">Anmelden</p>
+          <p className={`sign-in-text-${site}`}>Anmelden</p>
         </div>
       </button>
     );
@@ -41,7 +46,7 @@ export const RegisterButton = ({ signUp }: {signUp: string}) => {
   const navigate = useNavigate();
   
   function goToAuthPage() {
-    navigate('/auth');
+    navigate('/authsite');
     
   }
 
