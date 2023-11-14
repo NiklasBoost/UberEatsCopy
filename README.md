@@ -15,7 +15,7 @@ Dieses Projekt dient als Nachbildung von UberEats, wobei jedoch der Schwerpunkt 
 
 3. Wechsle in das Projektverzeichnis:
 
-`cd Kopfrechentrainer`
+`cd UberEatsCopy`
 
 
 4. Installiere die erforderlichen Abhängigkeiten:
